@@ -45,6 +45,11 @@
             key-positions = <11 12 13>;
             bindings = <&tog 3>;
         };
+
+        hangul {
+            bindings = <&toggle_hangle>;
+            key-positions = <22 23>;
+        };
     };
 
     macros {
@@ -61,6 +66,14 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+
+        toggle_hangle: toggle_hangle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp SPACE>, <&macro_release>, <&tog 1>;
+
+            label = "TOGGLE_HANGLE";
         };
     };
 
@@ -86,9 +99,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q       &kp W       &kp F        &kp P         &kp B      &kp J         &kp L             &kp U          &kp Y       &kp SEMI
-       &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T   &kp G      &kp M         &mt RSHFT N       &mt RCTRL E    &mt RALT I  &mt RGUI O
-&none  &kp Z       &kp X       &kp C        &kp D         &kp V      &kp K         &kp H             &kp COMMA      &kp DOT     &kp FSLH    &none
+       &kp Q       &kp W       &kp F        &kp P         &kp B      &kp J         &kp L              &kp U          &kp Y       &kp SEMI
+       &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T   &kp G      &kp M         &mt RSHFT N        &mt RCTRL E    &mt RALT I  &mt RGUI O
+&none  &kp Z       &kp X       &kp C        &kp D         &kp V      &kp K         &kp H              &kp COMMA      &kp DOT     &kp FSLH    &none
                                &kp ESCAPE   &lt 15 SPACE  &kp TAB    &lt 15 ENTER  &lt NUM BACKSPACE  &lt 16 DELETE
             >;
         };
