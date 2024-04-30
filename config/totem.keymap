@@ -57,10 +57,6 @@
 
 #define SMART_NUM &smart_num NUM 0
 
-&num_word {
-  layers = <NUM>;
-  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LEFT RIGHT UP DOWN>;
-};
 
 / {
     combos {
@@ -156,6 +152,16 @@
         bindings = <&sl NUM>, <&num_word>;
         #binding-cells = <0>;
       };
+
+      num_word:behavior_num_word {
+        compatible = "zmk,behavior-caps-word";
+        label = "NUM_WORD";
+        #binding-cells = <0>;
+        layers = <NUM>;
+        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LEFT RIGHT UP DOWN>;
+        ignore-numbers;
+      };
+
     };
     keymap {
         compatible = "zmk,keymap";
