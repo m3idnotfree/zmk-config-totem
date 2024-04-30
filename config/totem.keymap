@@ -95,7 +95,7 @@
        &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J        &kp L            &kp U         &kp Y       &kp SEMI
        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M        &mt RSHFT N      &mt RCTRL E   &mt RALT I  &mt RGUI O
 &none  &kp Z       &kp X       &kp C        &kp D        &kp V      &kp K        &kp H            &kp COMMA     &kp DOT     &kp FSLH    &mo 2
-                               &kp ESCAPE   &lt 4 SPACE  &kp TAB    &lt 4 ENTER  &lt 6 BACKSPACE  &kp DEL  
+                               &kp ESCAPE   &lt NAV SPACE  &kp TAB    &lt NAV ENTER  &lt NUM BACKSPACE  &lt SYM DEL  
             >;
         };
 
