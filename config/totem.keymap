@@ -56,6 +56,7 @@
 / {
 
     num_word :num_word {  // num-word, requires PR #1451
+      compatible = "zmk,behavior-caps-word";
       layers = <NUM>;
       continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
     };
