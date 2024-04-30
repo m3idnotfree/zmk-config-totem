@@ -96,7 +96,7 @@
         label = "NUM_DANCE";
         #binding-cells = <0>;
         tapping-term-ms = <TAPPING_TERM_MS>;
-        bindings = <&sl NUM> <&num_word>;
+        bindings = <&sl NUM>, <&num_word>;
       };
       smart_num: behavior_smart_num {
         flavor = "balanced";
