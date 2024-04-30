@@ -83,7 +83,7 @@
     };
 
     behaviors {
-      num_word:behavior_num_word {
+      num_word:num_word {
         compatible = "zmk,behavior-caps-word";
         label = "NUM_WORD";
         #binding-cells = <0>;
@@ -91,14 +91,16 @@
         continue-list = <BACKSPACE DEL DOT COMMA>;
         ignore-numbers;
       };
-      num_dance: behavior_num_dance {
+
+      num_dance: num_dance {
         compatible = "zmk,behavior-tap-dance";
         label = "NUM_DANCE";
         #binding-cells = <0>;
         tapping-term-ms = <TAPPING_TERM_MS>;
         bindings = <&sl NUM>, <&num_word>;
       };
-      smart_num: behavior_smart_num {
+
+      smart_num: smart_num {
         flavor = "balanced";
         compatible = "zmk,behavior-hold-tap";
         label = "SMART_NUM";
