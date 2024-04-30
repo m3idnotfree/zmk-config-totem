@@ -48,12 +48,18 @@
     ignore-modifiers;          // allow chording sticky mods & layers
 };
    
-&num_word {  // num-word, requires PR #1451
-    layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};
+// &num_word {  // num-word, requires PR #1451
+//     layers = <NUM>;
+//     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+// };
 
 / {
+
+    num_word :num_word {  // num-word, requires PR #1451
+      layers = <NUM>;
+      continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
