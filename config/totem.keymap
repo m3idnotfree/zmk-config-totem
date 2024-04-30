@@ -44,10 +44,62 @@
             key-positions = <28 29>;
         };
 
-        keyposition_test {
+        keyposition_left_top {
             bindings = <&none>;
-            key-positions = <0 1 2 3 4 20 10 11 12 13 14 21 22 23 24 25 32 33 34>;
+            key-positions = <0 1 2 3 4>;
         };
+
+        keyposition_right_top {
+            bindings = <&none>;
+            key-positions = <5 6 7 8 9>;
+        };
+
+        keyposition_left_middle {
+            bindings = <&none>;
+            key-positions = <10 11 12 13 14>;
+        };
+
+        keyposition_right_middle {
+          bindings = <&none>;
+          key-positions = <15 16 17 18 19>;
+        };
+
+        keyposition_left_bottom {
+          bindings = <&none>;
+          key-positions = <21 22 23 24 25>;
+        };
+
+        keyposition_right_bottom {
+          bindings = <&none>;
+          key-positions = <26 27 28 29 30>;
+        };
+
+        keyposition_left_thump {
+          bindings = <&none>;
+          key-positions = <32 33 34>;
+        };
+
+        keyposition_right_thump {
+          bindings = <&none>;
+          key-positions = <35 36 37>;
+        };
+
+        keyposition_left_extra {
+          bindings = <&none>;
+          key-positions = <20>;
+        };
+        keyposition_right_extra {
+          bindings = <&none>;
+          key-positions = <31>;
+        };
+
+
+
+
+
+
+
+
     };
 
     macros {
