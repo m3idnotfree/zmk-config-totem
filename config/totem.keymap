@@ -479,8 +479,8 @@
         //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT     &trans  U_WH_D  U_MS_U  U_WH_R  &trans
-        &kp SQT    &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  U_MS_L U_MS_D   U_MS_R  &trans
+        &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT     &trans  &msc SCRL_DOWN  &mmv MOVE_UP  &msc SCRL_DOWN  &trans
+        &kp SQT    &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans
 &trans  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH     &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &kp N0  &kp MINUS    &trans  &mkp LCLK  &mkp RCLK
             >;
