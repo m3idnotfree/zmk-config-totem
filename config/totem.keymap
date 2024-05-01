@@ -88,32 +88,30 @@
                 <&macro_tap>,
                 <&tog 1>;
 
-            label = "TOGGLE_HANGLE";
+            // label = "TOGGLE_HANGLE";
         };
     };
 
     behaviors {
         num_dance: num_dance {
             compatible = "zmk,behavior-tap-dance";
-            // label = "NUM_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM_MS>;
             bindings = <&sl NUM>, <&num_word>;
         };
 
         smart_num: smart_num {
-            flavor = "balanced";
             compatible = "zmk,behavior-hold-tap";
-            // label = "SMART_NUM";
             #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             bindings = <&mo>, <&num_dance>;
         };
 
         hml: hml {
-            flavor = "balanced";
             compatible = "zmk,behavior-hold-tap";
-            // label = "HML";
+            #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <150>;
