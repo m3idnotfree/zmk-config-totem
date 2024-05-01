@@ -341,20 +341,19 @@
     quick-tap-ms = <220>; 
     hold-trigger-key-positions = <0>;
         };
-smart_mouse: smart_mouse {
-          compatible = "zmk,behavior-tri-state";
-         #binding-cells = <0>;
-           bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
-    ignored-layers = <MOUSE>;
-  };
+// smart_mouse: smart_mouse {
+//           compatible = "zmk,behavior-tri-state";
+//          #binding-cells = <0>;
+//            bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+//     ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
+//     ignored-layers = <MOUSE>;
+//   };
 
-  swapper: swapper {
-          compatible = "zmk,behavior-tri-state";
-         #binding-cells = <0>;
-         bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
-  };
+         swapper: swapper {
+              compatible = "zmk,behavior-tri-state";
+              #binding-cells = <0>;
+              bindings = <&kp A>, <&kp B>, <&kt C>;
+          };
 
        // tri-state: tri-state {
        //      label = "TRI-STATE";
