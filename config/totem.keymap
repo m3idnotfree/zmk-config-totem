@@ -67,7 +67,12 @@
     // flavor = "balanced";
     // tapping-term-ms = <TAPPING_TERM_MS>;
     // quick-tap-ms = <QUICK_TAP_MS>;
-    MT_CORE;
+    // MT_CORE;
+      flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <220>;
+    hold-trigger-key-positions = <0>;
+
 };
 
 &lt {  // layer-tap config
@@ -317,7 +322,12 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&masked_home>, <&kp>;  
-            MT_CORE
+            // MT_CORE
+          flavor = "tap-preferred"; 
+    tapping-term-ms = <220>; 
+    quick-tap-ms = <220>; 
+    hold-trigger-key-positions = <0>;
+
         };
 
         
@@ -325,7 +335,11 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&masked_end>, <&kp>;  
-            MT_CORE
+            // MT_CORE
+    flavor = "tap-preferred"; 
+    tapping-term-ms = <220>; 
+    quick-tap-ms = <220>; 
+    hold-trigger-key-positions = <0>;
         };
 
         masked_home: masked_home {
