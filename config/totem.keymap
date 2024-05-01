@@ -60,7 +60,7 @@
 
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
+#define SMART_NUM 
 / {
     combos {
         compatible = "zmk,combos";
@@ -143,7 +143,7 @@
        &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J        &kp L            &kp U         &kp Y       &kp SEMI
        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M        &mt RSHFT N      &mt RCTRL E   &mt RALT I  &mt RGUI O
 &none  &kp Z       &kp X       &kp C        &kp D        &kp V      &kp K        &kp H            &kp COMMA     &kp DOT     &kp FSLH    &mo 2
-                               &kp ESCAPE   &lt NAV SPACE  &kp TAB    SMART_NUM  &lt NUM BACKSPACE  &lt SYM DEL  
+                               &kp ESCAPE   &lt NAV SPACE  &kp TAB    &smart_num NUM 0  &lt NUM BACKSPACE  &lt SYM DEL  
             >;
         };
 
