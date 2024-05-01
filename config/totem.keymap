@@ -60,7 +60,7 @@
 
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM 
+#define SMART_NUM &smart_num NUM 0
 / {
     combos {
         compatible = "zmk,combos";
