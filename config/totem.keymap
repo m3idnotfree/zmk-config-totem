@@ -77,11 +77,51 @@
             key-positions = <LB3 LB2>;
         };
 
-        toggle_colemac_qwert {
-            bindings = <&tog 1>;
-            key-positions = <RB2 RB3>;
+        // toggle_colemac_qwert {
+        //     bindings = <&tog 1>;
+        //     key-positions = <RB2 RB3>;
+        // };
+
+        combo_esc {
+          bindings = <&kp ESC>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <LT3 LT2>;
+          layers = <BASE NAV NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
         };
 
+        combo_ret {
+          bindings = <&kp RETURN>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <LT2 LT1>
+          layers = <BASE NAV NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
+
+        combo_tab {
+          bindings = <&hml LS(LALT) TAB>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <LM3 LM2>
+          layers = <BASE NAV NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
+
+
+        combo_bspc {
+          bindings = <&kp BSPC>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <RT1 RT2>
+          layers = <BASE NAV NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
+
+        combo_del {
+          bindings = <&kp DEL>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <RT2 RT3>
+          layers = <BASE NAV NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
         combo_lpar {
           bindings = <&hmr_lpar_lt RS(LCTRL) 0>;
           timeout-ms = <COMBO_TERM_FAST>;
@@ -113,6 +153,24 @@
           layers = <NAV>;
           require-prior-idle-ms = <COMBO_IDLE_FAST>;
         };
+
+        combo_lbkt {
+          bindings = <&kp LBKT>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <RB1 RB2>;
+          layers = <BASE NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
+
+        combo_rbkt {
+          bindings = <&kp RBKT>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <RB2 RB3>;
+          layers = <BASE NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
+
+
 
 
     };
