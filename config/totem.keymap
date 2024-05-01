@@ -349,11 +349,11 @@
 //     ignored-layers = <MOUSE>;
 //   };
 
-         swapper: swapper {
-              compatible = "zmk,behavior-tri-state";
-              #binding-cells = <0>;
-              bindings = <&kp A>, <&kp B>, <&kt C>;
-          };
+         // swapper: swapper {
+         //      compatible = "zmk,behavior-tri-state";
+         //      #binding-cells = <0>;
+         //      bindings = <&kp A>, <&kp B>, <&kt C>;
+         //  };
 
        // tri-state: tri-state {
        //      label = "TRI-STATE";
