@@ -122,7 +122,7 @@
 
         hangul {
             bindings = <&toggle_hangle>;
-            key-positions = <LB3 LB2>;
+            key-positions = <LB3 LB2 LB1>;
         };
 
         // toggle_colemac_qwert {
@@ -444,7 +444,7 @@
             hold-trigger-on-release;
         };
 
-        hmr_repeat: hmr_repeat {
+        hml_repeat: hmr_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
