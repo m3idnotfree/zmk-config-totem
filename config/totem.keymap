@@ -86,7 +86,7 @@
 &mt {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
+    quick-tap-ms = <175>;
 };
 
 &lt {
