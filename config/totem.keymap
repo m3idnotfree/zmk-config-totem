@@ -131,6 +131,35 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
+
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+        comma_morph: comma_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp &comma_inner_morph>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        comma_inner_morph: comma_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+          dot_morph: dot_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp &dot_inner_morph>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_inner_morph: dot_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp GREATER_THAN>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     keymap {
@@ -152,7 +181,7 @@
             bindings = <
        &kp Q       &kp W       &kp F        &kp P          &kp B      &kp J             &kp L              &kp U        &kp Y       &kp SEMI
        &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G      &kp M             &hmr RSHFT N        &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&none  &kp Z       &kp X       &kp C        &kp D          &kp V      &kp K             &kp H              &kp COMMA    &kp DOT     &kp FSLH    &mo 2
+&none  &kp Z       &kp X       &kp C        &kp D          &kp V      &kp K             &kp H              &comma_morph    &dot_morph     &kp FSLH    &mo 2
                                &kp ESCAPE   &lt NAV SPACE  &kp TAB    &smart_num NUM 0  &lt NUM BACKSPACE  &lt SYM DEL
             >;
         };
