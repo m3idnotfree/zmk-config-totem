@@ -111,6 +111,7 @@
 
       hml:hml {
         flavor = "balanced";
+        compatible = "zmk,behavior-hold-tap";
         tapping-term-ms = <280>;
         quick-tap-ms = <QUICK_TAP_MS>;
         require-prior-idle-ms = <150>;
