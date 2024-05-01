@@ -67,7 +67,7 @@
     // flavor = "balanced";
     // tapping-term-ms = <TAPPING_TERM_MS>;
     // quick-tap-ms = <QUICK_TAP_MS>;
-    MT_CORE
+    MT_CORE;
 };
 
 &lt {  // layer-tap config
