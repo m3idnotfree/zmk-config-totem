@@ -341,6 +341,12 @@
     quick-tap-ms = <220>; 
     hold-trigger-key-positions = <0>;
         };
+
+    swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+        };
 // smart_mouse: smart_mouse {
 //           compatible = "zmk,behavior-tri-state";
 //          #binding-cells = <0>;
