@@ -82,13 +82,13 @@
             key-positions = <RB2 RB3>;
         };
 
-        // combo_lpar {
-        //   bindings = <HRC_LPAR>;
-        //   timeout-ms = <COMBO_TERM_FAST>;
-        //   key-positions = <RM1 RM2>;
-        //   layers = <BASE NUM>;
-        //   require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        // };
+        combo_lpar {
+          bindings = <&hmr_lpar_lt RS(LCTRL) 0>;
+          timeout-ms = <COMBO_TERM_FAST>;
+          key-positions = <RM1 RM2>;
+          layers = <BASE NUM>;
+          require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
     };
 
     macros {
