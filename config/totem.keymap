@@ -708,10 +708,14 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans     &trans     &trans      &trans       &trans         &trans  &trans        &kp UP    &trans     &trans
-        &sk LGUI   &sk LALT   &sk LCTRL   &sk LSHIFT   &trans         &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &kp RET
-&trans  &trans     &trans     &trans      &trans       &trans         &trans    &trans        &kp TAB   &kp LT     &kp GT  &trans
-                              &trans      &trans       &trans         &trans     &kp K_CANCEL  &trans
+       &none     &none     &none      &none       &none     &none  &none         &kp UP    &none      &none
+        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none     &none  &kp LEFT      &kp DOWN  &kp RIGHT  &none
+&trans  &none     &none     &none      &none       &none     &none  &none         &none     &none      &none  &trans
+                            &trans     &trans      &trans    &none  &kp K_CANCEL  &trans
+//         &trans     &trans     &trans      &trans       &trans         &trans  &trans        &kp UP    &trans     &trans
+//         &sk LGUI   &sk LALT   &sk LCTRL   &sk LSHIFT   &trans         &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &kp RET
+// &trans  &trans     &trans     &trans      &trans       &trans         &trans    &trans        &kp TAB   &kp LT     &kp GT  &trans
+//                               &trans      &trans       &trans         &trans     &kp K_CANCEL  &trans
             >;
         };
 
@@ -763,14 +767,21 @@
 
         mouse_layout {
             bindings = <
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬────────────────┬─────────────┬────────────────┬─────────────╮
+         &trans        &trans        &trans        &trans        &trans          &trans        &msc SCRL_DOWN   &mmv MOVE_UP  &msc SCRL_DOWN   &trans
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼────────────────┼─────────────┼────────────────┼─────────────┤ 
+        &trans         &trans        &trans        &trans        &trans          &trans        &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼────────────────┼─────────────┼────────────────┼─────────────┤ 
+    &trans         &trans        &trans        &trans        &trans          &trans        &trans           &trans        &trans           &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &mkp LCLK  &mkp RCLK
         //          ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────────────┬────────────────┬─────────────────┬────────╮
-                      &trans   &trans   &trans   &trans   &trans     &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_DOWN    &trans
+                      // &trans   &trans   &trans   &trans   &trans     &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_DOWN    &trans
         //          ├────────┼────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤ 
-                      &trans   &trans   &trans   &trans   &trans     &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans
+                      // &trans   &trans   &trans   &trans   &trans     &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans
         // ╭────────┼────────┼────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤────────╮
-             &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans           &trans           &trans            &trans   &trans
+             // &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans           &trans           &trans            &trans   &trans
         // ╰────────┴────────┴────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤────────╯ 
-                                        &trans   &trans   &trans     &trans   &mkp LCLK        &mkp RCLK
+                                        // &trans   &trans   &trans     &trans   &mkp LCLK        &mkp RCLK
         //                            ╰────────┴────────┴────────╯ ╰────────┴────────────────┴────────────────╯
             >;
         };
