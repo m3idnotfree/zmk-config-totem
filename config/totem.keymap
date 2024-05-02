@@ -29,13 +29,6 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                          // thumbs
                                                                                 //
-                                                                                // // long-tap action on hold, short-tap action on all interrupts
-#define MT_CORE \
-    flavor = "tap-preferred"; \
-    tapping-term-ms = <220>; \
-    quick-tap-ms = <220>; \
-    hold-trigger-key-positions = <0>;
-
 #include "combos.dtsi"
 #include "mouse.dtsi"
 
@@ -50,31 +43,31 @@
 #include "behaviors.dtsi"
 #include "macros.dtsi"
 
-&sk {  // sticky-key config
-    release-after-ms = <900>;  // release after 0.6s
-    quick-release;             // no double capitalization when rolling keys
-};
-
-&sl {  // sticky-layer config
-    ignore-modifiers;          // allow chording sticky mods & layers
-};
-
-&lt {  // layer-tap config
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-};
-
-&num_word {
-    layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};
-
-&caps_word { /delete-property/ ignore-modifiers; };
+// &sk {  // sticky-key config
+//     release-after-ms = <900>;  // release after 0.6s
+//     quick-release;             // no double capitalization when rolling keys
+// };
+//
+// &sl {  // sticky-layer config
+//     ignore-modifiers;          // allow chording sticky mods & layers
+// };
+//
+// &lt {  // layer-tap config
+//     flavor = "balanced";
+//     tapping-term-ms = <200>;
+//     quick-tap-ms = <QUICK_TAP_MS>;
+// };
+//
+// &num_word {
+//     layers = <NUM>;
+//     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+// };
+//
+// &caps_word { /delete-property/ ignore-modifiers; };
 
 /* Nav cluster */
 
-&mt { MT_CORE };
+// &mt { MT_CORE };
 
 #define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
 #define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
@@ -87,28 +80,6 @@
 #define SMART_NUM  &smt_num NUM 0
 
 / {
-    // macros {
-    //     toggle_hangle: toggle_hangle {
-    //         compatible = "zmk,behavior-macro";
-    //         #binding-cells = <0>;
-    //         bindings
-    //             = <&macro_press &kp LCTRL>
-    //             , <&macro_tap &kp SPACE>
-    //             , <&macro_release &kp LCTRL>
-    //             , <&macro_tap &tog 1>
-    //             ;
-    //     };
-    //
-    //     dot_spc: dot_spc {
-    //         compatible = "zmk,behavior-macro";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-    //     };
-    // };
-
-    // behaviors {
-    // };
-
     keymap {
         compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
