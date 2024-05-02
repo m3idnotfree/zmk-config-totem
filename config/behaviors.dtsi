@@ -71,7 +71,7 @@
             hold-trigger-on-release;
         };
 
-        /omit-if-no-ref/ hmr_lpar_lt: hmr_lpar_lt {
+        /omit-if-no-ref/ hmrlprlt: hmr_lpar_lt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -84,7 +84,7 @@
             hold-trigger-on-release;
         };
 
-        /omit-if-no-ref/ hmrpargt: hmr_rpar_gt {
+        /omit-if-no-ref/ hmrrprgt: hmr_rpar_gt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -100,7 +100,7 @@
         /omit-if-no-ref/ mt_home: mt_home {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&maskedhm>, <&kp>;
+            bindings = <&mskdhm>, <&kp>;
          
             MT_CORE
         };
@@ -108,12 +108,12 @@
         /omit-if-no-ref/ mt_end: mt_end {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&maskeded>, <&kp>;
+            bindings = <&mskded>, <&kp>;
 
             MT_CORE
         };
 
-        /omit-if-no-ref/ maskedhm: masked_home {
+        /omit-if-no-ref/ mskdhm: masked_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp HOME>;
@@ -121,7 +121,7 @@
             mods = <(MOD_LCTL)>;
         };
 
-        /omit-if-no-ref/ maskeded: masked_end {
+        /omit-if-no-ref/ mskded: masked_end {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp END>, <&kp END>;

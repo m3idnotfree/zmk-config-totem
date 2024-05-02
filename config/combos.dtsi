@@ -7,8 +7,8 @@
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 #define HRC_TAB    &hml         LS(LALT) TAB
 #define HRC_REPEAT &hml_rpt  LS(LCTRL) 0
-#define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-#define HRC_RPAR   &hmrpargt RS(LALT) 0
+#define HRC_LPAR   &hmrlprlt RS(LCTRL) 0
+#define HRC_RPAR   &hmrrprgt RS(LALT) 0
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
     combo_##NAME { \
@@ -24,7 +24,7 @@
     combos {
         compatible = "zmk,combos";
 
-COMBO(hangul, &togg_hg, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(hangul, &tog_hg, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(colemacDH_qwert, &tog 1, RB3 RB2 RB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
