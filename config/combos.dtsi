@@ -24,8 +24,8 @@
     combos {
         compatible = "zmk,combos";
 
-COMBO(hangul, &tog_hg, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(colemacDH_qwert, &tog 1, RB3 RB2 RB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(hangul,          &tog_hg, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(colemacDH_qwert, &tog 1,  RB3 RB2 RB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
 COMBO(esc,   &kp ESC,      LT3 LT2, BASE QWERT NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
