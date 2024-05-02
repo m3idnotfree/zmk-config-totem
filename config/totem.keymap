@@ -710,8 +710,8 @@
             bindings = <
         &trans     &trans     &trans      &trans       &trans         &kp PG_UP  &trans        &kp UP    &trans     &trans
         &sk LGUI   &sk LALT   &sk LCTRL   &sk LSHIFT   &trans         &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT  &kp RET
-&trans  &trans     &trans     &trans      &trans       &trans         &kp INS &trans        &kp TAB   &kp LT     &kp GT  &trans
-                              &trans      &trans       &trans         &trans  &kp K_CANCEL  &trans
+&trans  &trans     &trans     &trans      &trans       &trans         &kp INS    &trans        &kp TAB   &kp LT     &kp GT  &trans
+                              &trans      &trans       &trans         &trans     &kp K_CANCEL  &trans
             >;
         };
 
