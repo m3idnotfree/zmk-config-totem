@@ -1,0 +1,14 @@
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+/ {
+      combos {
+                compatible = "zmk,combos";
+        hangul {
+            bindings = <&toggle_hangle>;
+            key-positions = <LB3 LB2 LB1>;
+        };
+  };
+};
