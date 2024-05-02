@@ -36,7 +36,6 @@
 #define ___ &trans
 
 /* Global settings */
-
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
 
