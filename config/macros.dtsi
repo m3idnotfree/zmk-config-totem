@@ -1,6 +1,6 @@
 / {
     macros {
-        /omit-if-no-ref/ toggle_hangle: toggle_hangle {
+        /omit-if-no-ref/ tog_hg: toggle_hangle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings

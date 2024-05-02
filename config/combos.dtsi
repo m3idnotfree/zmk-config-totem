@@ -6,9 +6,9 @@
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 #define HRC_TAB    &hml         LS(LALT) TAB
-#define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
+#define HRC_REPEAT &hml_rpt  LS(LCTRL) 0
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-#define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
+#define HRC_RPAR   &hmrpargt RS(LALT) 0
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
     combo_##NAME { \
@@ -24,13 +24,13 @@
     combos {
         compatible = "zmk,combos";
 
-COMBO(hangul, &toggle_hangle, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(hangul, &togg_hg, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(colemacDH_qwert, &tog 1, RB3 RB2 RB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
 COMBO(esc,   &kp ESC,      LT3 LT2, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(ret,   &kp RETURN,   LT2 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(mouse, &smart_mouse, LT3 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(mouse, &smt_ms, LT3 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 COMBO(tab,    HRC_TAB,      LM3 LM2, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)

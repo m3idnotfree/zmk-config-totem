@@ -8,7 +8,7 @@
             ignored-key-positions = <LT2>;
         };
 
-        /omit-if-no-ref/ smart_mouse: smart_mouse {
+        /omit-if-no-ref/ smt_ms: smart_mouse {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
@@ -17,15 +17,15 @@
             ignored-layers = <MOUSE>;
         };
 
-        /omit-if-no-ref/ smart_num: smart_num {
+        /omit-if-no-ref/ smt_num: smart_num {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mo>, <&num_dance>;
+            bindings = <&mo>, <&num_dnc>;
         };
 
-        /omit-if-no-ref/ num_dance: num_dance {
+        /omit-if-no-ref/ num_dnc: num_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM_MS>;
@@ -58,7 +58,7 @@
             hold-trigger-on-release;
         };
 
-        /omit-if-no-ref/ hml_repeat: hmr_repeat {
+        /omit-if-no-ref/ hml_rpt: hmr_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -84,7 +84,7 @@
             hold-trigger-on-release;
         };
 
-        /omit-if-no-ref/ hmr_rpar_gt: hmr_rpar_gt {
+        /omit-if-no-ref/ hmrpargt: hmr_rpar_gt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -100,7 +100,7 @@
         /omit-if-no-ref/ mt_home: mt_home {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&masked_home>, <&kp>;
+            bindings = <&maskedhm>, <&kp>;
          
             MT_CORE
         };
@@ -108,12 +108,12 @@
         /omit-if-no-ref/ mt_end: mt_end {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&masked_end>, <&kp>;
+            bindings = <&maskeded>, <&kp>;
 
             MT_CORE
         };
 
-        /omit-if-no-ref/ masked_home: masked_home {
+        /omit-if-no-ref/ maskedhm: masked_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp HOME>;
@@ -121,7 +121,7 @@
             mods = <(MOD_LCTL)>;
         };
 
-        /omit-if-no-ref/ masked_end: masked_end {
+        /omit-if-no-ref/ maskeded: masked_end {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp END>, <&kp END>;
@@ -130,7 +130,7 @@
         };
 
         // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-        /omit-if-no-ref/ smart_shft: smart_shft {
+        /omit-if-no-ref/ smt_shft: smart_shft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&caps_word>;
@@ -139,15 +139,15 @@
         };
 
         // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-        /omit-if-no-ref/ comma_morph: comma_morph {
+        /omit-if-no-ref/ comma_m: comma_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&comma_inner_morph>;
+            bindings = <&kp COMMA>, <&cm_inr_m>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        /omit-if-no-ref/ comma_inner_morph: comma_inner_morph {
+        /omit-if-no-ref/ cm_inr_m: comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
@@ -156,15 +156,15 @@
         };
 
         // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-        /omit-if-no-ref/ dot_morph: dot_morph {
+        /omit-if-no-ref/ dot_m: dot_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&dot_inner_morph>;
+            bindings = <&kp DOT>, <&dt_inr_m>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        /omit-if-no-ref/ dot_inner_morph: dot_inner_morph {
+        /omit-if-no-ref/ dt_inr_m: dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp GREATER_THAN>;
@@ -205,10 +205,10 @@
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mo>, <&spc_morph>;
+            bindings = <&mo>, <&spc_m>;
         };
 
-        /omit-if-no-ref/ spc_morph: spc_morph {
+        /omit-if-no-ref/ spc_m: spc_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPC>, <&dot_spc>;
