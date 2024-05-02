@@ -105,10 +105,20 @@
 //     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 //     ignored-key-positions = <LT2>;
 // )
+//
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+    combo_##NAME { \
+        timeout-ms = <TERM>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        layers = <LAYERS>; \
+        require-prior-idle-ms = <QUICKTAP>; \
+        __VA_ARGS__ \
+    };
+
 / {
     combos {
         compatible = "zmk,combos";
-
         hangul {
             bindings = <&toggle_hangle>;
             key-positions = <LB3 LB2 LB1>;
@@ -120,13 +130,14 @@
         // };
         /* Horizontal combos - left hand */
 
-        combo_esc {
-            bindings = <&kp ESC>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            key-positions = <LT3 LT2>;
-            layers = <BASE NAV NUM>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
+COMBO(esc,&kp ESC, LT3 LT2,BASE NAV NUM,COMBO_TERM_FAST,COMBO_IDLE_FAST)
+        // combo_esc {
+        //     bindings = <&kp ESC>;
+        //     timeout-ms = <COMBO_TERM_FAST>;
+        //     key-positions = <LT3 LT2>;
+        //     layers = <BASE NAV NUM>;
+        //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        // };
 
         combo_ret {
             bindings = <&kp RETURN>;
