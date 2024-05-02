@@ -409,7 +409,7 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-            ignored-key-positions = <SWP_POS>;
+            ignored-key-positions = <LT2>;
         };
         num_dance: num_dance {
             compatible = "zmk,behavior-tap-dance";
