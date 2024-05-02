@@ -48,6 +48,7 @@
 #define TAPPING_TERM_MS 200
 
 #include "behaviors.dtsi"
+#include "macros.dtsi"
 
 &sk {  // sticky-key config
     release-after-ms = <900>;  // release after 0.6s
@@ -73,7 +74,6 @@
 
 /* Nav cluster */
 
-
 &mt { MT_CORE };
 
 #define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
@@ -86,28 +86,25 @@
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM  &smart_num NUM 0
 
-#define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-#define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
-
 / {
-    macros {
-        toggle_hangle: toggle_hangle {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LCTRL>
-                , <&macro_tap &tog 1>
-                ;
-        };
-
-        dot_spc: dot_spc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-        };
-    };
+    // macros {
+    //     toggle_hangle: toggle_hangle {
+    //         compatible = "zmk,behavior-macro";
+    //         #binding-cells = <0>;
+    //         bindings
+    //             = <&macro_press &kp LCTRL>
+    //             , <&macro_tap &kp SPACE>
+    //             , <&macro_release &kp LCTRL>
+    //             , <&macro_tap &tog 1>
+    //             ;
+    //     };
+    //
+    //     dot_spc: dot_spc {
+    //         compatible = "zmk,behavior-macro";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+    //     };
+    // };
 
     // behaviors {
     // };
