@@ -11,8 +11,8 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
 
@@ -35,17 +35,6 @@
 
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
-
-// #define COMBO_TERM_FAST 18
-// #define COMBO_TERM_SLOW 30
-//
-// #define COMBO_IDLE_FAST 150
-// #define COMBO_IDLE_SLOW 50
-// // make homerow combos tap-only (so HRMs can be chorded instantaneously)
-// #define HRC_TAB    &hml         LS(LALT) TAB
-// #define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
-// #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-// #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
 
 &mt {
     flavor = "tap-preferred";
@@ -95,17 +84,17 @@
     quick-tap-ms = <220>; \
     hold-trigger-key-positions = <0>;
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
-    combo_##NAME { \
-        timeout-ms = <TERM>; \
-        bindings = <BINDINGS>; \
-        key-positions = <KEYPOS>; \
-        layers = <LAYERS>; \
-        require-prior-idle-ms = <QUICKTAP>; \
-        __VA_ARGS__ \
-    };
-
-/ {
+// #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+//     combo_##NAME { \
+//         timeout-ms = <TERM>; \
+//         bindings = <BINDINGS>; \
+//         key-positions = <KEYPOS>; \
+//         layers = <LAYERS>; \
+//         require-prior-idle-ms = <QUICKTAP>; \
+//         __VA_ARGS__ \
+//     };
+//
+// / {
 //     combos {
 //         compatible = "zmk,combos";
 //         hangul {
