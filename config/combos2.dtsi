@@ -3,6 +3,23 @@
 
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
+
+// make homerow combos tap-only (so HRMs can be chorded instantaneously)
+#define HRC_TAB    &hml         LS(LALT) TAB
+#define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
+#define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
+#define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+    combo_##NAME { \
+        timeout-ms = <TERM>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        layers = <LAYERS>; \
+        require-prior-idle-ms = <QUICKTAP>; \
+        __VA_ARGS__ \
+    };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -16,35 +33,40 @@
         // };
         /* Horizontal combos - left hand */
 
-        combo_esc {
-            bindings = <&kp ESC>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            key-positions = <LT3 LT2>;
-            layers = <BASE NAV NUM>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
+COMBO(esc,   &kp ESC,      LT3 LT2, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(ret,   &kp RETURN,   LT2 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(mouse, &smart_mouse, LT3 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-        combo_ret {
-            bindings = <&kp RETURN>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            key-positions = <LT2 LT1>;
-            layers = <BASE NAV NUM>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
-
-
-        combo_mouse {
-            bindings = <&smart_mouse>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            key-positions = <LT3 LT1>;
-            layers = <BASE NAV NUM>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
+        // combo_esc {
+        //     bindings = <&kp ESC>;
+        //     timeout-ms = <COMBO_TERM_FAST>;
+        //     key-positions = <LT3 LT2>;
+        //     layers = <BASE NAV NUM>;
+        //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        // };
+        //
+        // combo_ret {
+        //     bindings = <&kp RETURN>;
+        //     timeout-ms = <COMBO_TERM_FAST>;
+        //     key-positions = <LT2 LT1>;
+        //     layers = <BASE NAV NUM>;
+        //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        // };
+        //
+        //
+        // combo_mouse {
+        //     bindings = <&smart_mouse>;
+        //     timeout-ms = <COMBO_TERM_FAST>;
+        //     key-positions = <LT3 LT1>;
+        //     layers = <BASE NAV NUM>;
+        //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        // };
 
         // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 
         combo_tab {
-            bindings = <&hml LS(LALT) TAB>;
+            // bindings = <&hml LS(LALT) TAB>;
+            bindings = <HRC_TAB>;
             timeout-ms = <COMBO_TERM_FAST>;
             key-positions = <LM3 LM2>;
             layers = <BASE NAV NUM>;
@@ -52,7 +74,8 @@
         };
 
         combo_repeat {
-            bindings = <&hml_repeat LS(LCTRL) 0>;
+            // bindings = <&hml_repeat LS(LCTRL) 0>;
+            bindings = <HRC_REPEAT>;
             timeout-ms = <COMBO_TERM_FAST>;
             key-positions = <LM2 LM1>;
             layers = <BASE NAV NUM>;
