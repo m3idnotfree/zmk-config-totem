@@ -161,12 +161,11 @@
         //     layers = <BASE NAV NUM>;
         //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
         // };
-COMBO(esc,   &kp ESC,       LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(ret,   &kp RETURN,    LT2 LT1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(mouse, &smart_mouse,  LT3 LT1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(esc, &kp ESC,    LT3 LT2, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(ret, &kp RETURN, LT2 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(mouse, &smart_mouse, LT3 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-COMBO(tab,   HRC_TAB,       LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(repeat,HRC_REPEAT,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(tab, HRC_TAB, LM3 LM2, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
         // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 
         // combo_tab {
@@ -177,13 +176,13 @@ COMBO(repeat,HRC_REPEAT,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDL
         //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
         // };
 
-        // combo_repeat {
-        //     bindings = <&hml_repeat LS(LCTRL) 0>;
-        //     timeout-ms = <COMBO_TERM_FAST>;
-        //     key-positions = <LM2 LM1>;
-        //     layers = <BASE NAV NUM>;
-        //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        // };
+        combo_repeat {
+            bindings = <&hml_repeat LS(LCTRL) 0>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            key-positions = <LM2 LM1>;
+            layers = <BASE NAV NUM>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
 
         /* Horizontal combos - right hand */
         combo_bspc {
