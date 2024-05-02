@@ -178,7 +178,7 @@
              require-prior-idle-ms = <COMBO_IDLE_FAST>;
          };
 
-         make homerow combos tap-only (so HRMs can be chorded instantaneously)
+         // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 
          combo_tab {
              bindings = <&hml LS(LALT) TAB>;
