@@ -10,7 +10,6 @@
             bindings = <&toggle_hangle>;
             key-positions = <LB3 LB2 LB1>;
         };
-    };
             // toggle_colemac_qwert {
         //     bindings = <&tog 1>;
         //     key-positions = <RB2 RB3>;
@@ -272,5 +271,5 @@
             layers = <BASE NAV NUM>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
         };
-
+  };
 };
