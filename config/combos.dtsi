@@ -9,16 +9,16 @@
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
-    combo_##NAME { \
-        timeout-ms = <TERM>; \
-        bindings = <BINDINGS>; \
-        key-positions = <KEYPOS>; \
-        layers = <LAYERS>; \
-        require-prior-idle-ms = <QUICKTAP>; \
-        __VA_ARGS__ \
-    };
-
+// #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+//     combo_##NAME { \
+//         timeout-ms = <TERM>; \
+//         bindings = <BINDINGS>; \
+//         key-positions = <KEYPOS>; \
+//         layers = <LAYERS>; \
+//         require-prior-idle-ms = <QUICKTAP>; \
+//         __VA_ARGS__ \
+//     };
+//
 / {
       combos {
         compatible = "zmk,combos";
@@ -332,5 +332,4 @@
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
         };
     };
-
 }
