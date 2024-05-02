@@ -37,16 +37,16 @@
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
-
-#define COMBO_IDLE_FAST 150
-#define COMBO_IDLE_SLOW 50
-// make homerow combos tap-only (so HRMs can be chorded instantaneously)
-#define HRC_TAB    &hml         LS(LALT) TAB
-#define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
-#define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-#define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
+// #define COMBO_TERM_FAST 18
+// #define COMBO_TERM_SLOW 30
+//
+// #define COMBO_IDLE_FAST 150
+// #define COMBO_IDLE_SLOW 50
+// // make homerow combos tap-only (so HRMs can be chorded instantaneously)
+// #define HRC_TAB    &hml         LS(LALT) TAB
+// #define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
+// #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
+// #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
 
 &mt {
     flavor = "tap-preferred";
