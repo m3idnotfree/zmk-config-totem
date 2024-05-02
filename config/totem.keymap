@@ -659,6 +659,8 @@
         &trans  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G           &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMICOLON
 &trans  &trans  &trans       &trans       &kp V        &kp B             &kp N   &kp M        &trans       &trans      &trans              &trans
                              &trans       &trans       &trans            &trans  &trans       &trans
+
+
             >;
         };
 
@@ -680,6 +682,7 @@
        &bootloader  &bt BT_NXT  &none         &none  &none    &none  &none  &none  &none  &bootloader
 &none  &none        &bt BT_PRV  &none         &none  &none    &none  &none  &none  &none  &none        &none
                                 &none         &none  &none    &none  &none  &none
+
             >;
         };
 
@@ -717,15 +720,19 @@
 // &trans  &trans     &trans     &trans      &trans       &trans         &trans    &trans        &kp TAB   &kp LT     &kp GT  &trans
 //                               &trans      &trans       &trans         &trans     &kp K_CANCEL  &trans
           //          ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────────────┬────────────────┬─────────────────┬────────╮
-                      &trans   &trans   &trans   &trans   &trans     &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_DOWN    &trans
+                      // &trans   &trans   &trans   &trans   &trans     &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_DOWN    &trans
         //          ├────────┼────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤ 
-                      &trans   &trans   &trans   &trans   &trans     &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans
+                      // &trans   &trans   &trans   &trans   &trans     &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans
         // ╭────────┼────────┼────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤────────╮
-             &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans           &trans           &trans            &trans   &trans
+             // &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans           &trans           &trans            &trans   &trans
         // ╰────────┴────────┴────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤────────╯ 
-                                        &trans   &trans   &trans     &trans   &mkp LCLK        &mkp RCLK
+                                        // &trans   &trans   &trans     &trans   &mkp LCLK        &mkp RCLK
         //                            ╰────────┴────────┴────────╯ ╰────────┴────────────────┴────────────────╯
 
+      &none &none &none &none &none  &none &none &none &none &none
+      &none &none &none &none &none  &none &none &none &none &none
+&none &none &none &none &none &none  &none &none &none &none &none &none
+                  &none &none &none  &none &none &none
             >;
         };
 
@@ -785,14 +792,19 @@
     // &trans         &trans        &trans        &trans        &trans          &trans        &trans           &trans        &trans           &trans  &trans  &trans
     //                        &trans  &trans  &trans    &trans  &mkp LCLK  &mkp RCLK
         //          ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────────────┬────────────────┬─────────────────┬────────╮
-                      &trans   &trans   &trans   &trans   &trans     &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_DOWN    &trans
+                      // &trans   &trans   &trans   &trans   &trans     &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_DOWN    &trans
         //          ├────────┼────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤ 
-                      &trans   &trans   &trans   &trans   &trans     &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans
+                      // &trans   &trans   &trans   &trans   &trans     &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans
         // ╭────────┼────────┼────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤────────╮
-             &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans           &trans           &trans            &trans   &trans
+             // &trans   &trans   &trans   &trans   &trans   &trans     &trans   &trans           &trans           &trans            &trans   &trans
         // ╰────────┴────────┴────────┼────────┼────────┼────────┤ ├────────┼────────────────┼────────────────┼─────────────────┼────────┤────────╯ 
-                                        &trans   &trans   &trans     &trans   &mkp LCLK        &mkp RCLK
+                                        // &trans   &trans   &trans     &trans   &mkp LCLK        &mkp RCLK
         //                            ╰────────┴────────┴────────╯ ╰────────┴────────────────┴────────────────╯
+      &none &none &none &none &none  &none &none &none &none &none
+      &none &none &none &none &none  &none &none &none &none &none
+&none &none &none &none &none &none  &none &none &none &none &none &none
+                  &none &none &none  &none &none &none
+
             >;
         };
 
