@@ -92,19 +92,19 @@
     hold-trigger-key-positions = <0>;
 
 // smart-mouse, requires PR #1366
-ZMK_TRI_STATE(smart_mouse,
-    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
-    ignored-layers = <MOUSE>;
-)
+// ZMK_TRI_STATE(smart_mouse,
+//     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+//     ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
+//     ignored-layers = <MOUSE>;
+// )
 
 /* Custom behaviors */
 
 // Alt+Tab swapper, requires PR #1366
-ZMK_TRI_STATE(swapper,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
-)
+// ZMK_TRI_STATE(swapper,
+//     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+//     ignored-key-positions = <LT2>;
+// )
 / {
     combos {
         compatible = "zmk,combos";
@@ -405,6 +405,12 @@ ZMK_TRI_STATE(swapper,
     };
 
     behaviors {
+    swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <SWP_POS>;
+        };
         num_dance: num_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
