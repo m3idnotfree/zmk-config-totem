@@ -61,6 +61,17 @@
                 , <&macro_tap &kp G &kp I &kp F>
                 ;
         };
+
+        toggle_hangle: toggle_hangle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp SPACE>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &tog 1>,
+        };
+
     };
 
         keymap {
