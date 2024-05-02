@@ -84,7 +84,7 @@
 #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM  &smart_num NUM 0
+#define SMART_NUM  &smt_num NUM 0
 
 / {
     // macros {
