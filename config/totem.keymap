@@ -13,13 +13,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 
 #include "keypos_38keys.h"
-#include "mouse.dtsi"
-
 #include "zmk-helpers/helper.h"
 
 #define BASE 0
@@ -32,6 +29,7 @@
 #define MOUSE 7
 
 #include "combos.dtsi"
+#include "mouse.dtsi"
 
 /* Global settings */
 
