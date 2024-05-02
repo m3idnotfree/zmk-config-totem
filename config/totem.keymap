@@ -109,38 +109,6 @@
     };
 
     behaviors {
-        swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-
-            ignored-key-positions = <LT2>;
-        };
-
-        smart_mouse: smart_mouse {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-
-            ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
-            ignored-layers = <MOUSE>;
-        };
-
-        num_dance: num_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&sl NUM>, <&num_word>;
-        };
-
-        // smart_num: smart_num {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "balanced";
-        //     tapping-term-ms = <TAPPING_TERM_MS>;
-        //     bindings = <&mo>, <&num_dance>;
-        // };
-
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
