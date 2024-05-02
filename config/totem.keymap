@@ -130,7 +130,6 @@
         // };
         /* Horizontal combos - left hand */
 
-COMBO(esc,&kp ESC, LT3 LT2,BASE NAV NUM,COMBO_TERM_FAST,COMBO_IDLE_FAST)
         // combo_esc {
         //     bindings = <&kp ESC>;
         //     timeout-ms = <COMBO_TERM_FAST>;
@@ -139,30 +138,34 @@ COMBO(esc,&kp ESC, LT3 LT2,BASE NAV NUM,COMBO_TERM_FAST,COMBO_IDLE_FAST)
         //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
         // };
 
-        combo_ret {
-            bindings = <&kp RETURN>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            key-positions = <LT2 LT1>;
-            layers = <BASE NAV NUM>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
-
-        // combo_smart_mouse {
-        //     bindings = <&smart>;
+        // combo_ret {
+        //     bindings = <&kp RETURN>;
         //     timeout-ms = <COMBO_TERM_FAST>;
-        //     key-positions = <LT3 LT1>;
+        //     key-positions = <LT2 LT1>;
         //     layers = <BASE NAV NUM>;
         //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
         // };
-        // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 
-        combo_tab {
-            bindings = <&hml LS(LALT) TAB>;
+
+        combo_mouse {
+            bindings = <&smart_mouse>;
             timeout-ms = <COMBO_TERM_FAST>;
-            key-positions = <LM3 LM2>;
+            key-positions = <LT3 LT1>;
             layers = <BASE NAV NUM>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
         };
+COMBO(esc,&kp ESC, LT3 LT2,BASE NAV NUM,COMBO_TERM_FAST,COMBO_IDLE_FAST)
+COMBO(ret,&kp RETURN, LT2 LT1,BASE NAV NUM,COMBO_TERM_FAST,COMBO_IDLE_FAST)
+COMBO(tab,&hml LS(LALT) TAB, LM3 LM2,BASE NAV NUM,COMBO_TERM_FAST,COMBO_IDLE_FAST)
+        // make homerow combos tap-only (so HRMs can be chorded instantaneously)
+
+        // combo_tab {
+        //     bindings = <&hml LS(LALT) TAB>;
+        //     timeout-ms = <COMBO_TERM_FAST>;
+        //     key-positions = <LM3 LM2>;
+        //     layers = <BASE NAV NUM>;
+        //     require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        // };
 
         combo_repeat {
             bindings = <&hml_repeat LS(LCTRL) 0>;
