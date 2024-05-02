@@ -23,19 +23,11 @@
 / {
     combos {
         compatible = "zmk,combos";
-        hangul {
-            bindings = <&toggle_hangle>;
-            key-positions = <LB3 LB2 LB1>;
-        };
-            // toggle_colemac_qwert {
-        //     bindings = <&tog 1>;
-        //     key-positions = <RB2 RB3>;
-        // };
-        /* Horizontal combos - left hand */
 
 COMBO(hangul, &toggle_hangle, LB3 LB2 LB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(colemacDH_qwert, &tog 1, RB3 RB2 RB1, BASE QWERT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
+/* Horizontal combos - left hand */
 COMBO(esc,   &kp ESC,      LT3 LT2, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(ret,   &kp RETURN,   LT2 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(mouse, &smart_mouse, LT3 LT1, BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)

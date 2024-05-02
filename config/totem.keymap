@@ -29,7 +29,7 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RB5 // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
-#include "combos2.dtsi"
+#include "combos.dtsi"
 #include "mouse.dtsi"
 
 #define XXX &none
@@ -370,10 +370,10 @@ ___  ___  ___          ___           &kp V         &kp B     &kp N   &kp M      
 
         adjust_layer {
             bindings = <
-       &sys_reset   &bt BT_CLR  &out OUT_TOG  &none  &none    &none  &none  &none  &none  &sys_reset
-       &bootloader  &bt BT_NXT  &none         &none  &none    &none  &none  &none  &none  &bootloader
-&none  &none        &bt BT_PRV  &none         &none  &none    &none  &none  &none  &none  &none        &none
-                                &none         &none  &none    &none  &none  &none
+     &sys_reset   &bt BT_CLR  &out OUT_TOG  XXX  XXX    XXX  XXX  XXX  XXX  &sys_reset
+     &bootloader  &bt BT_NXT  XXX           XXX  XXX    XXX  XXX  XXX  XXX  &bootloader
+XXX  XXX          &bt BT_PRV  XXX           XXX  XXX    XXX  XXX  XXX  XXX  XXX          XXX
+                              XXX           XXX  XXX    XXX  XXX  XXX
             >;
         };
 
@@ -381,10 +381,10 @@ ___  ___  ___          ___           &kp V         &kp B     &kp N   &kp M      
 
         nvim_debug_layout {
             bindings = <
-        &trans  &kp W   &kp I   &trans    &trans      &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &kp D   &kp RBKT  &kp LBKT    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans      &trans  &trans  &trans
+     ___  &kp W  &kp I  ___       ___         ___  ___  ___  ___  ___
+     ___  ___    &kp D  &kp RBKT  &kp LBKT    ___  ___  ___  ___  ___
+___  ___  ___    ___    ___       ___         ___  ___  ___  ___  ___  ___
+                 ___    ___       ___         ___  ___  ___
             >;
         };
 
@@ -392,10 +392,10 @@ ___  ___  ___          ___           &kp V         &kp B     &kp N   &kp M      
 
         nav_layer {
             bindings = <
-        &trans    &trans    &trans     &trans      &trans    &trans  &trans        &kp UP    &trans     &trans
-        &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHIFT  &none     &none   &kp LEFT      &kp DOWN  &kp RIGHT  &kp RET
-&trans  &trans    &trans    &trans     &trans      &trans    &trans  &trans        &kp TAB   &kp LT     &kp GT   &trans
-                            &trans     &trans      &trans    &none   &kp K_CANCEL  &trans
+     ___       ___       ___        ___         ___    ___  ___           &kp UP    ___        ___
+     &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHIFT  XXX    XXX  &kp LEFT      &kp DOWN  &kp RIGHT  &kp RET
+___  ___       ___       ___        ___         ___    ___  ___           &kp TAB   &kp LT     &kp GT   ___
+                         ___        ___         ___    XXX  &kp K_CANCEL  ___
             >;
         };
 
@@ -403,10 +403,10 @@ ___  ___  ___          ___           &kp V         &kp B     &kp N   &kp M      
 
         sym_layer {
             bindings = <
-        &kp LBRC   &kp AMPS  &kp ASTRK    &kp LPAR   &kp RBRC     &none   &none  &none   &none  &none
-        &kp DQT    &kp DLLR  &kp PRCNT    &kp CARET  &kp PLUS     &none   &none  &none   &none  &none
-&trans  &kp TILDE  &kp EXCL  &kp AT_SIGN  &kp HASH   &kp PIPE     &none   &none  &none   &none  &none  &trans
-                             &trans       &kp RPAR   &kp UNDER    &trans  &none  &trans
+     &kp LBRC   &kp AMPS  &kp ASTRK    &kp LPAR   &kp RBRC     XXX  XXX  XXX  XXX  XXX
+     &kp DQT    &kp DLLR  &kp PRCNT    &kp CARET  &kp PLUS     XXX  XXX  XXX  XXX  XXX
+___  &kp TILDE  &kp EXCL  &kp AT_SIGN  &kp HASH   &kp PIPE     XXX  XXX  XXX  XXX  XXX  ___
+                             ___       &kp RPAR   &kp UNDER    ___  XXX  ___
             >;
         };
 
@@ -414,10 +414,10 @@ ___  ___  ___          ___           &kp V         &kp B     &kp N   &kp M      
 
         num_layout {
             bindings = <
-        &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT     &trans  &trans  &trans  &trans  &trans
-        &kp SQT    &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH     &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &kp N0  &kp MINUS    &trans  &trans  &trans
+     &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT     ___  ___  ___  ___  ___
+     &kp SQT    &kp N4  &kp N5  &kp N6  &kp EQUAL    ___  ___  ___  ___  ___
+___  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH     ___  ___  ___  ___  ___  ___
+                           ___  &kp N0  &kp MINUS    ___  ___  ___
             >;
         };
 
@@ -425,10 +425,10 @@ ___  ___  ___          ___           &kp V         &kp B     &kp N   &kp M      
 
         mouse_layout {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans      U_WH_L  U_WH_D     U_MS_U     U_WH_U    U_WH_R  
-        &trans  &trans  &trans  &trans  &trans      &trans  U_MS_L     U_MS_D     U_MS_R    &trans  
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4   &mkp MCLK  &mkp MB5  &trans  &trans
-                        &trans  &trans  &trans      &trans  &mkp LCLK  &mkp RCLK
+     ___  ___  ___  ___  ___      U_WH_L  U_WH_D     U_MS_U     U_WH_U    U_WH_R  
+     ___  ___  ___  ___  ___      ___     U_MS_L     U_MS_D     U_MS_R    ___  
+___  ___  ___  ___  ___  ___      ___     &mkp MB4   &mkp MCLK  &mkp MB5  ___     ___
+               ___  ___  ___      ___     &mkp LCLK  &mkp RCLK
             >;
         };
     };
