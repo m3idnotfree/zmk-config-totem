@@ -28,8 +28,36 @@
 #define NUM 6
 #define MOUSE 7
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
+
+
 #include "combos.dtsi"  // requires layer aliases
-#include "mouse.dtsi"
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;    // 40
+  delay-ms = <0>;                   // 0
+};
+
+&msc {
+  acceleration-exponent = <1>;      // 0
+  time-to-max-speed-ms = <40>;      // 500
+  delay-ms = <0>;                   // 10
+};
+
+#define U_MS_U &mmv MOVE_UP
+#define U_MS_D &mmv MOVE_DOWN
+#define U_MS_L &mmv MOVE_LEFT
+#define U_MS_R &mmv MOVE_RIGHT
+#define U_WH_U &msc SCRL_UP
+#define U_WH_D &msc SCRL_DOWN
+#define U_WH_L &msc SCRL_LEFT
+#define U_WH_R &msc SCRL_RIGHT
+
+// #include "mouse.dtsi"
 
 /* Global settings */
 
@@ -84,13 +112,6 @@
 #define SMART_NUM &smart_num NUM 0
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
-
-// long-tap action on hold, short-tap action on all interrupts
-// #define MT_CORE \
-//     flavor = "tap-preferred"; \
-//     tapping-term-ms = <220>; \
-//     quick-tap-ms = <220>; \
-//     hold-trigger-key-positions = <0>;
 
 / {
     macros {
