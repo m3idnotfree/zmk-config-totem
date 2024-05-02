@@ -40,6 +40,8 @@
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
 
+#include "behaviors"
+
 &sk {  // sticky-key config
     release-after-ms = <900>;  // release after 0.6s
     quick-release;             // no double capitalization when rolling keys
@@ -131,13 +133,13 @@
             bindings = <&sl NUM>, <&num_word>;
         };
 
-        smart_num: smart_num {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mo>, <&num_dance>;
-        };
+        // smart_num: smart_num {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "balanced";
+        //     tapping-term-ms = <TAPPING_TERM_MS>;
+        //     bindings = <&mo>, <&num_dance>;
+        // };
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";

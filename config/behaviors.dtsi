@@ -1,0 +1,11 @@
+/ { 
+    behaviors {
+        /omit-if-no-ref/ smart_num: smart_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mo>, <&num_dance>;
+        };
+  };
+};
