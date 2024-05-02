@@ -95,7 +95,7 @@
                 <&macro_press &kp LCTRL>
                 ,<&macro_tap &kp SPACE>
                 ,<&macro_release &kp LCTRL>
-                ,<&macro_tap &tog 1>,
+                ,<&macro_tap &tog 1>
                 ;
         };
 
