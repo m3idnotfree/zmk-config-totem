@@ -43,6 +43,8 @@
 #include "behaviors.dtsi"
 #include "home_row.dtsi"
 #include "smart_number.dtsi"
+#include "mod_morph.dtsi"
+#include "hold_tap.dtsi"
 #include "macros.dtsi"
 
 /* Nav cluster */
