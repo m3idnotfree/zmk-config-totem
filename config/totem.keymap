@@ -17,6 +17,7 @@
 #include "keypos_38keys.h"
 
 #include "zmk-helpers/helper.h"
+#include 
 
 #define BASE 0
 #define QWERT 1
@@ -41,6 +42,8 @@
 #define TAPPING_TERM_MS 200
 
 #include "behaviors.dtsi"
+#include "home_row.dtsi"
+#include "smart_number.dtsi"
 #include "macros.dtsi"
 
 /* Nav cluster */
