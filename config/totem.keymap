@@ -40,11 +40,12 @@
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
 
-#include "behaviors.dtsi"
+#include "default_behaviors.dtsi"
 #include "home_row.dtsi"
 #include "smart_number.dtsi"
 #include "mod_morph.dtsi"
 #include "hold_tap.dtsi"
+#include "tri_state.dtsi"
 #include "macros.dtsi"
 
 /* Nav cluster */
@@ -55,7 +56,7 @@
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
-ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
+ZMK_CONDITIONAL_LAYER(FN NUM, SYS)     // FN + NUM --> SYS
 
 / {
     keymap {

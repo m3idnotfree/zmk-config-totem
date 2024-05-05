@@ -16,7 +16,7 @@
 #define LT3  1
 #define LT4  0
 
-#define RT0  5 // right-top row + appendix
+#define RT0  5  // right-top row + appendix
 #define RT1  6
 #define RT2  7
 #define RT3  8

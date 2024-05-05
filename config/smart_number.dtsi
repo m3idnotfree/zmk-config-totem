@@ -1,4 +1,4 @@
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer
+/* tap: num-word | double-tap: sticky num-layer | hold: num-layer */
 #define SMART_NUM &smt_num NUM 0
 ZMK_HOLD_TAP(smt_num,
     flavor = "balanced";
@@ -10,7 +10,9 @@ ZMK_TAP_DANCE(num_dnc,
     tapping-term-ms = <200>;
     bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
-&num_word {  // num-word, requires PR #1451
+
+/* num-word, requires PR #1451 */
+&num_word {  
     layers = <NUM>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };

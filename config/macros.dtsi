@@ -1,4 +1,4 @@
-ZMK_MACRO(toggle_hangle,
+ZMK_MACRO(tog_hangle,
     bindings
         = <&macro_press &kp LCTRL>
         , <&macro_tap &kp SPACE>
