@@ -17,7 +17,6 @@
 #include "keypos_38keys.h"
 
 #include "zmk-helpers/helper.h"
-#include 
 
 #define BASE 0
 #define QWERT 1
