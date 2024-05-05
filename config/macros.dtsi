@@ -1,4 +1,4 @@
-ZMK_MACRO(tog_hg,
+ZMK_MACRO(toggle_hangle,
     bindings
         = <&macro_press &kp LCTRL>
         , <&macro_tap &kp SPACE>
@@ -12,23 +12,3 @@ ZMK_MACRO(dot_spc,
     tap-ms = <5>;
     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
 )
-// / {
-//     macros {
-//         /omit-if-no-ref/ tog_hg: toggle_hangle {
-//             compatible = "zmk,behavior-macro";
-//             #binding-cells = <0>;
-//             bindings
-//                 = <&macro_press &kp LCTRL>
-//                 , <&macro_tap &kp SPACE>
-//                 , <&macro_release &kp LCTRL>
-//                 , <&macro_tap &tog 1>
-//                 ;
-//         };
-//
-//         /omit-if-no-ref/ dot_spc: dot_spc {
-//             compatible = "zmk,behavior-macro";
-//             #binding-cells = <0>;
-//             bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-//         };
-//   };
-// };
