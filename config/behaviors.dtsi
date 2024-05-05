@@ -74,7 +74,7 @@ ZMK_MOD_MORPH(smt_shft,
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
-ZMK_HOLD_TAP(smt_ms,
+ZMK_HOLD_TAP(smt_num,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
