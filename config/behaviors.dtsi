@@ -73,7 +73,7 @@ ZMK_MOD_MORPH(smt_shft,
 };
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
+#define SMART_NUM &smt_num NUM 0
 ZMK_HOLD_TAP(smt_num,
     flavor = "balanced";
     tapping-term-ms = <200>;
