@@ -34,3 +34,9 @@
 //     bindings = <&uc_shift>;
 //     ignore-modifiers;
 // )
+
+#include "home_row.dtsi"
+#include "smart_number.dtsi"
+#include "mod_morph.dtsi"
+#include "hold_tap.dtsi"
+#include "tri_state.dtsi"

@@ -40,12 +40,7 @@
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
 
-#include "default_behaviors.dtsi"
-#include "home_row.dtsi"
-#include "smart_number.dtsi"
-#include "mod_morph.dtsi"
-#include "hold_tap.dtsi"
-#include "tri_state.dtsi"
+#include "behaviors.dtsi"
 #include "macros.dtsi"
 
 /* Nav cluster */
