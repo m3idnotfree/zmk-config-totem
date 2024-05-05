@@ -51,17 +51,16 @@
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
-// // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-// #define SMART_NUM  &smt_num NUM 0
+ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV NUM>;
-            then-layer = <SYS>;
-        };
-    };
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     tri_layer {
+    //         if-layers = <NAV NUM>;
+    //         then-layer = <SYS>;
+    //     };
+    // };
 
     keymap {
         compatible = "zmk,keymap";

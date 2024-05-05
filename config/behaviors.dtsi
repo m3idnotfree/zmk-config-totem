@@ -96,15 +96,70 @@ ZMK_TRI_STATE(smt_ms,
     ignored-layers = <MOUSE>;
 )
 
-/ { 
-    behaviors {
-        /omit-if-no-ref/ swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+/* Custom behaviors */
 
-            ignored-key-positions = <LT2>;
-        };
+// Alt+Tab swapper, requires PR #1366
+ZMK_TRI_STATE(swapper,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT2>;
+)
+
+// Sticky layer + sticky shift (workaround for issue #1421)
+ZMK_STICKY_KEY(sls,
+    release-after-ms = <1000>;
+    bindings = <&uc_shift>;
+    ignore-modifiers;
+)
+
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+SIMPLE_MORPH(comma_m, SFT, &kp COMMA, &cm_inr_m)
+SIMPLE_MORPH(cm_inr_m, CTL, &kp SEMICOLON, &kp LESS_THAN)
+
+// tap: dot | shift + tap: colon | ctrl + shift + tap: >
+SIMPLE_MORPH(dot_m, SFT, &kp DOT, &dt_inr_m)
+SIMPLE_MORPH(dt_inr_m, CTL, &kp COLON, &kp GREATER_THAN)
+
+// tap: qmark | shift + tap: excl
+SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+
+// tap: left/right parenthesis | shft + tap: less-than/greater-than
+SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
+SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+
+// tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
+ZMK_HOLD_TAP(lt_spc,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&spc_m>;
+)
+SIMPLE_MORPH(spc_m, SFT, &kp SPACE, &dot_spc)
+
+
+// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
+ZMK_MOD_MORPH(bs_del,
+    bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <MOD_RSFT>;
+)
+
+
+// / { 
+//     behaviors {
+        // /omit-if-no-ref/ swapper: swapper {
+        //     compatible = "zmk,behavior-tri-state";
+        //     #binding-cells = <0>;
+        //     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+        //
+        //     ignored-key-positions = <LT2>;
+        // };
 
         // /omit-if-no-ref/ smt_ms: smart_mouse {
         //     compatible = "zmk,behavior-tri-state";
@@ -236,92 +291,92 @@ ZMK_TRI_STATE(smt_ms,
         //     mods = <(MOD_LSFT)>;
         // };
 
-        // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-        /omit-if-no-ref/ comma_m: comma_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&cm_inr_m>;
+        // // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+        // /omit-if-no-ref/ comma_m: comma_morph {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp COMMA>, <&cm_inr_m>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
+        //
+        // /omit-if-no-ref/ cm_inr_m: comma_inner_morph {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
+        //
+        //     mods = <(MOD_LCTL|MOD_RCTL)>;
+        // };
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        // // tap: dot | shift + tap: colon | ctrl + shift + tap: >
+        // /omit-if-no-ref/ dot_m: dot_morph {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp DOT>, <&dt_inr_m>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
+        //
+        // /omit-if-no-ref/ dt_inr_m: dot_inner_morph {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp COLON>, <&kp GREATER_THAN>;
+        //
+        //     mods = <(MOD_LCTL|MOD_RCTL)>;
+        // };
 
-        /omit-if-no-ref/ cm_inr_m: comma_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
+        // // tap: qmark | shift + tap: excl
+        // /omit-if-no-ref/ qexcl: qexcl {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp QMARK>, <&kp EXCL>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
 
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
+        // // tap: left/right parenthesis | shft + tap: less-than/greater-than
+        // /omit-if-no-ref/ lpar_lt: lpar_lt {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp LPAR>, <&kp LT>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
+        //
+        // /omit-if-no-ref/ rpar_gt: rpar_gt {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp RPAR>, <&kp GT>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
 
-        // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-        /omit-if-no-ref/ dot_m: dot_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&dt_inr_m>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        /omit-if-no-ref/ dt_inr_m: dot_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp GREATER_THAN>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        // tap: qmark | shift + tap: excl
-        /omit-if-no-ref/ qexcl: qexcl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        // tap: left/right parenthesis | shft + tap: less-than/greater-than
-        /omit-if-no-ref/ lpar_lt: lpar_lt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        /omit-if-no-ref/ rpar_gt: rpar_gt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp GT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
-        /omit-if-no-ref/ lt_spc: lt_spc {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mo>, <&spc_m>;
-        };
-
-        /omit-if-no-ref/ spc_m: spc_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SPC>, <&dot_spc>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        // // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
+        // /omit-if-no-ref/ lt_spc: lt_spc {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "balanced";
+        //     tapping-term-ms = <TAPPING_TERM_MS>;
+        //     quick-tap-ms = <QUICK_TAP_MS>;
+        //     bindings = <&mo>, <&spc_m>;
+        // };
+        //
+        // /omit-if-no-ref/ spc_m: spc_morph {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp SPC>, <&dot_spc>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
 
         // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
-        /omit-if-no-ref/ bs_del: bs_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <MOD_RSFT>;
-        };
-  };
-};
+        // /omit-if-no-ref/ bs_del: bs_del {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp BSPC>, <&kp DEL>;
+        //
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        //     keep-mods = <MOD_RSFT>;
+        // };
+//   };
+// };
