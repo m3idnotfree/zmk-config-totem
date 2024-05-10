@@ -19,6 +19,11 @@
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
 
+
+/* Hangle */
+ZMK_COMBO(defqwe,&tog QWE,    RB3 RB2 RB1,   DEF QWE,     COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(hangle,&tog_hangle, LB3 LB2 LB1,   DEF QWE,     COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 /* Horizontal combos - left hand */
 ZMK_COMBO(esc,   &kp ESC,       LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(ret,   &kp RETURN,    LT2 LT1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
