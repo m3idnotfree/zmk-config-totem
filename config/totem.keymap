@@ -40,7 +40,7 @@
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 200
 
-#i///nclude "behaviors.dtsi"
+#include "behaviors.dtsi"
 #include "macros.dtsi"
 
 /* Nav cluster */
