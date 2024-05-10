@@ -8,8 +8,6 @@
 #endif
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define DEF 0
 #define QWE 1
@@ -17,8 +15,7 @@
 #define FN 3
 #define NUM 4
 #define SYS 5
-#define UC 6
-#define MOUSE 7
+#define MOUSE 6
 
 #include "urob_combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
@@ -147,13 +144,13 @@ ZMK_STICKY_KEY(sls,
     bindings = <&uc_shift>;
     ignore-modifiers;
 )
-ZMK_MACRO(uc_shift,
-    wait-ms = <0>;
-    tap-ms = <1>;
-    bindings = <&macro_press &mo UC &kp LSHFT>
-             , <&macro_pause_for_release>
-             , <&macro_release &mo UC &kp LSHFT>;
-)
+// ZMK_MACRO(uc_shift,
+//     wait-ms = <0>;
+//     tap-ms = <1>;
+//     bindings = <&macro_press &mo UC &kp LSHFT>
+//              , <&macro_pause_for_release>
+//              , <&macro_release &mo UC &kp LSHFT>;
+// )
 
 // reuse basic mod-morph scheme
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
@@ -205,11 +202,11 @@ ZMK_TAP_DANCE(copy_cut,
 )
 
 // Windows sleep key
-ZMK_MACRO(win_sleep,
-    wait-ms = <500>;
-    tap-ms = <50>;
-    bindings = <&kp LG(X) &kp U &kp S>;
-)
+// ZMK_MACRO(win_sleep,
+//     wait-ms = <500>;
+//     tap-ms = <50>;
+//     bindings = <&kp LG(X) &kp U &kp S>;
+// )
 
 // toggle hangle
 ZMK_MACRO(tog_hangle,
@@ -247,13 +244,13 @@ ZMK_LAYER(base,
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
-ZMK_LAYER(qwert,
+ZMK_LAYER(qwe,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     ___           ___           &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp P           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     ___           &hml LALT S   &hml LCTRL D  &LSHFT F      ___             X_MM     &kp H         &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr LGUI SEMI  X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           &kp V         &kp B           X_MB     &el_kappa     &kp N         &kp M         ___           ___             X_RB
+    X_LB     ___           ___           ___           &kp V         &kp B           X_MB     &kp N         &kp M         ___           ___           ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     ___           ___                                                       X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰───────────────────────────╯                                           ╰──────╯
