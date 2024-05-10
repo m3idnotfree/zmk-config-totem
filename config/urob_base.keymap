@@ -139,11 +139,11 @@ ZMK_TRI_STATE(swapper,
 )
 
 // Sticky layer + sticky shift (workaround for issue #1421)
-ZMK_STICKY_KEY(sls,
-    release-after-ms = <1000>;
-    bindings = <&uc_shift>;
-    ignore-modifiers;
-)
+// ZMK_STICKY_KEY(sls,
+//     release-after-ms = <1000>;
+//     bindings = <&uc_shift>;
+//     ignore-modifiers;
+// )
 // ZMK_MACRO(uc_shift,
 //     wait-ms = <0>;
 //     tap-ms = <1>;
