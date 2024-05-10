@@ -1,31 +1,31 @@
 /* sticky-key config */
-&sk {  
-    release-after-ms = <900>;  // release after 0.6s
-    quick-release;             // no double capitalization when rolling keys
+&sk {
+    release-after-ms = <900>; // release after 0.6s
+    quick-release;            // no double capitalization when rolling keys
 };
 /* sticky-layer config */
-&sl {  
-    ignore-modifiers;          // allow chording sticky mods & layers
+&sl {
+    ignore-modifiers; // allow chording sticky mods & layers
 };
 /* layer-tap config */
-&lt {  
+&lt {
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 /* long-tap action on hold, short-tap action on all interrupts */
-#define MT_CORE                       \
-    flavor = "tap-preferred";         \
-    tapping-term-ms = <220>;          \
-    quick-tap-ms = <220>;             \
-    hold-trigger-key-positions = <0>;
+#define MT_CORE                                                                                    \
+    flavor = "tap-preferred";                                                                      \
+    tapping - term - ms = <220>;                                                                   \
+    quick - tap - ms = <220>;                                                                      \
+    hold - trigger - key - positions = <0>;
 
-&mt { MT_CORE };
+&mt{MT_CORE};
 
 /* mods deactivate caps-word, requires PR #1451 */
 &caps_word {  
-    /delete-property/ ignore-modifiers;
+    /delete-property/ ignore-modifiers; 
 };
 
 // Sticky layer + sticky shift (workaround for issue #1421)
@@ -35,8 +35,8 @@
 //     ignore-modifiers;
 // )
 
-#include "home_row.dtsi"
-#include "smart_number.dtsi"
-#include "mod_morph.dtsi"
 #include "hold_tap.dtsi"
+#include "home_row.dtsi"
+#include "mod_morph.dtsi"
+#include "smart_number.dtsi"
 #include "tri_state.dtsi"
