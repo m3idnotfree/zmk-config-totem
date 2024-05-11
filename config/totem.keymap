@@ -1,12 +1,12 @@
 /* source key position labels */
 #include "zmk-helpers/key-labels/totem.h"
 
-#define X_LB    &tog SYS
+#define X_LB    &kp LEFT
 #define X_RB    &kp RIGHT
 
 #define X_LH    &kp ESC
 #define X_RH    &smart_shft
 
 /* source the main keymap */
-#include "urob_base.keymap"
+#include "base.keymap"
 

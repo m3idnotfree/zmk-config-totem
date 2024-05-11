@@ -1,9 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-
 #include <dt-bindings/zmk/bt.h>
-#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
+#include <dt-bindings/zmk/outputs.h>
 
 #include "zmk-helpers/helper.h"
 
@@ -16,7 +14,7 @@
 #define MOUSE 6
 #define RKEY 7
 
-#include "urob_combos.dtsi"  // requires layer aliases
+#include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 #include "extra_keys.h"
 
@@ -306,7 +304,7 @@ ZMK_LAYER(num,
 // 5
 ZMK_LAYER(sys,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT                                _BT_SEL_KEYS_                                X_MT     XXX           XXX           XXX           XXX           XXX             X_RT
+    X_LT     &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      X_MT     XXX           XXX           XXX           XXX           XXX             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp S         &kp Y         &kp S         &kp A         &bootloader     X_MM     &bootloader   XXX           XXX           XXX           XXX             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
