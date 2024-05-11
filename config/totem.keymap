@@ -1,7 +1,7 @@
 /* source key position labels */
 #include "zmk-helpers/key-labels/totem.h"
 
-#define X_LB    &tog MOUSE
+#define X_LB    &kp LEFT
 #define X_RB    &tog RKEY
 
 #define X_LH    &kp ESC
@@ -9,3 +9,4 @@
 
 /* source the main keymap */
 #include "base.keymap"
+
