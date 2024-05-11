@@ -217,7 +217,6 @@ ZMK_MACRO(tog_hangle,
         ;
 )
 
-
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_PREV    &hmr LCTRL LG(LC(LEFT))  // previous desktop
