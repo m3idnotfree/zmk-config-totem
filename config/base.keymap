@@ -278,9 +278,9 @@ ZMK_LAYER(nav,
 // 3
 ZMK_LAYER(fn,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     WEB_TAP_LEFT  WEB_TAP_RIGHT &kp PG_DN     &kp PG_UP     &kp HOME        X_MT     ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &kp LEFT        X_RT
+    X_LT     WEB_TAP_LEFT  WEB_TAP_RIGHT &kp PG_DN     &kp PG_UP     &kp HOME        X_MT     &out OUT_USB  &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &kp LEFT        X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp LGUI      MAC_DSK_LETF  &kp LCTRL     MAC_DSK_RIGHT &kp END         X_MM     ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___             X_RM
+    X_LM     &kp LGUI      MAC_DSK_LETF  &kp LCTRL     MAC_DSK_RIGHT &kp END         X_MM     &out OUT_BLE  DSK_PREV      VOL_DOWN      DSK_NEXT      &bt BT_CLR_ALL X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp F10       &kp F1        WEB_GO_BACK   WEB_GO_FORWARD ___             X_MB    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
