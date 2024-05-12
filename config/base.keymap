@@ -16,8 +16,8 @@
 #define MOUSE 6
 #define RKEY 7
 
-#include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
+#include "combos.dtsi"  // requires layer aliases
 #include "extra_keys.h"
 
 #define XXX &none
@@ -322,7 +322,7 @@ ZMK_LAYER(mouse,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     ___           ___           ___           ___           ___             X_MB     XXX           BACK          &mkp MCLK      GO           XXX             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &mkp LCLK     &mkp RCLK                                                 X_RH
+    X_LH                                               ___           ___             X_MH     &mkp RCLK     &mkp LCLK                                                 X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
