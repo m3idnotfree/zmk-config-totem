@@ -85,3 +85,7 @@ ZMK_COMBO(pipe,  &kp PIPE,      RM3 RB3,     DEF QWE NAV NUM, COMBO_TERM_SLOW, C
 // ZMK_COMBO(rbslh,  &kp BSLH,      RT2 RH1,      DEF QWE        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // ZMK_COMBO(rtilde, &kp TILDE,     RT1 RH1,      DEF QWE        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
+/* Mac Web combes */
+ZMK_COMBO(close_tap,   &kp LG(W),        U_MS_U U_WH_U       , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(new_tap,     &kp LG(T),        U_WH_D U_MS_U U_WH_U, MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(refresh_tap, &kp F5,           U_WH_D U_WH_U       , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)

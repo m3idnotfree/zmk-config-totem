@@ -230,10 +230,14 @@ ZMK_MACRO(tog_hangle,
 #define MAC_DSK_LETF  &hml LALT LC(LEFT)    // mac workspace left
 #define MAC_DSK_RIGHT &hml LSHFT LC(RIGHT)  // mac workspace right
 
-#define WEB_TAP_LEFT   &kp LG(LA(LEFT))
-#define WEB_TAP_RIGHT  &kp LG(LA(RIGHT))
-#define WEB_GO_BACK    &kp LG(LEFT)
-#define WEB_GO_FORWARD &kp LG(RIGHT)
+#define GO             &mkp MB5
+#define BACK           &mkp MB4
+
+#define W_TAP_L   &kp LC(PG_UP)
+#define W_TAP_R   &kp LC(PG_DN)
+#define W_TAPM_L &kp LC(LS(PG_UP))
+#define W_TAPM_R &kp LC(LS(PG_DN))
+
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
@@ -288,11 +292,11 @@ ZMK_LAYER(nav,
 
 ZMK_LAYER(fn,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     WEB_TAP_LEFT  WEB_TAP_RIGHT &kp PG_DN     &kp PG_UP     &kp HOME        X_MT     ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    ___             X_RT
+    X_LT     W_TAP_L       W_TAP_R       &kp PG_DN     &kp PG_UP     &kp HOME        X_MT     ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp LGUI      MAC_DSK_LETF  &kp LCTRL     MAC_DSK_RIGHT &kp END         X_MM     ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp F10       &kp F1        WEB_GO_BACK   WEB_GO_FORWARD ___             X_MB    ___           ___           ___           ___           ___             X_RB
+    X_LB     &kp F10       &kp F1        BACK          GO            ___             X_MB    ___           ___           ___           ___           ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &kp C_MUTE    &kp C_PP                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -316,7 +320,7 @@ ZMK_LAYER(mouse,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     ___           ___           ___           ___           ___             X_MM     XXX           U_MS_L        U_MS_D         U_MS_R       XXX             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           ___           ___             X_MB     XXX           &mkp MB4      &mkp MCLK      &mkp MB5     XXX             X_RB
+    X_LB     ___           ___           ___           ___           ___             X_MB     XXX           BACK          &mkp MCLK      GO           XXX             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &mkp LCLK     &mkp RCLK                                                 X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
