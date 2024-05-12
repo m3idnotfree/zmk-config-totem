@@ -16,8 +16,8 @@
 #define MOUSE 6
 #define RKEY 7
 
-#include "mouse.dtsi"
 #include "combos.dtsi"  // requires layer aliases
+#include "mouse.dtsi"
 #include "extra_keys.h"
 
 #define XXX &none
