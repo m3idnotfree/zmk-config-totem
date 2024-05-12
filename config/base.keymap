@@ -219,24 +219,26 @@ ZMK_MACRO(tog_hangle,
 )
 
 // misc aliases
-#define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &hmr LCTRL LG(LC(LEFT))  // previous desktop
-#define DSK_NEXT    &hmr LALT LG(LC(RIGHT))  // next     desktop
-#define PIN_WIN     &kp LG(LC(LS(Q)))        // pin window across desktops
-#define PIN_APP     &kp LG(LC(LS(A)))        // pin application across desktops
-#define DSK_MGR     &kp LA(GRAVE)            // desktop manager
-#define VOL_DOWN    &hmr RSHFT C_VOL_DN
+#define CANCEL         &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
+#define DSK_PREV       &hmr LCTRL LG(LC(LEFT))  // previous desktop
+#define DSK_NEXT       &hmr LALT LG(LC(RIGHT))  // next     desktop
+#define PIN_WIN        &kp LG(LC(LS(Q)))        // pin window across desktops
+#define PIN_APP        &kp LG(LC(LS(A)))        // pin application across desktops
+#define DSK_MGR        &kp LA(GRAVE)            // desktop manager
+#define VOL_DOWN       &hmr RSHFT C_VOL_DN
 
-#define MAC_DSK_LETF  &hml LALT LC(LEFT)    // mac workspace left
-#define MAC_DSK_RIGHT &hml LSHFT LC(RIGHT)  // mac workspace right
+#define MAC_DSK_LETF   &hml LALT LC(LEFT)       // mac workspace left
+#define MAC_DSK_RIGHT  &hml LSHFT LC(RIGHT)     // mac workspace right
 
+/* mouse */
 #define GO             &mkp MB5
 #define BACK           &mkp MB4
 
-#define W_TAP_L   &kp LC(PG_UP)
-#define W_TAP_R   &kp LC(PG_DN)
-#define W_TAPM_L &kp LC(LS(PG_UP))
-#define W_TAPM_R &kp LC(LS(PG_DN))
+/* web */
+#define W_TAP_L        &kp LC(PG_UP)
+#define W_TAP_R        &kp LC(PG_DN)
+#define W_TAPM_L       &kp LC(LS(PG_UP))
+#define W_TAPM_R       &kp LC(LS(PG_DN))
 
 /* Keymap */
 
