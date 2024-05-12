@@ -10,7 +10,7 @@ on:
       # - 'boards/*/*/*.keymap'
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    uses: m3idnotfree/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write # allow workflow to commit to the repo
     with:
