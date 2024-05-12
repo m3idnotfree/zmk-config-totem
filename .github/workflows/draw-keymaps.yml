@@ -1,16 +1,15 @@
-# Example for using the keymap-drawer ZMK user config workflow
 name: Draw ZMK keymaps
 on:
-  workflow_dispatch: # can be triggered manually
-  push: # automatically run on changes to following paths
+  workflow_dispatch:
+  push:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
-      # - 'boards/*/*/*.keymap'
+      - '.github/workflows/draw-keymaps.yml'
 jobs:
   draw:
-    uses: m3idnotfree/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write # allow workflow to commit to the repo
     with:
