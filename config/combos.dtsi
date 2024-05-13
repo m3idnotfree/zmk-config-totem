@@ -110,11 +110,11 @@ COMBO(t_d,   &kp DOWN,      LM3 LH1,     DEF QWE         , COMBO_TERM_FAST, COMB
 COMBO(refresh_tap, &kp F5,           RT1 RT3    , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Mac Web combes */
-COMBO(close_tap,   &kp LG(W),        RT2 RT3    , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(new_tap,     &kp LG(T),        RT1 RT2 RT3, MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(m_close_tap,   &kp LG(W),        RT2 RT3    , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(m_new_tap,     &kp LG(T),        RT1 RT2 RT3, MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Linux Web combes */
-COMBO(close_tap,   &kp LC(W),        RT2 RT3    , LINUXMOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(new_tap,     &kp LC(T),        RT1 RT2 RT3, LINUXMOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(l_close_tap,   &kp LC(W),        RT2 RT3    , LINUXMOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(l_new_tap,     &kp LC(T),        RT1 RT2 RT3, LINUXMOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
     };
 };
