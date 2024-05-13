@@ -30,9 +30,9 @@
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
 
-/ {
-    combos {
-        compatible = "zmk,combos";
+// / {
+//     combos {
+//         compatible = "zmk,combos";
 
 /* Hangle */
 ZMK_COMBO(defqwe,&tog QWE,    RB3 RB2 RB1,   DEF QWE        ,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -181,8 +181,9 @@ ZMK_COMBO(refresh_tap, &kp F5,           RT1 RT3    , MOUSE, COMBO_TERM_FAST, CO
 // COMBO(new_tap,     &kp LG(T),        6 7 8, MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 // COMBO(refresh_tap, &kp F5,           6 8    , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-    };
-};
+//     };
+// };
+
 // /* Hangle */
 // ZMK_COMBO(defqwe,&tog QWE,    RB3 RB2 RB1,   DEF QWE        ,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // ZMK_COMBO(hangle,&tog_hangle, LB3 LB2 LB1,   DEF QWE        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
