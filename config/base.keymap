@@ -127,7 +127,7 @@ ZMK_TAP_DANCE(num_dance,
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1 RH2>;
+    ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1 RH2>;
     ignored-layers = <MOUSE>;
 )
 
@@ -226,10 +226,11 @@ ZMK_MACRO(tog_hangle,
 #define PIN_WIN        &kp LG(LC(LS(Q)))        // pin window across desktops
 #define PIN_APP        &kp LG(LC(LS(A)))        // pin application across desktops
 #define DSK_MGR        &kp LA(GRAVE)            // desktop manager
-#define VOL_DOWN       &hmr RSHFT C_VOL_DN
+// #define VOL_DOWN       &hmr RSHFT C_VOL_DN
+#define VOL_DOWN       &kp C_VOL_DN
 
-#define MAC_DSK_LETF   &hml LALT LC(LEFT)       // mac workspace left
-#define MAC_DSK_RIGHT  &hml LSHFT LC(RIGHT)     // mac workspace right
+#define MAC_DSK_LETF   &kp LC(LEFT)       // mac workspace left
+#define MAC_DSK_RIGHT  &kp LC(RIGHT)     // mac workspace right
 
 /* mouse */
 #define GO             &mkp MB5
@@ -308,9 +309,9 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     W_TAP_L       W_TAP_R       &kp PG_DN     &kp PG_UP     &kp HOME        X_MT     ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp LGUI      MAC_DSK_LETF  &kp LCTRL     MAC_DSK_RIGHT &kp END         X_MM     ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___             X_RM
+    X_LM     &kp LGUI      MAC_DSK_LETF  &kp LCTRL     MAC_DSK_RIGHT &kp END         X_MM     ___           ___           VOL_DOWN      ___           ___             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp F10       &kp F1        BACK          GO            ___             X_MB    ___           ___           ___           ___           ___             X_RB
+    X_LB     &kp F10       &kp F1        BACK          GO            ___             X_MB     ___           ___           ___           ___           ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &kp C_MUTE    &kp C_PP                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
