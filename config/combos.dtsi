@@ -15,7 +15,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    global-quick-tap-ms = <QUICKTAP>; \
+    require-prior-idle-ms = <QUICKTAP>; \
   };
 
 #define COMBO_TERM_FAST 18
@@ -29,6 +29,7 @@
 #define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
+
 / {
     combos {
         compatible = "zmk,combos";
