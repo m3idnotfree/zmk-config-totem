@@ -4,8 +4,8 @@
 #define X_LB    &kp LEFT
 #define X_RB    &kp RIGHT
 
-#define X_LH    &kp ESC
-#define X_RH    &kp BSPC
+#define X_LH    &none
+#define X_RH    &none
 
 /* source the main keymap */
 #include "base.keymap"

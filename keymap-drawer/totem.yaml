@@ -11,17 +11,17 @@ layers:
   - U
   - Y
   - ''''
-  - '&hml LGUI A'
-  - '&hml LALT R'
-  - '&hml LCTRL S'
-  - '&hml LSHFT T'
+  - {t: A, h: Gui}
+  - {t: R, h: Alt}
+  - {t: S, h: Ctrl}
+  - {t: T, h: Shift}
   - G
   - M
-  - '&hmr RSHFT N'
-  - '&hmr LCTRL E'
-  - '&hmr LALT I'
-  - '&hmr LGUI O'
-  - $$mdi:arrow-left$$
+  - {t: N, h: Shift}
+  - {t: E, h: Ctrl}
+  - {t: I, h: Alt}
+  - {t: O, h: Gui}
+  - $$material:keyboard_arrow_left$$
   - Z
   - X
   - C
@@ -29,16 +29,16 @@ layers:
   - V
   - K
   - H
-  - '&comma_morph'
-  - '&dot_morph'
-  - '&qexcl'
-  - $$mdi:arrow-right$$
-  - Esc
-  - '&lt_spc 3 0'
-  - {t: RET, h: fn}
-  - '&smart_num 2 0'
-  - '&smart_shft'
-  - BSPC
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: '?', s: '!'}
+  - $$material:keyboard_arrow_right$$
+  - ''
+  - {t: '$$material:space_bar$$', h: Nav, s: .}
+  - {t: '$$material:keyboard_return$$', h: fn}
+  - Smart num
+  - Smart shift
+  - ''
   qwert:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -51,16 +51,16 @@ layers:
   - O
   - P
   - {t: ▽, type: trans}
-  - '&hml LALT S'
-  - '&hml LCTRL D'
-  - '&hml LSHFT F'
+  - {t: S, h: Alt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Shift}
   - {t: ▽, type: trans}
   - H
-  - '&hmr RSHFT J'
-  - '&hmr LCTRL K'
-  - '&hmr LALT L'
-  - '&hmr LGUI SEMI'
-  - $$mdi:arrow-left$$
+  - {t: J, h: Shift}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Alt}
+  - {t: ;, h: Gui}
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -71,13 +71,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-right$$
-  - Esc
+  - $$material:keyboard_arrow_right$$
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BSPC
+  - ''
   num:
   - {t: ▽, type: trans}
   - '7'
@@ -89,17 +89,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&hml LGUI N0'
-  - '&hml LALT N4'
-  - '&hml LCTRL N5'
-  - '&hml LSHFT N6'
+  - {t: '0', h: Gui}
+  - {t: '4', h: Alt}
+  - {t: '5', h: Ctrl}
+  - {t: '6', h: Shift}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-left$$
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - '1'
   - '2'
@@ -110,211 +110,174 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-right$$
-  - Esc
+  - $$material:keyboard_arrow_right$$
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BSPC
+  - ''
   nav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+ $$mdi:keyboard-tab$$
-  - '&swapper'
+  - Shift Tap
+  - Swapper
   - {t: ▽, type: trans}
   - PG UP
-  - {t: BSPC, h: Ctl+ BSPC}
-  - {t: '$$mdi:arrow-up$$', h: Ctl+ Home}
-  - {t: DEL, h: Ctl+ DEL}
+  - {t: '$$material:backspace$$', h: Ctrl + Bspc}
+  - {t: '$$material:keyboard_arrow_up$$', h: Ctrl + Home}
+  - {t: ⌦, h: Ctrl + Del}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: Gui, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Shift, h: sticky}
   - {t: ▽, type: trans}
   - PG DN
-  - '&mt_home 0 LEFT'
-  - {t: '$$mdi:arrow-down$$', h: Ctl+ End}
-  - '&mt_end 0 RIGHT'
-  - RET
-  - $$mdi:arrow-left$$
+  - {t: '$$material:keyboard_arrow_left$$', h: Home}
+  - {t: '$$material:keyboard_arrow_down$$', h: Ctrl + End}
+  - {t: '$$material:keyboard_arrow_right$$', h: End}
+  - $$material:keyboard_return$$
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - INS
-  - $$mdi:keyboard-tab$$
+  - $$material:keyboard_tab$$
   - <
   - '>'
   - {t: ▽, type: trans}
-  - $$mdi:arrow-right$$
-  - Esc
+  - $$material:keyboard_arrow_right$$
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CANCEL
-  - BSPC
+  - ''
   fn:
-  - Ctl+ PG UP
-  - Ctl+ PG DN
+  - Tab ←
+  - Tab →
   - PG DN
   - PG UP
   - Home
   - {t: ▽, type: trans}
-  - $$mdi:skip-backward$$
-  - $$mdi:volume-plus$$
-  - $$mdi:skip-forward$$
+  - $$material:skip_previous$$
+  - $$material:volume_up$$
+  - $$material:skip_next$$
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-command$$
-  - '&hml LALT LC(LEFT)'
-  - $$mdi:apple-keyboard-control$$
-  - '&hml LSHFT LC(RIGHT)'
+  - Gui
+  - Mac Desk Left
+  - Ctrl
+  - Mac Desk Right
   - End
   - {t: ▽, type: trans}
-  - '&hmr LCTRL LG(LC(LEFT))'
-  - '&hmr RSHFT C_VOL_DN'
-  - '&hmr LALT LG(LC(RIGHT))'
   - {t: ▽, type: trans}
-  - $$mdi:arrow-left$$
+  - $$material:volume_down$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$material:keyboard_arrow_left$$
   - F10
   - F1
-  - '&mkp MB4'
-  - '&mkp MB5'
+  - Back Click
+  - Forward Click
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-right$$
-  - Esc
+  - $$material:keyboard_arrow_right$$
+  - ''
   - {t: ▽, type: trans}
   - {type: held}
-  - $$mdi:volume-mute$$
-  - $$mdi:play-pause$$
-  - BSPC
-  sys:
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - BT CLR
+  - $$material:volume_mute$$
+  - $$material:play_pause$$
   - ''
-  - BT CLR
-  - BT CLR ALL
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&bootloader'
-  - '&bootloader'
-  - ''
-  - ''
-  - ''
-  - ''
-  - $$mdi:arrow-left$$
-  - ''
-  - ''
-  - OUT BLE
-  - OUT USB
-  - '&sys_reset'
-  - '&sys_reset'
-  - ''
-  - ''
-  - ''
-  - ''
-  - $$mdi:arrow-right$$
-  - Esc
-  - ''
-  - ''
-  - ''
-  - ''
-  - BSPC
+  sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', '', '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
+      BLE, Out USB, Reset, Reset, '', '', '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+ PG UP
-  - '&msc SCRL_DOWN'
-  - '&mmv MOVE_UP'
-  - '&msc SCRL_UP'
-  - Ctl+ PG DN
+  - Tab ←
+  - Scroll ↓
+  - Mouse ↑
+  - Scroll ↑
+  - Tab →
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB4'
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - '&mkp MB5'
-  - $$mdi:arrow-left$$
+  - Back Click
+  - Mouse ←
+  - Mouse ↓
+  - Mouse →
+  - Forward Click
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+Sft+ PG UP
+  - Tab Move ←
   - PG DN
-  - '&mkp MCLK'
+  - Middle Click
   - PG UP
-  - Ctl+Sft+ PG DN
-  - $$mdi:arrow-right$$
-  - Esc
+  - Tab Move →
+  - $$material:keyboard_arrow_right$$
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp RCLK'
-  - '&mkp LCLK'
-  - Esc
-  rkeys: ['', '', '', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '$$mdi:arrow-up$$', '&msc SCRL_UP', '&msc SCRL_RIGHT', '', '', '', '', '', '', '$$mdi:arrow-left$$',
-    '$$mdi:arrow-down$$', '$$mdi:arrow-right$$', F, '$$mdi:arrow-left$$', '', '', '', '', '', '', '&mkp MB4', '&mkp MCLK', '&mkp MB5', '', '$$mdi:arrow-right$$',
-    Esc, '', '', '&mkp LCLK', '&mkp RCLK', BSPC]
+  - Right Click
+  - Left Click
+  - esc
+  rkeys: ['', '', '', '', '', Scroll ←, Scroll ↓, '$$material:keyboard_arrow_up$$', Scroll ↑, Scroll →, '', '', '', '', '', '', '$$material:keyboard_arrow_left$$',
+    '$$material:keyboard_arrow_down$$', '$$material:keyboard_arrow_right$$', F, '$$material:keyboard_arrow_left$$', '', '', '', '', '', '', Back Click, Middle Click,
+    Forward Click, '', '$$material:keyboard_arrow_right$$', '', '', '', Left Click, Right Click, '']
   linux_mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+ PG UP
-  - '&msc SCRL_DOWN'
-  - '&mmv MOVE_UP'
-  - '&msc SCRL_UP'
-  - Ctl+ PG DN
+  - Tab ←
+  - Scroll ↓
+  - Mouse ↑
+  - Scroll ↑
+  - Tab →
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB4'
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - '&mkp MB5'
-  - $$mdi:arrow-left$$
+  - Back Click
+  - Mouse ←
+  - Mouse ↓
+  - Mouse →
+  - Forward Click
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+Sft+ PG UP
+  - Tab Move ←
   - PG DN
-  - '&mkp MCLK'
+  - Middle Click
   - PG UP
-  - Ctl+Sft+ PG DN
-  - $$mdi:arrow-right$$
-  - Esc
+  - Tab Move →
+  - $$material:keyboard_arrow_right$$
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp RCLK'
-  - '&mkp LCLK'
-  - Esc
+  - Right Click
+  - Left Click
+  - esc
 combos:
 - p: [6, 5]
   k: {t: qwert, h: '$$mdi:toggle-switch$$'}
@@ -332,10 +295,10 @@ combos:
   k: {t: mouse, h: '$$mdi:toggle-switch$$'}
   l: [base, mouse]
 - p: [1, 2]
-  k: Esc
+  k: esc
   l: [base, qwert, nav, num]
 - p: [2, 3]
-  k: ⮐
+  k: $$material:keyboard_return$$
   l: [base, qwert, nav, num]
 - p: [1, 3]
   k: '&smart_mouse'
@@ -356,16 +319,16 @@ combos:
   k: Sft+ INS
   l: [base, qwert, nav, num]
 - p: [6, 7]
-  k: BSPC
+  k: $$material:backspace$$
   l: [base, qwert, nav, num]
 - p: [7, 8]
   k: DEL
   l: [base, qwert, nav, num]
 - p: [16, 17]
-  k: '&hmr_lpar_lt RS(LCTRL) 0'
+  k: <(
   l: [base, qwert, num]
 - p: [17, 18]
-  k: '&hmr_rpar_gt RS(LALT) 0'
+  k: )>
   l: [base, qwert, num]
 - p: [16, 17]
   k: <
@@ -434,22 +397,22 @@ combos:
   k: '|'
   l: [base, qwert, nav, num]
 - p: [4, 33]
-  k: $$mdi:volume-plus$$
+  k: $$material:volume_up$$
   l: [base, qwert]
 - p: [14, 33]
-  k: $$mdi:volume-minus$$
+  k: $$material:volume_down$$
   l: [base, qwert]
 - p: [11, 33]
-  k: $$mdi:arrow-left$$
+  k: $$material:keyboard_arrow_left$$
   l: [base, qwert]
 - p: [13, 33]
-  k: $$mdi:arrow-right$$
+  k: $$material:keyboard_arrow_right$$
   l: [base, qwert]
 - p: [2, 33]
-  k: $$mdi:arrow-up$$
+  k: $$material:keyboard_arrow_up$$
   l: [base, qwert]
 - p: [12, 33]
-  k: $$mdi:arrow-down$$
+  k: $$material:keyboard_arrow_down$$
   l: [base, qwert]
 - p: [6, 8]
   k: F5
