@@ -325,12 +325,12 @@ combos:
 - p: [9, 19, 30]
   k: {t: rkeys, h: '$$mdi:toggle-switch$$'}
   l: [base, rkeys]
-- p: [31, 37]
+- p: [31, 30]
   k: {t: linux_mouse, h: '$$mdi:toggle-switch$$'}
   l: [base, linux_mouse]
-- p: [20, 32]
+- p: [20, 21]
   k: {t: mouse, h: '$$mdi:toggle-switch$$'}
-  l: [base, linux_mouse]
+  l: [base, mouse]
 - p: [1, 2]
   k: Esc
   l: [base, qwert, nav, num]

@@ -489,18 +489,14 @@ rect.held, rect.combo.held {
 <use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="752" y="164" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-3">
-<path d="M702,222 l91,-11" class="combo"/>
-<path d="M702,222 l-91,11" class="combo"/>
-<rect rx="6" ry="6" x="688" y="209" width="28" height="26" class="combo"/>
-<text x="702" y="222" class="combo tap"><tspan style="font-size: 60%">linux_mouse</tspan></text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="694" y="218" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<rect rx="6" ry="6" x="767" y="203" width="28" height="26" class="combo"/>
+<text x="781" y="216" class="combo tap"><tspan style="font-size: 60%">linux_mouse</tspan></text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="773" y="212" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-4">
-<path d="M140,222 l-91,-11" class="combo"/>
-<path d="M140,222 l91,11" class="combo"/>
-<rect rx="6" ry="6" x="126" y="209" width="28" height="26" class="combo"/>
-<text x="140" y="222" class="combo tap">mouse</text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="132" y="218" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<rect rx="6" ry="6" x="47" y="203" width="28" height="26" class="combo"/>
+<text x="61" y="216" class="combo tap">mouse</text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="54" y="212" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="160" y="32" width="28" height="26" class="combo"/>
@@ -2429,18 +2425,23 @@ rect.held, rect.combo.held {
 <text x="0" y="-4" class="key tap">Esc</text>
 </g>
 <g class="combo combopos-0">
+<rect rx="6" ry="6" x="47" y="203" width="28" height="26" class="combo"/>
+<text x="61" y="216" class="combo tap">mouse</text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="54" y="212" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+</g>
+<g class="combo combopos-1">
 <path d="M639,59 l-44,-2" class="combo"/>
 <path d="M639,59 l44,2" class="combo"/>
 <rect rx="6" ry="6" x="625" y="46" width="28" height="26" class="combo"/>
 <text x="639" y="59" class="combo tap">F5</text>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="654" y="32" width="28" height="26" class="combo"/>
 <text x="668" y="45" class="combo tap">
 <tspan x="668" dy="-0.6em">Gui+</tspan><tspan x="668" dy="1.2em">W</tspan>
 </text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <path d="M637,49 l-42,5" class="combo"/>
 <path d="M637,49 l45,9" class="combo"/>
 <rect rx="6" ry="6" x="623" y="36" width="28" height="26" class="combo"/>
@@ -2880,26 +2881,17 @@ rect.held, rect.combo.held {
 <text x="0" y="-4" class="key tap">Esc</text>
 </g>
 <g class="combo combopos-0">
-<path d="M702,222 l91,-11" class="combo"/>
-<path d="M702,222 l-91,11" class="combo"/>
-<rect rx="6" ry="6" x="688" y="209" width="28" height="26" class="combo"/>
-<text x="702" y="222" class="combo tap"><tspan style="font-size: 60%">linux_mouse</tspan></text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="694" y="218" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<rect rx="6" ry="6" x="767" y="203" width="28" height="26" class="combo"/>
+<text x="781" y="216" class="combo tap"><tspan style="font-size: 60%">linux_mouse</tspan></text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="773" y="212" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-1">
-<path d="M140,222 l-91,-11" class="combo"/>
-<path d="M140,222 l91,11" class="combo"/>
-<rect rx="6" ry="6" x="126" y="209" width="28" height="26" class="combo"/>
-<text x="140" y="222" class="combo tap">mouse</text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="132" y="218" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
-</g>
-<g class="combo combopos-2">
 <rect rx="6" ry="6" x="654" y="32" width="28" height="26" class="combo"/>
 <text x="668" y="45" class="combo tap">
 <tspan x="668" dy="-0.6em">Ctl+</tspan><tspan x="668" dy="1.2em">W</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-2">
 <path d="M637,49 l-42,5" class="combo"/>
 <path d="M637,49 l45,9" class="combo"/>
 <rect rx="6" ry="6" x="623" y="36" width="28" height="26" class="combo"/>
