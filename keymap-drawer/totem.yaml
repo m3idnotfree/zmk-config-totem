@@ -37,8 +37,8 @@ layers:
   - '&lt_spc 3 0'
   - {t: RET, h: fn}
   - '&smart_num 2 0'
-  - '&bs_del'
   - '&smart_shft'
+  - BSPC
   qwert:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -77,7 +77,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&smart_shft'
+  - BSPC
   num:
   - {t: ▽, type: trans}
   - '7'
@@ -116,7 +116,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&smart_shft'
+  - BSPC
   nav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -155,7 +155,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CANCEL
-  - '&smart_shft'
+  - BSPC
   fn:
   - Ctl+ PG UP
   - Ctl+ PG DN
@@ -194,7 +194,7 @@ layers:
   - {type: held}
   - $$mdi:volume-mute$$
   - $$mdi:play-pause$$
-  - '&smart_shft'
+  - BSPC
   sys:
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -233,7 +233,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&smart_shft'
+  - BSPC
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -275,7 +275,7 @@ layers:
   - Esc
   rkeys: ['', '', '', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '$$mdi:arrow-up$$', '&msc SCRL_UP', '&msc SCRL_RIGHT', '', '', '', '', '', '', '$$mdi:arrow-left$$',
     '$$mdi:arrow-down$$', '$$mdi:arrow-right$$', F, '$$mdi:arrow-left$$', '', '', '', '', '', '', '&mkp MB4', '&mkp MCLK', '&mkp MB5', '', '$$mdi:arrow-right$$',
-    Esc, '', '', '&mkp LCLK', '&mkp RCLK', '&smart_shft']
+    Esc, '', '', '&mkp LCLK', '&mkp RCLK', BSPC]
   linux_mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
