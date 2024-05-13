@@ -1,5 +1,6 @@
 /* source key position labels */
-#include "zmk-helpers/key-labels/totem.h"
+// #include "zmk-helpers/key-labels/totem.h"
+#include "totem.h"
 
 #define X_LB    &tog MOUSE
 #define X_RB    &tog RKEY
