@@ -1,0 +1,249 @@
+layers:
+  base:
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - '&hml LGUI A'
+  - '&hml LALT R'
+  - '&hml LCTRL S'
+  - '&hml LSHFT T'
+  - G
+  - M
+  - '&hmr RSHFT N'
+  - '&hmr LCTRL E'
+  - '&hmr LALT I'
+  - '&hmr LGUI O'
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - '&comma_morph'
+  - '&dot_morph'
+  - '&qexcl'
+  - '&lt_spc 3 0'
+  - {t: RET, h: fn}
+  - '&smart_num 2 0'
+  - '&bs_del'
+  qwert:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: ▽, type: trans}
+  - '&hml LALT S'
+  - '&hml LCTRL D'
+  - '&hml LSHFT F'
+  - {t: ▽, type: trans}
+  - H
+  - '&hmr RSHFT J'
+  - '&hmr LCTRL K'
+  - '&hmr LALT L'
+  - '&hmr LGUI SEMI'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - V
+  - B
+  - N
+  - M
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  num:
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hml LGUI N0'
+  - '&hml LALT N4'
+  - '&hml LCTRL N5'
+  - '&hml LSHFT N6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+ $$mdi:keyboard-tab$$
+  - '&swapper'
+  - {t: ▽, type: trans}
+  - PG UP
+  - {t: BSPC, h: Ctl+ BSPC}
+  - {t: '$$mdi:arrow-up$$', h: Ctl+ Home}
+  - {t: DEL, h: Ctl+ DEL}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: ▽, type: trans}
+  - PG DN
+  - '&mt_home 0 LEFT'
+  - {t: '$$mdi:arrow-down$$', h: Ctl+ End}
+  - '&mt_end 0 RIGHT'
+  - RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INS
+  - $$mdi:keyboard-tab$$
+  - <
+  - '>'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - CANCEL
+  fn:
+  - Ctl+ PG UP
+  - Ctl+ PG DN
+  - PG DN
+  - PG UP
+  - Home
+  - {t: ▽, type: trans}
+  - $$mdi:skip-backward$$
+  - $$mdi:volume-plus$$
+  - $$mdi:skip-forward$$
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-command$$
+  - '&hml LALT LC(LEFT)'
+  - $$mdi:apple-keyboard-control$$
+  - '&hml LSHFT LC(RIGHT)'
+  - End
+  - {t: ▽, type: trans}
+  - '&hmr LCTRL LG(LC(LEFT))'
+  - '&hmr RSHFT C_VOL_DN'
+  - '&hmr LALT LG(LC(RIGHT))'
+  - {t: ▽, type: trans}
+  - F10
+  - F1
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - $$mdi:volume-mute$$
+  - $$mdi:play-pause$$
+  sys:
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - BT CLR
+  - ''
+  - BT CLR
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT BLE
+  - OUT USB
+  - '&sys_reset'
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+ PG UP
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_UP'
+  - Ctl+ PG DN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+Sft+ PG UP
+  - PG DN
+  - '&mkp MCLK'
+  - PG UP
+  - Ctl+Sft+ PG DN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp RCLK'
+  - '&mkp LCLK'
+  - Esc
+  rkeys: ['', '', '', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '$$mdi:arrow-up$$', '&msc SCRL_UP', '&msc SCRL_RIGHT', '', '', '', '', '', '', '$$mdi:arrow-left$$',
+    '$$mdi:arrow-down$$', '$$mdi:arrow-right$$', F, '', '', '', '', '', '', '&mkp MB4', '&mkp MCLK', '&mkp MB5', '', '', '', '&mkp LCLK', '&mkp RCLK']
