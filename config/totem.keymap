@@ -2,8 +2,8 @@
 // #include "zmk-helpers/key-labels/totem.h"
 #include "totem.h"
 
-#define X_LB    &tog MOUSE
-#define X_RB    &tog RKEY
+#define X_LB    &kp LEFT
+#define X_RB    &kp RIGHT
 
 #define X_LH    &kp ESC
 #define X_RH    &smart_shft
