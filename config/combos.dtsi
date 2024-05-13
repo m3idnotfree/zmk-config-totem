@@ -7,7 +7,7 @@
  ╰──────────╮ 32  33  34 │ 35  36  37 ╭───────────╯ ╰──────────╮  LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
             ╰────────────┴────────────╯                        ╰──────────────┴─────────────╯
 */
-
+//
 /* Copied (modified) from https://github.com/caksoylar/zmk-config */
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP)                                      \
   combo_##NAME {                                                                                   \
