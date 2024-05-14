@@ -35,8 +35,8 @@
     combos {
         compatible = "zmk,combos";
 /* Hangle */
-COMBO(defqwe,&tog QWE,      RT1 RT0,     DEF QWE        , COMBO_TERM_DEF, COMBO_IDLE_SLOW)
-COMBO(hangle,&tog_hangle,   LT1 LT0,     DEF QWE        , COMBO_TERM_DEF, COMBO_IDLE_SLOW)
+COMBO(defqwe,&tog QWE,      RB3 RB2 RB1,     DEF QWE        , COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(hangle,&tog_hangle,   LB3 LB2 LB1,     DEF QWE        , COMBO_TERM_DEF, COMBO_IDLE_FAST)
 
 /* RKey */
 COMBO(rkey,  &tog RKEY,     RT4 RM4 RB4, DEF RKEY       , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -97,26 +97,26 @@ COMBO(fslh,  &kp FSLH,      RM2 RB2,     DEF QWE NAV NUM, COMBO_TERM_SLOW, COMBO
 COMBO(pipe,  &kp PIPE,      RM3 RB3,     DEF QWE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Thumb combos left - hand */
-COMBO(v_up,  &kp C_VOL_UP,  LT0 LH1,     DEF QWE         , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(v_dn,  &kp C_VOL_DN,  LM0 LH1,     DEF QWE         , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(t_l,   &kp LEFT,      LM3 LH1,     DEF QWE         , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(t_r,   &kp RIGHT,     LM1 LH1,     DEF QWE         , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(t_u,   &kp UP,        LT2 LH1,     DEF QWE         , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(t_d,   &kp DOWN,      LM2 LH1,     DEF QWE         , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(v_up,  &kp C_VOL_UP,  LT0 LH1,     DEF QWE         , COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(v_dn,  &kp C_VOL_DN,  LM0 LH1,     DEF QWE         , COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(t_l,   &kp LEFT,      LM3 LH1,     DEF QWE         , COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(t_r,   &kp RIGHT,     LM1 LH1,     DEF QWE         , COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(t_u,   &kp UP,        LT2 LH1,     DEF QWE         , COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(t_d,   &kp DOWN,      LM2 LH1,     DEF QWE         , COMBO_TERM_DEF, COMBO_IDLE_FAST)
 
 /* Thumb combos right hand */
 // COMBO(rpipe,  &kp PIPE,      RT3 RH1,      DEF QWE        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // COMBO(rbslh,  &kp BSLH,      RT2 RH1,      DEF QWE        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 // COMBO(rtilde, &kp TILDE,     RT1 RH1,      DEF QWE        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-COMBO(refresh_tap, &kp F5,           RT1 RT3    , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(refresh_tap, &kp F5,           RT1 RT3    , MOUSE, COMBO_TERM_DEF, COMBO_IDLE_FAST)
 
 /* Mac Web combes */
-COMBO(m_close_tap,   &kp LG(W),        RT2 RT3    , MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(m_new_tap,     &kp LG(T),        RT1 RT2 RT3, MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(m_close_tap,   &kp LG(W),        RT2 RT3    , MOUSE, COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(m_new_tap,     &kp LG(T),        RT1 RT2 RT3, MOUSE, COMBO_TERM_DEF, COMBO_IDLE_FAST)
 
 /* Linux Web combes */
-COMBO(l_close_tap,   &kp LC(W),        RT2 RT3    , LINUXMOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(l_new_tap,     &kp LC(T),        RT1 RT2 RT3, LINUXMOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(l_close_tap,   &kp LC(W),        RT2 RT3    , LINUXMOUSE, COMBO_TERM_DEF, COMBO_IDLE_FAST)
+COMBO(l_new_tap,     &kp LC(T),        RT1 RT2 RT3, LINUXMOUSE, COMBO_TERM_DEF, COMBO_IDLE_FAST)
     };
 };

@@ -279,10 +279,10 @@ layers:
   - Left Click
   - esc
 combos:
-- p: [6, 5]
+- p: [29, 28, 27]
   k: {t: qwert, h: '$$mdi:toggle-switch$$'}
   l: [base, qwert]
-- p: [3, 4]
+- p: [22, 23, 24]
   k: '&tog_hangle'
   l: [base, qwert]
 - p: [9, 19, 30]
