@@ -34,7 +34,7 @@ layers:
   - {t: '?', s: '!'}
   - $$material:keyboard_arrow_right$$
   - ''
-  - {t: '$$material:space_bar$$', h: Nav, s: .}
+  - {t: SPC, h: nav}
   - {t: '$$material:keyboard_return$$', h: fn}
   - Smart num
   - Smart shift
@@ -151,7 +151,7 @@ layers:
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
   - ''
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CANCEL
@@ -401,18 +401,6 @@ combos:
   l: [base, qwert]
 - p: [14, 33]
   k: $$material:volume_down$$
-  l: [base, qwert]
-- p: [11, 33]
-  k: $$material:keyboard_arrow_left$$
-  l: [base, qwert]
-- p: [13, 33]
-  k: $$material:keyboard_arrow_right$$
-  l: [base, qwert]
-- p: [2, 33]
-  k: $$material:keyboard_arrow_up$$
-  l: [base, qwert]
-- p: [12, 33]
-  k: $$material:keyboard_arrow_down$$
   l: [base, qwert]
 - p: [6, 8]
   k: F5
