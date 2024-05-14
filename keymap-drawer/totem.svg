@@ -30,6 +30,9 @@
 <svg id="material:skip_previous">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M220-240v-480h60v480h-60Zm520 0L394-480l346-240v480Zm-60-240Zm0 125v-250L499-480l181 125Z"/></svg>
 </svg>
+<svg id="material:space_bar">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-360v-240h60v180h520v-180h60v240H160Z"/></svg>
+</svg>
 <svg id="material:volume_down">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-360v-240h160l200-200v640L360-360H200Zm420 48v-337q54 17 87 64t33 105q0 59-33 105t-87 63ZM500-648 387-540H260v120h127l113 109v-337ZM378-480Z"/></svg>
 </svg>
@@ -425,8 +428,9 @@ rect.held, rect.combo.held {
 <g transform="translate(316, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">SPC</text>
-<text x="0" y="24" class="key hold">nav</text>
+<use href="#material:space_bar" xlink:href="#material:space_bar" x="-9" y="-13" height="18" width="18.0" class="key tap glyph material:space_bar"/>
+<text x="0" y="24" class="key hold">Nav</text>
+<text x="0" y="-24" class="key shifted">.</text>
 </g>
 <g transform="translate(377, 270) rotate(30.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -1332,10 +1336,10 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(140, 62) rotate(-4.0)" class="key trans keypos-1">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key trans"/>
-<text x="0" y="-4" class="key trans tap">▽</text>
+<g transform="translate(140, 62) rotate(-4.0)" class="key keypos-1">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">Swapper</tspan></text>
 </g>
 <g transform="translate(207, 28)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -1347,7 +1351,7 @@ rect.held, rect.combo.held {
 <g transform="translate(267, 56)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">Swapper</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 67%">&amp;mswapper</tspan></text>
 </g>
 <g transform="translate(326, 65)" class="key trans keypos-4">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
@@ -1507,9 +1511,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
 </g>
-<g transform="translate(316, 245) rotate(15.0)" class="key held keypos-33">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held side"/>
-<rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key held"/>
+<g transform="translate(316, 245) rotate(15.0)" class="key trans keypos-33">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key trans"/>
+<text x="0" y="-4" class="key trans tap">▽</text>
 </g>
 <g transform="translate(377, 270) rotate(30.0)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>

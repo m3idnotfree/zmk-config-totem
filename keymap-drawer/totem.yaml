@@ -34,7 +34,7 @@ layers:
   - {t: '?', s: '!'}
   - $$material:keyboard_arrow_right$$
   - ''
-  - {t: SPC, h: nav}
+  - {t: '$$material:space_bar$$', h: Nav, s: .}
   - {t: '$$material:keyboard_return$$', h: fn}
   - Smart num
   - Smart shift
@@ -119,9 +119,9 @@ layers:
   - ''
   nav:
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Shift Tap
   - Swapper
+  - Shift Tap
+  - '&mswapper'
   - {t: ▽, type: trans}
   - PG UP
   - {t: '$$material:backspace$$', h: Ctrl + Bspc}
@@ -151,7 +151,7 @@ layers:
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CANCEL
