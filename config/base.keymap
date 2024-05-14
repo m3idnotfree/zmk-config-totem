@@ -142,7 +142,7 @@ ZMK_TRI_STATE(swapper,
 // Command+Tab swapper, requires PR #1366
 ZMK_TRI_STATE(mswapper,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-    ignored-key-positions = <LT3>;
+    ignored-key-positions = <LT2>;
 )
 // Sticky layer + sticky shift (workaround for issue #1421)
 // ZMK_STICKY_KEY(sls,
