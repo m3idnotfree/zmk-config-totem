@@ -457,13 +457,17 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="531" y="47" width="28" height="26" class="combo"/>
-<text x="545" y="60" class="combo tap">qwert</text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="538" y="56" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<path d="M635,160 l40,9" class="combo"/>
+<path d="M635,160 l-40,5" class="combo"/>
+<rect rx="6" ry="6" x="621" y="147" width="28" height="26" class="combo"/>
+<text x="635" y="160" class="combo tap">qwert</text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="627" y="156" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="282" y="47" width="28" height="26" class="combo"/>
-<text x="296" y="60" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hangle</tspan></text>
+<path d="M207,160 l-40,9" class="combo"/>
+<path d="M207,160 l40,5" class="combo"/>
+<rect rx="6" ry="6" x="193" y="147" width="28" height="26" class="combo"/>
+<text x="207" y="160" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hangle</tspan></text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="745" y="155" width="28" height="26" class="combo"/>
@@ -853,13 +857,17 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="531" y="47" width="28" height="26" class="combo"/>
-<text x="545" y="60" class="combo tap">qwert</text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="538" y="56" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<path d="M635,160 l40,9" class="combo"/>
+<path d="M635,160 l-40,5" class="combo"/>
+<rect rx="6" ry="6" x="621" y="147" width="28" height="26" class="combo"/>
+<text x="635" y="160" class="combo tap">qwert</text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="627" y="156" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="282" y="47" width="28" height="26" class="combo"/>
-<text x="296" y="60" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hangle</tspan></text>
+<path d="M207,160 l-40,9" class="combo"/>
+<path d="M207,160 l40,5" class="combo"/>
+<rect rx="6" ry="6" x="193" y="147" width="28" height="26" class="combo"/>
+<text x="207" y="160" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hangle</tspan></text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="160" y="32" width="28" height="26" class="combo"/>
