@@ -58,7 +58,7 @@ COMBO(copy,        &kp LC(INS),     LB3 LB2,     DEF QWE NAV NUM, COMBO_TERM_FAS
 COMBO(paste,       &kp LS(INS),     LB2 LB1,     DEF QWE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - right hand */
-COMBO(bspc,        &kp BSPC,        RT1 RT2,     DEF QWE NAV NUM, COMBO_TERM_DEF,  COMBO_IDLE_FAST)
+COMBO(bspc,        &kp BSPC,        RT1 RT2,     DEF QWE NAV NUM, COMBO_TERM_SLOW,  COMBO_IDLE_SLOW)
 COMBO(del,         &kp DEL,         RT2 RT3,     DEF QWE NAV NUM, COMBO_TERM_DEF,  COMBO_IDLE_FAST)
 
 COMBO(lpar,        HRC_LPAR,        RM1 RM2,     DEF QWE     NUM, COMBO_TERM_DEF,  COMBO_IDLE_FAST)
@@ -99,10 +99,10 @@ COMBO(pipe,        &kp PIPE,        RM3 RB3,     DEF QWE NAV NUM, COMBO_TERM_SLO
 /* Thumb combos left - hand */
 COMBO(v_up,        &kp C_VOL_UP,    LT0 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
 COMBO(v_dn,        &kp C_VOL_DN,    LM0 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
-COMBO(t_l,         &kp LEFT,        LM3 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
-COMBO(t_r,         &kp RIGHT,       LM1 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
-COMBO(t_u,         &kp UP,          LT2 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
-COMBO(t_d,         &kp DOWN,        LM2 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+// COMBO(t_l,         &kp LEFT,        LM3 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+// COMBO(t_r,         &kp RIGHT,       LM1 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+// COMBO(t_u,         &kp UP,          LT2 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+// COMBO(t_d,         &kp DOWN,        LM2 LH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_FAST)
 
 /* Thumb combos right hand */
 // COMBO(rpipe,    &kp PIPE,        RT3 RH1,     DEF QWE,         COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
