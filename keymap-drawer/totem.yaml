@@ -115,7 +115,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - CANCEL
   - ''
   nav:
   - {t: ▽, type: trans}
@@ -241,8 +241,11 @@ layers:
     Forward Click, '', '$$material:keyboard_arrow_right$$', '', '', '', Left Click, Right Click, '']
   linux_mouse: ['', '', F, '', Q, Tab ←, Scroll ↓, Mouse ↑, Scroll ↑, Tab →, '$$material:keyboard_arrow_up$$', 'Sft+ $$material:keyboard_return$$', '', '', I, Back
       Click, Mouse ←, Mouse ↓, Mouse →, Forward Click, '$$material:keyboard_arrow_left$$', '$$material:keyboard_arrow_down$$', '$$material:keyboard_arrow_right$$',
-    DEL, '', '', Tab Move ←, PG DN, Middle Click, PG UP, Tab Move →, '$$material:keyboard_arrow_right$$', '', '', '', Right Click, Left Click, esc]
+    DEL, '', SPC, Tab Move ←, PG DN, Middle Click, PG UP, Tab Move →, '$$material:keyboard_arrow_right$$', '', '', '', Right Click, Left Click, esc]
 combos:
+- p: [5, 27]
+  k: CANCEL
+  l: [base, qwert, num]
 - p: [29, 28, 27]
   k: {t: qwert, h: '$$mdi:toggle-switch$$'}
   l: [base, qwert]

@@ -34,6 +34,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+COMBO(cancel,      &kp K_CANCEL,    RT0 RB1,     DEF QWE NUM,     COMBO_TERM_FAST,  COMBO_IDLE_FAST)
 /* Hangle */
 COMBO(defqwe,      &tog QWE,        RB3 RB2 RB1, DEF QWE,         COMBO_TERM_FAST,  COMBO_IDLE_FAST)
 COMBO(hangle,      &tog_hangle,     LB3 LB2 LB1, DEF QWE,         COMBO_TERM_FAST,  COMBO_IDLE_FAST)
