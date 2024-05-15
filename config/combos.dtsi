@@ -42,8 +42,8 @@ COMBO(hangle,      &tog_hangle,     LB3 LB2 LB1, DEF QWE,         COMBO_TERM_FAS
 COMBO(rkey,        &tog RKEY,       RT4 RM4 RB4, DEF RKEY,        COMBO_TERM_FAST,  COMBO_IDLE_FAST)
 
 /* Linux mouse*/
-COMBO(lmouse,      &tog LINUXMOUSE, RB5 RB4,     DEF LINUXMOUSE,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-COMBO(mmouse,      &tog MOUSE,      LB5 LB4,     DEF MOUSE,       COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+COMBO(mmouse,      &tog MOUSE,      RB5 RB4,     DEF MOUSE,       COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(lmouse,      &tog LINUXMOUSE, LB5 LB4,     DEF LINUXMOUSE,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
 COMBO(esc,         &kp ESC,         LT3 LT2,     DEF QWE NAV NUM, COMBO_TERM_FAST,  COMBO_IDLE_FAST)
