@@ -181,17 +181,24 @@ SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
+// ZMK_HOLD_TAP(lt_spc,
+//     flavor = "balanced";
+//     tapping-term-ms = <200>;
+//     quick-tap-ms = <QUICK_TAP_MS>;
+//     bindings = <&mo>, <&spc_morph>;
+// )
+// SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
+// ZMK_MACRO(dot_spc,
+//     wait-ms = <0>;
+//     tap-ms = <5>;
+//     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+// )
+
 ZMK_HOLD_TAP(lt_spc,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&spc_morph>;
-)
-SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
-ZMK_MACRO(dot_spc,
-    wait-ms = <0>;
-    tap-ms = <5>;
-    bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+    bindings = <&mo>, <&kp>;
 )
 
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
@@ -247,6 +254,11 @@ ZMK_MACRO(tog_hangle,
 #define W_TAPM_L       &kp LC(LS(PG_UP))
 #define W_TAPM_R       &kp LC(LS(PG_DN))
 
+#define _MOUSE_TOP_ W_TAP_L   U_WH_D     U_MS_U      U_WH_U    W_TAP_R
+#define _MOUSE_MID_ BACK      U_MS_L     U_MS_D      U_MS_R    GO
+#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
+#define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
+
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
@@ -263,7 +275,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma_morph  &dot_morph    &qexcl          X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               &lt_spc NAV 0 &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
+    X_LH                                             &lt_spc NAV SPC &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
@@ -298,7 +310,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         nav {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &swapper      &kp LS(TAB)   &mswapper      ___             X_MT     &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___             X_RT
+    X_LT     ___           &swapper      &kp LS(TAB)   &mswapper      ___            X_MT     &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___             X_MM     &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
@@ -340,13 +352,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         mouse {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           ___           ___           ___           ___             X_MT     W_TAP_L       U_WH_D        U_MS_U         U_WH_U       W_TAP_R         X_RT
+    X_LT     ___           ___           ___           ___           ___             X_MT                                 _MOUSE_TOP_                                 X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     ___           ___           ___           ___           ___             X_MM     BACK          U_MS_L        U_MS_D         U_MS_R       GO              X_RM
+    X_LM     ___           ___           ___           ___           ___             X_MM                                 _MOUSE_MID_                                 X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           ___           ___             X_MB     W_TAPM_L      &kp PG_DN     &mkp MCLK      &kp PG_UP    W_TAPM_R        X_RB
+    X_LB     ___           ___           ___           ___           ___             X_MB                                 _MOUSE_BOT_                                 X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &mkp RCLK     &mkp LCLK                                                 &kp ESC
+    X_LH                                               ___           ___             X_MH                                 _MOUSE_THU_
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
@@ -367,13 +379,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         linux_mouse {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           ___           ___           ___           ___             X_MT     W_TAP_L       U_WH_D        U_MS_U         U_WH_U       W_TAP_R         X_RT
+    X_LT     XXX           XXX           &kp F         XXX           &kp Q           X_MT                                 _MOUSE_TOP_                                 X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     ___           ___           ___           ___           ___             X_MM     BACK          U_MS_L        U_MS_D         U_MS_R       GO              X_RM
+    X_LM     &kp UP        &kp LS(RET)   XXX           XXX           &kp I           X_MM                                 _MOUSE_MID_                                 X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           ___           ___             X_MB     W_TAPM_L      &kp PG_DN     &mkp MCLK      &kp PG_UP    W_TAPM_R        X_RB
+  &kp LEFT   &kp DOWN      &kp RIGHT     &kp DEL       XXX           XXX             X_MB                                 _MOUSE_BOT_                                 X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &mkp RCLK     &mkp LCLK                                                 &kp ESC
+    X_LH                                               XXX           XXX             X_MH                                 _MOUSE_THU_
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
