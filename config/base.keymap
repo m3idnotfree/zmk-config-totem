@@ -256,7 +256,7 @@ ZMK_MACRO(tog_hangle,
 
 #define _MOUSE_TOP_ W_TAP_L   U_WH_D     U_MS_U      U_WH_U    W_TAP_R
 #define _MOUSE_MID_ BACK      U_MS_L     U_MS_D      U_MS_R    GO
-#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  ___         &kp PG_UP W_TAPM_R
+#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
 #define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
 
 /* Keymap */
@@ -383,7 +383,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp UP        &kp LS(RET)   ___           ___           &kp I           X_MM                                 _MOUSE_MID_                                 X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LEFT   &kp DOWN      &kp RIGHT     ___           ___           ___             X_MB                                 _MOUSE_BOT_                                 X_RB
+  &kp LEFT   &kp DOWN      &kp RIGHT     ___           ___           ___             X_MB                                 _MOUSE_BOT_                               &kp LC(T)
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               &kp C_VOL_DN  &kp C_VOL_UP    X_MH                                 _MOUSE_THU_
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
