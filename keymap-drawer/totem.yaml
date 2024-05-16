@@ -196,7 +196,7 @@ layers:
   - $$material:play_pause$$
   - ''
   sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', '', '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
-      BLE, Out USB, Reset, Reset, '', '', '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
+      BLE, Out USB, Reset, Reset, '', OUT TOG, '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -239,10 +239,45 @@ layers:
   rkeys: ['', '', '', '', '', Scroll ←, Scroll ↓, '$$material:keyboard_arrow_up$$', Scroll ↑, Scroll →, '', '', '', '', '', '', '$$material:keyboard_arrow_left$$',
     '$$material:keyboard_arrow_down$$', '$$material:keyboard_arrow_right$$', F, '$$material:keyboard_arrow_left$$', '', '', '', '', '', '', Back Click, Middle Click,
     Forward Click, '', '$$material:keyboard_arrow_right$$', '', '', '', Left Click, Right Click, '']
-  linux_mouse: ['', '', F, '', Q, Tab ←, Scroll ↓, Mouse ↑, Scroll ↑, Tab →, '$$material:keyboard_arrow_up$$', 'Sft+ $$material:keyboard_return$$', '', '', I, Back
-      Click, Mouse ←, Mouse ↓, Mouse →, Forward Click, '$$material:keyboard_arrow_left$$', '$$material:keyboard_arrow_down$$', '$$material:keyboard_arrow_right$$',
-    DEL, '', SPC, Tab Move ←, PG DN, Middle Click, PG UP, Tab Move →, '$$material:keyboard_arrow_right$$', '', '$$material:volume_down$$', '$$material:volume_up$$',
-    Right Click, Left Click, esc]
+  linux_mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F
+  - ''
+  - {t: ▽, type: trans}
+  - Tab ←
+  - Scroll ↓
+  - Mouse ↑
+  - Scroll ↑
+  - Tab →
+  - $$material:keyboard_arrow_up$$
+  - Sft+ $$material:keyboard_return$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - I
+  - Back Click
+  - Mouse ←
+  - Mouse ↓
+  - Mouse →
+  - Forward Click
+  - $$material:keyboard_arrow_left$$
+  - $$material:keyboard_arrow_down$$
+  - $$material:keyboard_arrow_right$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Tab Move ←
+  - PG DN
+  - Middle Click
+  - PG UP
+  - Tab Move →
+  - $$material:keyboard_arrow_right$$
+  - ''
+  - $$material:volume_down$$
+  - $$material:volume_up$$
+  - Right Click
+  - Left Click
+  - esc
 combos:
 - p: [5, 27]
   k: CANCEL
@@ -256,12 +291,6 @@ combos:
 - p: [9, 19, 30]
   k: {t: rkeys, h: '$$mdi:toggle-switch$$'}
   l: [base, rkeys]
-- p: [31, 30]
-  k: {t: mouse, h: '$$mdi:toggle-switch$$'}
-  l: [base, mouse]
-- p: [20, 21]
-  k: {t: linux_mouse, h: '$$mdi:toggle-switch$$'}
-  l: [base, linux_mouse]
 - p: [1, 2]
   k: esc
   l: [base, qwert, nav, num]
@@ -276,15 +305,6 @@ combos:
   l: [base, qwert, nav, num]
 - p: [12, 13]
   k: '&hml_repeat LS(LCTRL) 0'
-  l: [base, qwert, nav, num]
-- p: [22, 24]
-  k: Ctl+ X
-  l: [base, qwert, nav, num]
-- p: [22, 23]
-  k: Ctl+ INS
-  l: [base, qwert, nav, num]
-- p: [23, 24]
-  k: Sft+ INS
   l: [base, qwert, nav, num]
 - p: [6, 7]
   k: $$material:backspace$$
@@ -370,6 +390,12 @@ combos:
 - p: [14, 33]
   k: $$material:volume_down$$
   l: [base, qwert]
+- p: [31, 30]
+  k: {t: mouse, h: '$$mdi:toggle-switch$$'}
+  l: [base, mouse]
+- p: [20, 21]
+  k: {t: linux_mouse, h: '$$mdi:toggle-switch$$'}
+  l: [base, linux_mouse]
 - p: [6, 8]
   k: F5
   l: [mouse]
@@ -379,9 +405,30 @@ combos:
 - p: [6, 7, 8]
   k: Gui+ T
   l: [mouse]
+- p: [29, 27]
+  k: Gui+ X
+  l: [mouse]
+- p: [29, 28]
+  k: Gui+ C
+  l: [mouse]
+- p: [28, 27]
+  k: Gui+ V
+  l: [mouse]
 - p: [7, 8]
   k: Ctl+ W
   l: [linux_mouse]
 - p: [6, 7, 8]
   k: Ctl+ T
+  l: [linux_mouse]
+- p: [29, 27]
+  k: Ctl+ X
+  l: [linux_mouse]
+- p: [29, 28]
+  k: Ctl+ C
+  l: [linux_mouse]
+- p: [28, 27]
+  k: Ctl+ V
+  l: [linux_mouse]
+- p: [3, 4]
+  k: DEL
   l: [linux_mouse]
