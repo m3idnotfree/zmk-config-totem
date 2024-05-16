@@ -114,14 +114,14 @@ COMBO(refresh_tap, &kp F5,          RT1 RT3, MOUSE LINUXMOUSE, COMBO_TERM_FAST, 
 
 /* Mac Web combes */
 COMBO(m_close_tap, &kp LG(W),       RT2 RT3, MOUSE,            COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(m_new_tap,   &kp LG(T),       RT1 RT3, MOUSE,            COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+COMBO(m_new_tap,   &kp LG(T),       RT1 RT2, MOUSE,            COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 COMBO(m_cut,       &kp LG(X),       RB3 RB1, MOUSE,            COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(m_copy,      &kp LG(C),       RB3 RB2, MOUSE,            COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(m_paste,     &kp LG(V),       RB2 RB1, MOUSE,            COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Linux Web combes */
 COMBO(l_close_tap, &kp LC(W),       RT2 RT3, LINUXMOUSE,       COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(l_new_tap,   &kp LC(T),       RT1 RT3, LINUXMOUSE,       COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+COMBO(l_new_tap,   &kp LC(T),       RT1 RT2, LINUXMOUSE,       COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 COMBO(l_cut,       &kp K_CUT,       RB3 RB1, LINUXMOUSE,       COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(l_copy,      &kp K_COPY,      RB3 RB2, LINUXMOUSE,       COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(l_paste,     &kp K_PASTE,     RB2 RB1, LINUXMOUSE,       COMBO_TERM_FAST, COMBO_IDLE_FAST)
