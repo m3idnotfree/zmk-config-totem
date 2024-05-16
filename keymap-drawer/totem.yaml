@@ -402,7 +402,7 @@ combos:
 - p: [7, 8]
   k: Gui+ W
   l: [mouse]
-- p: [6, 8]
+- p: [6, 7]
   k: Gui+ T
   l: [mouse]
 - p: [29, 27]
@@ -417,7 +417,7 @@ combos:
 - p: [7, 8]
   k: Ctl+ W
   l: [linux_mouse]
-- p: [6, 8]
+- p: [6, 7]
   k: Ctl+ T
   l: [linux_mouse]
 - p: [29, 27]
