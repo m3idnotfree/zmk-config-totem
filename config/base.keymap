@@ -256,7 +256,7 @@ ZMK_MACRO(tog_hangle,
 
 #define _MOUSE_TOP_ W_TAP_L   U_WH_D     U_MS_U      U_WH_U    W_TAP_R
 #define _MOUSE_MID_ BACK      U_MS_L     U_MS_D      U_MS_R    GO
-#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
+#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  ___         &kp PG_UP W_TAPM_R
 #define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
 
 /* Keymap */

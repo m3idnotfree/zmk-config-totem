@@ -226,7 +226,7 @@ layers:
   - {t: ▽, type: trans}
   - Tab Move ←
   - PG DN
-  - Middle Click
+  - {t: ▽, type: trans}
   - PG UP
   - Tab Move →
   - $$material:keyboard_arrow_right$$
@@ -268,7 +268,7 @@ layers:
   - {t: ▽, type: trans}
   - Tab Move ←
   - PG DN
-  - Middle Click
+  - {t: ▽, type: trans}
   - PG UP
   - Tab Move →
   - $$material:keyboard_arrow_right$$
@@ -398,11 +398,11 @@ combos:
   l: [base, linux_mouse]
 - p: [6, 8]
   k: F5
-  l: [mouse]
+  l: [mouse, linux_mouse]
 - p: [7, 8]
   k: Gui+ W
   l: [mouse]
-- p: [6, 7, 8]
+- p: [6, 8]
   k: Gui+ T
   l: [mouse]
 - p: [29, 27]
@@ -417,17 +417,17 @@ combos:
 - p: [7, 8]
   k: Ctl+ W
   l: [linux_mouse]
-- p: [6, 7, 8]
+- p: [6, 8]
   k: Ctl+ T
   l: [linux_mouse]
 - p: [29, 27]
-  k: Ctl+ X
+  k: CUT
   l: [linux_mouse]
 - p: [29, 28]
-  k: Ctl+ C
+  k: COPY
   l: [linux_mouse]
 - p: [28, 27]
-  k: Ctl+ V
+  k: PASTE
   l: [linux_mouse]
 - p: [3, 4]
   k: DEL
