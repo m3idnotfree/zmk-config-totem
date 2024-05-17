@@ -89,16 +89,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '0', h: Gui}
-  - {t: '4', h: Alt}
-  - {t: '5', h: Ctrl}
-  - {t: '6', h: Shift}
+  - '0'
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: Shift, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Gui, h: sticky}
   - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - '1'
