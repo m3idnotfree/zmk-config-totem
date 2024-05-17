@@ -259,8 +259,8 @@ ZMK_MACRO(tog_hangle,
 #define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
 #define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
 
-#define INCREASE &kp LG(PLUS)
-#define DECREASE &kp LG(MINUS)
+#define INCREASE &kp LG(KP_PLUS)
+#define DECREASE &kp LG(KP_SUBTRACT)
  
 /* Keymap */
 
