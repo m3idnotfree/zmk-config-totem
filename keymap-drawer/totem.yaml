@@ -184,8 +184,8 @@ layers:
   - Forward Click
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+ -
+  - Gui+ +
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
