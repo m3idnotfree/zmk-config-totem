@@ -1,11 +1,11 @@
 /* source key position labels */
 #include "totem.h"
-#define ZELLIJ_LEADER LC(g)
+#define ZELLIJ_LEADER &kp LC(g)
 
 #define X_LB    &kp LEFT
 #define X_RB    &kp RIGHT
 
-#define X_LH    &kp ZELLIJ_LEADER
+#define X_LH    ZELLIJ_LEADER
 #define X_RH    &none
 
 /* source the main keymap */
