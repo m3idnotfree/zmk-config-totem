@@ -1,6 +1,6 @@
 draw_config:
   n_columns: 1
-  draw_key_sides: true
+  draw_key_sides: false
   key_w: 60.0
   key_h: 56.0
   split_gap: 30.0
@@ -421,7 +421,7 @@ parse_config:
       h: Ctrl + Del
     '&kp LS(TAB)':
       t: Shift Tap
-    '&kp LC(g)': zellij leader
+    '&kp LC(G)': zellij leader
   # zmk_combos:
   #   combo_lighting: {align: top, o: 2.12, arc_scale: 1.03}
   #   combo_lighting_transitional: {align: top, o: 2.10, arc_scale: 1.03}
