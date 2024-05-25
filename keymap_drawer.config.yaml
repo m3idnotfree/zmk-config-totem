@@ -421,6 +421,7 @@ parse_config:
       h: Ctrl + Del
     '&kp LS(TAB)':
       t: Shift Tap
+    '&kp LC(g)': zellij leader
   # zmk_combos:
   #   combo_lighting: {align: top, o: 2.12, arc_scale: 1.03}
   #   combo_lighting_transitional: {align: top, o: 2.10, arc_scale: 1.03}
