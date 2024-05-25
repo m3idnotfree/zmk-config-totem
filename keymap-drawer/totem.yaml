@@ -33,7 +33,7 @@ layers:
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
   - $$material:keyboard_arrow_right$$
-  - esc
+  - Ctl+ G
   - '&lt_spc 3 SPC'
   - {t: '$$material:keyboard_return$$', h: fn}
   - Smart num
@@ -72,7 +72,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
-  - esc
+  - Ctl+ G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -111,7 +111,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
-  - esc
+  - Ctl+ G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -150,7 +150,7 @@ layers:
   - '>'
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
-  - esc
+  - Ctl+ G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -189,14 +189,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
-  - esc
+  - Ctl+ G
   - {t: ▽, type: trans}
   - {type: held}
   - $$material:volume_mute$$
   - $$material:play_pause$$
   - ''
   sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', '', '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
-      BLE, Out USB, Reset, Reset, '', OUT TOG, '', '', '$$material:keyboard_arrow_right$$', esc, '', '', '', '', '']
+      BLE, Out USB, Reset, Reset, '', OUT TOG, '', '', '$$material:keyboard_arrow_right$$', Ctl+ G, '', '', '', '', '']
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -230,7 +230,7 @@ layers:
   - PG UP
   - Tab Move →
   - $$material:keyboard_arrow_right$$
-  - esc
+  - Ctl+ G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Right Click
@@ -238,7 +238,7 @@ layers:
   - esc
   rkeys: ['', '', '', '', '', Scroll ←, Scroll ↓, '$$material:keyboard_arrow_up$$', Scroll ↑, Scroll →, '', '', '', '', '', '', '$$material:keyboard_arrow_left$$',
     '$$material:keyboard_arrow_down$$', '$$material:keyboard_arrow_right$$', F, '$$material:keyboard_arrow_left$$', '', '', '', '', '', '', Back Click, Middle Click,
-    Forward Click, '', '$$material:keyboard_arrow_right$$', esc, '', '', Left Click, Right Click, '']
+    Forward Click, '', '$$material:keyboard_arrow_right$$', Ctl+ G, '', '', Left Click, Right Click, '']
   linux_mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -272,7 +272,7 @@ layers:
   - PG UP
   - Tab Move →
   - Ctl+ T
-  - esc
+  - Ctl+ G
   - $$material:volume_down$$
   - $$material:volume_up$$
   - Right Click
