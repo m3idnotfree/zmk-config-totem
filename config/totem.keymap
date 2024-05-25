@@ -10,13 +10,3 @@
 
 /* source the main keymap */
 #include "base.keymap"
-
-#include "../layers/L0_colemak-dh.dtsi"
-#include "../layers/L1_qwerty.dtsi"
-#include "../layers/L2_num.dtsi"
-#include "../layers/L3_nav.dtsi"
-#include "../layers/L4_fn.dtsi"
-#include "../layers/L5_sys.dtsi"
-#include "../layers/L6_mouse.dtsi"
-#include "../layers/L7_rkeys.dtsi"
-#include "../layers/L8_linux_mouse.dtsi"
