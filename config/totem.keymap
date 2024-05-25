@@ -5,7 +5,7 @@
 #define X_LB    &kp LEFT
 #define X_RB    &kp RIGHT
 
-#define X_LH    ZELLIJ_LEADER
+#define X_LH    &kp ESC
 #define X_RH    &none
 
 /* source the main keymap */
