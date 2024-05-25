@@ -421,6 +421,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -471,7 +474,7 @@ rect.held, rect.combo.held {
 <path d="M207,160 l-40,9" class="combo"/>
 <path d="M207,160 l40,5" class="combo"/>
 <rect rx="6" ry="6" x="193" y="147" width="28" height="26" class="combo"/>
-<text x="207" y="160" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hangle</tspan></text>
+<text x="207" y="160" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hang…</tspan></text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="745" y="155" width="28" height="26" class="combo"/>
@@ -490,20 +493,18 @@ rect.held, rect.combo.held {
 <path d="M203,59 l-44,2" class="combo"/>
 <path d="M203,59 l44,-2" class="combo"/>
 <rect rx="6" ry="6" x="189" y="46" width="28" height="26" class="combo"/>
-<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mouse</tspan></text>
+<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mo…</tspan></text>
 </g>
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="161" y="88" width="28" height="26" class="combo"/>
 <text x="175" y="101" class="combo tap">
-<tspan x="175" dy="-1.2em" style="font-size: 75%">&amp;hml</tspan><tspan x="175" dy="1.2em" style="font-size: 75%">LS(LALT)</tspan>
-<tspan x="175" dy="1.2em" style="font-size: 75%">TAB</tspan>
+<tspan x="175" dy="-0.6em">&amp;hml</tspan><tspan x="175" dy="1.2em">…</tspan>
 </text>
 </g>
 <g class="combo combopos-8">
 <rect rx="6" ry="6" x="223" y="85" width="28" height="26" class="combo"/>
 <text x="237" y="98" class="combo tap">
-<tspan x="237" dy="-1.2em" style="font-size: 60%">&amp;hml_repeat</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">LS(LCTRL)</tspan>
-<tspan x="237" dy="1.2em" style="font-size: 60%">0</tspan>
+<tspan x="237" dy="-0.6em" style="font-size: 60%">&amp;hml_repe…</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">…</tspan>
 </text>
 </g>
 <g class="combo combopos-9">
@@ -613,7 +614,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-34">
 <rect rx="6" ry="6" x="47" y="203" width="28" height="26" class="combo"/>
-<text x="61" y="216" class="combo tap"><tspan style="font-size: 60%">linux_mouse</tspan></text>
+<text x="61" y="216" class="combo tap"><tspan style="font-size: 60%">linux_mou…</tspan></text>
 <use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="54" y="212" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 </g>
@@ -791,6 +792,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
@@ -833,7 +837,7 @@ rect.held, rect.combo.held {
 <path d="M207,160 l-40,9" class="combo"/>
 <path d="M207,160 l40,5" class="combo"/>
 <rect rx="6" ry="6" x="193" y="147" width="28" height="26" class="combo"/>
-<text x="207" y="160" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hangle</tspan></text>
+<text x="207" y="160" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hang…</tspan></text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="160" y="32" width="28" height="26" class="combo"/>
@@ -847,20 +851,18 @@ rect.held, rect.combo.held {
 <path d="M203,59 l-44,2" class="combo"/>
 <path d="M203,59 l44,-2" class="combo"/>
 <rect rx="6" ry="6" x="189" y="46" width="28" height="26" class="combo"/>
-<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mouse</tspan></text>
+<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mo…</tspan></text>
 </g>
 <g class="combo combopos-6">
 <rect rx="6" ry="6" x="161" y="88" width="28" height="26" class="combo"/>
 <text x="175" y="101" class="combo tap">
-<tspan x="175" dy="-1.2em" style="font-size: 75%">&amp;hml</tspan><tspan x="175" dy="1.2em" style="font-size: 75%">LS(LALT)</tspan>
-<tspan x="175" dy="1.2em" style="font-size: 75%">TAB</tspan>
+<tspan x="175" dy="-0.6em">&amp;hml</tspan><tspan x="175" dy="1.2em">…</tspan>
 </text>
 </g>
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="223" y="85" width="28" height="26" class="combo"/>
 <text x="237" y="98" class="combo tap">
-<tspan x="237" dy="-1.2em" style="font-size: 60%">&amp;hml_repeat</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">LS(LCTRL)</tspan>
-<tspan x="237" dy="1.2em" style="font-size: 60%">0</tspan>
+<tspan x="237" dy="-0.6em" style="font-size: 60%">&amp;hml_repe…</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">…</tspan>
 </text>
 </g>
 <g class="combo combopos-8">
@@ -1135,6 +1137,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
@@ -1178,20 +1183,18 @@ rect.held, rect.combo.held {
 <path d="M203,59 l-44,2" class="combo"/>
 <path d="M203,59 l44,-2" class="combo"/>
 <rect rx="6" ry="6" x="189" y="46" width="28" height="26" class="combo"/>
-<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mouse</tspan></text>
+<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mo…</tspan></text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="161" y="88" width="28" height="26" class="combo"/>
 <text x="175" y="101" class="combo tap">
-<tspan x="175" dy="-1.2em" style="font-size: 75%">&amp;hml</tspan><tspan x="175" dy="1.2em" style="font-size: 75%">LS(LALT)</tspan>
-<tspan x="175" dy="1.2em" style="font-size: 75%">TAB</tspan>
+<tspan x="175" dy="-0.6em">&amp;hml</tspan><tspan x="175" dy="1.2em">…</tspan>
 </text>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="223" y="85" width="28" height="26" class="combo"/>
 <text x="237" y="98" class="combo tap">
-<tspan x="237" dy="-1.2em" style="font-size: 60%">&amp;hml_repeat</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">LS(LCTRL)</tspan>
-<tspan x="237" dy="1.2em" style="font-size: 60%">0</tspan>
+<tspan x="237" dy="-0.6em" style="font-size: 60%">&amp;hml_repe…</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">…</tspan>
 </text>
 </g>
 <g class="combo combopos-6">
@@ -1325,13 +1328,13 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
 <use href="#material:backspace" xlink:href="#material:backspace" x="-9" y="-13" height="18" width="18.0" class="key tap glyph material:backspace"/>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 60%">Ctrl + Bspc</tspan></text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 60%">Ctrl + Bs…</tspan></text>
 </g>
 <g transform="translate(634, 28)" class="key keypos-7">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
 <use href="#material:keyboard_arrow_up" xlink:href="#material:keyboard_arrow_up" x="-9" y="-13" height="18" width="18.0" class="key tap glyph material:keyboard_arrow_up"/>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 60%">Ctrl + Home</tspan></text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 60%">Ctrl + Ho…</tspan></text>
 </g>
 <g transform="translate(702, 62) rotate(4.0)" class="key keypos-8">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -1466,6 +1469,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
@@ -1503,20 +1509,18 @@ rect.held, rect.combo.held {
 <path d="M203,59 l-44,2" class="combo"/>
 <path d="M203,59 l44,-2" class="combo"/>
 <rect rx="6" ry="6" x="189" y="46" width="28" height="26" class="combo"/>
-<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mouse</tspan></text>
+<text x="203" y="59" class="combo tap"><tspan style="font-size: 60%">&amp;smart_mo…</tspan></text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="161" y="88" width="28" height="26" class="combo"/>
 <text x="175" y="101" class="combo tap">
-<tspan x="175" dy="-1.2em" style="font-size: 75%">&amp;hml</tspan><tspan x="175" dy="1.2em" style="font-size: 75%">LS(LALT)</tspan>
-<tspan x="175" dy="1.2em" style="font-size: 75%">TAB</tspan>
+<tspan x="175" dy="-0.6em">&amp;hml</tspan><tspan x="175" dy="1.2em">…</tspan>
 </text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="223" y="85" width="28" height="26" class="combo"/>
 <text x="237" y="98" class="combo tap">
-<tspan x="237" dy="-1.2em" style="font-size: 60%">&amp;hml_repeat</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">LS(LCTRL)</tspan>
-<tspan x="237" dy="1.2em" style="font-size: 60%">0</tspan>
+<tspan x="237" dy="-0.6em" style="font-size: 60%">&amp;hml_repe…</tspan><tspan x="237" dy="1.2em" style="font-size: 60%">…</tspan>
 </text>
 </g>
 <g class="combo combopos-5">
@@ -1799,6 +1803,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
@@ -1996,6 +2003,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -2217,6 +2227,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans side"/>
@@ -2434,6 +2447,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -2539,7 +2555,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em" style="font-size: 60%">Sft+</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">$$material:keyboard_return$$</tspan>
+<tspan x="0" dy="-0.6em" style="font-size: 60%">Sft+</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">$$materia…</tspan>
 </text>
 </g>
 <g transform="translate(207, 84)" class="key trans keypos-12">
@@ -2669,6 +2685,9 @@ rect.held, rect.combo.held {
 <g transform="translate(250, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="43" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">zellij</tspan><tspan x="0" dy="1.2em">leader</tspan>
+</text>
 </g>
 <g transform="translate(316, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key side"/>
@@ -2701,7 +2720,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="47" y="203" width="28" height="26" class="combo"/>
-<text x="61" y="216" class="combo tap"><tspan style="font-size: 60%">linux_mouse</tspan></text>
+<text x="61" y="216" class="combo tap"><tspan style="font-size: 60%">linux_mou…</tspan></text>
 <use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="54" y="212" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-1">
