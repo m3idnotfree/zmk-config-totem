@@ -262,7 +262,10 @@ layers:
   - Forward Click
   - $$material:keyboard_arrow_left$$
   - $$material:keyboard_arrow_down$$
-  - RIGHT K COPY K PASTE K CUT
+  - $$material:keyboard_arrow_right$$
+  - COPY
+  - PASTE
+  - CUT
   - Tab Move ←
   - PG DN
   - Middle Click
