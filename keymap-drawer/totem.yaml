@@ -279,10 +279,10 @@ combos:
 - p: [5, 27]
   k: CANCEL
   l: [base, qwert, num]
-- p: [33, 11]
+- p: [33, 12]
   k: {t: qwert, h: '$$mdi:toggle-switch$$'}
   l: [base, qwert]
-- p: [33, 12]
+- p: [33, 11]
   k: '&tog_hangle'
   l: [base, qwert]
 - p: [1, 2]
