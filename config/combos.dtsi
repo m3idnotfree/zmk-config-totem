@@ -37,7 +37,7 @@
 COMBO(cancel,          &kp K_CANCEL,    RT0 RB1,     DEF QWE NUM,      COMBO_TERM_FAST, COMBO_IDLE_FAST)
 /* Hangle */
 COMBO(defqwe,          &tog QWE,        LH1 LM3,     DEF QWE,          COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(hangle,          &tog_hangle,     LH1 LM4,     DEF QWE,          COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(hangle,          &tog_hangle,     LH1 LM2,     DEF QWE,          COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
 COMBO(esc,             &kp ESC,         LT3 LT2,     DEF QWE NAV NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
