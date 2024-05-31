@@ -124,11 +124,10 @@ ZMK_TAP_DANCE(num_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
-#define KEYS_L_M LM0 LM1 LM2 LM3 LM4   // left hand middle
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <LT3 LT2 LT1 LT0 KEYS_L_M LB3 LB2 LB1 LB0 KEYS_R RH0 RH1 RH2 X_LB X_RB>;
+    ignored-key-positions = <LT3 LT2 LT1 LT0 LM0 LM1 LM2 LM3 LM4 LB3 LB2 LB1 LB0 KEYS_R RH0 RH1 RH2 X_LB X_RB>;
     ignored-layers = <MOUSE FN>;
 )
 
