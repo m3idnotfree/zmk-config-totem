@@ -50,7 +50,7 @@ layers:
   - I
   - O
   - P
-  - {t: ▽, type: trans}
+  - {t: A, h: Gui}
   - {t: S, h: Alt}
   - {t: D, h: Ctrl}
   - {t: F, h: Shift}
@@ -79,81 +79,81 @@ layers:
   - {t: ▽, type: trans}
   - ''
   num:
-  - ''
+  - {t: ▽, type: trans}
   - '7'
   - '8'
   - '9'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
   - '4'
   - '5'
   - '6'
-  - ''
-  - ''
-  - {t: Shift, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Gui, h: sticky}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$material:keyboard_arrow_left$$
-  - ''
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
   - ''
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CANCEL
   - ''
   nav:
-  - ''
+  - {t: ▽, type: trans}
   - Swapper
   - Shift Tap
   - '&mswapper'
-  - ''
+  - {t: ▽, type: trans}
   - PG UP
   - {t: '$$material:backspace$$', h: Ctrl + Bspc}
   - {t: '$$material:keyboard_arrow_up$$', h: Ctrl + Home}
   - {t: ⌦, h: Ctrl + Del}
-  - ''
-  - {t: Gui, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Shift, h: sticky}
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PG DN
   - {t: '$$material:keyboard_arrow_left$$', h: Home}
   - {t: '$$material:keyboard_arrow_down$$', h: Ctrl + End}
   - {t: '$$material:keyboard_arrow_right$$', h: End}
   - $$material:keyboard_return$$
   - $$material:keyboard_arrow_left$$
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - INS
   - $$material:keyboard_tab$$
   - <
   - '>'
-  - ''
+  - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
   - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - CANCEL
   - ''
   fn:
@@ -236,9 +236,6 @@ layers:
   - Right Click
   - Left Click
   - esc
-  rkeys: ['', '', '', '', '', Scroll ←, Scroll ↓, '$$material:keyboard_arrow_up$$', Scroll ↑, Scroll →, '', '', '', '', '', '', '$$material:keyboard_arrow_left$$',
-    '$$material:keyboard_arrow_down$$', '$$material:keyboard_arrow_right$$', F, '$$material:keyboard_arrow_left$$', '', '', '', '', '', '', Back Click, Middle Click,
-    Forward Click, '', '$$material:keyboard_arrow_right$$', '', '', '', Left Click, Right Click, '']
   linux_mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -288,9 +285,6 @@ combos:
 - p: [22, 23, 24]
   k: '&tog_hangle'
   l: [base, qwert]
-- p: [9, 19, 30]
-  k: {t: rkeys, h: '$$mdi:toggle-switch$$'}
-  l: [base, rkeys]
 - p: [1, 2]
   k: esc
   l: [base, qwert, nav, num]
@@ -387,10 +381,10 @@ combos:
 - p: [18, 29]
   k: '|'
   l: [base, qwert, nav, num]
-- p: [4, 33]
+- p: [4, 34]
   k: $$material:volume_up$$
   l: [base, qwert]
-- p: [14, 33]
+- p: [14, 34]
   k: $$material:volume_down$$
   l: [base, qwert]
 - p: [31, 30]
