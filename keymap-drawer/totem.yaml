@@ -223,7 +223,7 @@ layers:
   - Gui+ X
   - Gui+ C
   - Gui+ V
-  - CANCEL
+  - {t: ▽, type: trans}
   - Tab Move ←
   - PG DN
   - Middle Click
