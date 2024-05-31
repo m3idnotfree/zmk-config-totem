@@ -127,8 +127,8 @@ ZMK_TAP_DANCE(num_dance,
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1 RH2>;
-    ignored-layers = <MOUSE>;
+    ignored-key-positions = <LT1 LT2 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4 RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1 RH2>;
+    ignored-layers = <MOUSE FN>;
 )
 
 /* Custom behaviors */
@@ -259,6 +259,10 @@ ZMK_MACRO(tog_hangle,
 #define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
 #define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
 
+#define MAC_CUT   &kp LG(X)
+#define MAC_COPY  &kp LG(C)
+#define MAC_PASTE &kp LG(V)
+
 #define INCREASE &kp LG(KP_PLUS)
 #define DECREASE &kp LG(KP_SUBTRACT)
  
@@ -300,13 +304,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         num {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &kp N7        &kp N8        &kp N9        ___             X_MT     ___           ___           ___           ___           ___             X_RT
+    X_LT     XXX           &kp N7        &kp N8        &kp N9        XXX             X_MT     XXX           XXX           XXX           XXX           XXX             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp N0        &kp N4        &kp N5        &kp N6        ___             X_MM     ___           &sk RSHFT     &sk LCTRL     &sk LALT      &sk LGUI        X_RM
+    X_LM     &kp N0        &kp N4        &kp N5        &kp N6        XXX             X_MM     XXX           &sk RSHFT     &sk LCTRL     &sk LALT      &sk LGUI        X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           &kp N1        &kp N2        &kp N3        ___             X_MB     ___           ___           ___           ___           ___             X_RB
+    X_LB     XXX           &kp N1        &kp N2        &kp N3        XXX             X_MB     XXX           XXX           XXX           XXX           XXX             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     ___           CANCEL                                                    X_RH
+    X_LH                                               XXX           XXX             X_MH     XXX           CANCEL                                                    X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
@@ -314,13 +318,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         nav {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &swapper      &kp LS(TAB)   &mswapper      ___            X_MT     &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___             X_RT
+    X_LT     XXX           &swapper      &kp LS(TAB)   &mswapper     XXX             X_MT     &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       XXX             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___             X_MM     &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET         X_RM
+    X_LM     &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     XXX             X_MM     &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           ___           ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        ___             X_RB
+    X_LB     XXX           XXX           XXX           XXX           XXX             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        XXX             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     ___           CANCEL                                                    X_RH
+    X_LH                                               XXX           XXX             X_MH     XXX           CANCEL                                                    X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
@@ -356,13 +360,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         mouse {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           ___           ___           ___           ___             X_MT                                 _MOUSE_TOP_                                 X_RT
+    X_LT     ___           ___           &kp F         &kp I         ___             X_MT                                 _MOUSE_TOP_                                 X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     ___           ___           ___           ___           ___             X_MM                                 _MOUSE_MID_                                 X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           ___           ___             X_MB                                 _MOUSE_BOT_                                 X_RB
+  &kp LEFT   ___           MAC_CUT       MAC_COPY      MAC_PASTE     ___             X_MB                                 _MOUSE_BOT_                               &kp RIGHT
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH                                 _MOUSE_THU_
+    X_LH                                               CANCEL        ___             X_MH                                 _MOUSE_THU_
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
@@ -387,7 +391,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp UP        &kp LS(RET)   ___           ___           &kp I           X_MM                                 _MOUSE_MID_                                 X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LEFT   &kp DOWN      &kp RIGHT     ___           ___           ___             X_MB                                 _MOUSE_BOT_                               &kp LC(T)
+  &kp LEFT   &kp DOWN      &kp RIGHT     K_COPY        K_PASTE       K_CUT           X_MB                                 _MOUSE_BOT_                               &kp LC(T)
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               &kp C_VOL_DN  &kp C_VOL_UP    X_MH                                 _MOUSE_THU_
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
