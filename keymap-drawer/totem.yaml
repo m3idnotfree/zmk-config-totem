@@ -114,7 +114,8 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - CANCEL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   nav:
   - {t: ▽, type: trans}
@@ -153,7 +154,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - CANCEL
+  - {t: ▽, type: trans}
   - ''
   fn:
   - Tab ←
@@ -161,7 +162,7 @@ layers:
   - PG DN
   - PG UP
   - Home
-  - {t: ▽, type: trans}
+  - $$material:play_pause$$
   - $$material:skip_previous$$
   - $$material:volume_up$$
   - $$material:skip_next$$
@@ -182,7 +183,7 @@ layers:
   - Back Click
   - Forward Click
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$material:volume_mute$$
   - Gui+ KP SUBTRACT
   - Gui+ KP PLUS
   - {t: ▽, type: trans}
@@ -191,8 +192,8 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {type: held}
-  - $$material:volume_mute$$
-  - $$material:play_pause$$
+  - {t: ▽, type: trans}
+  - CANCEL
   - ''
   sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', T, '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
       BLE, Out USB, Reset, Reset, '', OUT TOG, '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
@@ -230,7 +231,7 @@ layers:
   - Tab Move →
   - $$material:keyboard_arrow_right$$
   - ''
-  - CANCEL
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Right Click
   - Left Click
