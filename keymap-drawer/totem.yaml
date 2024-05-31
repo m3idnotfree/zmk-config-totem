@@ -114,7 +114,6 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - CANCEL
   - ''
   nav:
@@ -279,10 +278,10 @@ combos:
 - p: [5, 27]
   k: CANCEL
   l: [base, qwert, num]
-- p: [29, 28, 27]
+- p: [33, 11]
   k: {t: qwert, h: '$$mdi:toggle-switch$$'}
   l: [base, qwert]
-- p: [22, 23, 24]
+- p: [33, 10]
   k: '&tog_hangle'
   l: [base, qwert]
 - p: [1, 2]
