@@ -113,8 +113,8 @@ layers:
   - $$material:keyboard_arrow_right$$
   - ''
   - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - CANCEL
   - ''
   nav:
@@ -195,7 +195,7 @@ layers:
   - $$material:volume_mute$$
   - $$material:play_pause$$
   - ''
-  sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', '', '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
+  sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', T, '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
       BLE, Out USB, Reset, Reset, '', OUT TOG, '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
   mouse:
   - {t: ▽, type: trans}
