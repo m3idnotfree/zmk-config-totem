@@ -48,6 +48,7 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
+
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                                     \
     ZMK_HOLD_TAP(NAME,                                                                             \
         flavor = "balanced";                                                                       \
@@ -123,12 +124,14 @@ ZMK_TAP_DANCE(num_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
+#define KEYS_L_M LM0 LM1 LM2 LM3 LM4   // left hand middle
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <KEYS_L KEYS_R THUMBS>;
+    ignored-key-positions = <LT3 LT2 LT1 LT0 KEYS_L_M LB3 LB2 LB1 LB0 KEYS_R RH0 RH1 RH2 X_LB X_RB>;
     ignored-layers = <MOUSE FN>;
 )
+
 
 /* Custom behaviors */
 
@@ -329,7 +332,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     ___           ___           ___           ___           ___             X_MM                                 _MOUSE_MID_                                 X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LEFT   ___           MAC_CUT       MAC_COPY      MAC_PASTE     CANCEL          X_MB                                 _MOUSE_BOT_                               &kp RIGHT
+  &kp LEFT   ___           MAC_CUT       MAC_COPY      MAC_PASTE     ___             X_MB                                 _MOUSE_BOT_                               &kp RIGHT
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH                                 _MOUSE_THU_
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
