@@ -426,14 +426,14 @@ rect.held, rect.combo.held {
 <path d="M262,165 l43,64" class="combo"/>
 <path d="M262,165 l-43,-64" class="combo"/>
 <rect rx="6" ry="6" x="248" y="152" width="28" height="26" class="combo"/>
-<text x="262" y="165" class="combo tap">qwert</text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="254" y="161" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<text x="262" y="165" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hang…</tspan></text>
 </g>
 <g class="combo combopos-2">
 <path d="M230,181 l70,52" class="combo"/>
 <path d="M230,181 l-70,-52" class="combo"/>
 <rect rx="6" ry="6" x="216" y="168" width="28" height="26" class="combo"/>
-<text x="230" y="181" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hang…</tspan></text>
+<text x="230" y="181" class="combo tap">qwert</text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="222" y="177" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="160" y="32" width="28" height="26" class="combo"/>
@@ -753,14 +753,14 @@ rect.held, rect.combo.held {
 <path d="M262,165 l43,64" class="combo"/>
 <path d="M262,165 l-43,-64" class="combo"/>
 <rect rx="6" ry="6" x="248" y="152" width="28" height="26" class="combo"/>
-<text x="262" y="165" class="combo tap">qwert</text>
-<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="254" y="161" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
+<text x="262" y="165" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hang…</tspan></text>
 </g>
 <g class="combo combopos-2">
 <path d="M230,181 l70,52" class="combo"/>
 <path d="M230,181 l-70,-52" class="combo"/>
 <rect rx="6" ry="6" x="216" y="168" width="28" height="26" class="combo"/>
-<text x="230" y="181" class="combo tap"><tspan style="font-size: 60%">&amp;tog_hang…</tspan></text>
+<text x="230" y="181" class="combo tap">qwert</text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="222" y="177" height="15" width="15.0" class="combo hold glyph mdi:toggle-switch"/>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="160" y="32" width="28" height="26" class="combo"/>
