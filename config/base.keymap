@@ -64,9 +64,9 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
-MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+MAKE_HRM(hmlrepet, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
+MAKE_HRM(hmrlprlt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
+MAKE_HRM(hmrrprgt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
 /* Nav cluster */
 
@@ -78,8 +78,8 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     hold-trigger-key-positions = <0>;
 
 &mt { MT_CORE };
-ZMK_HOLD_TAP(mt_home, bindings = <&masked_home>, <&kp>; MT_CORE)
-ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
+ZMK_HOLD_TAP(mt_home, bindings = <&msk_home>, <&kp>; MT_CORE)
+ZMK_HOLD_TAP(mt_end, bindings = <&msk_end>, <&kp>; MT_CORE)
 
 #define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
 #define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
@@ -94,13 +94,14 @@ ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
         bindings = <BINDING>, <BINDING>;                                                           \
         mods = <MODS>;                                                                             \
     )
-MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
-MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
+MASK_MODS(msk_home, (MOD_LCTL), &kp HOME)
+MASK_MODS(msk_end,  (MOD_LCTL), &kp END)
 
 /* Caps-word, num-word and smart-mouse */
 
+// Behavior can be invoked on peripherals, so name must be <= 8 characters.
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_MOD_MORPH(smart_shft,
+ZMK_MOD_MORPH(smt_shft,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
 )
@@ -109,14 +110,14 @@ ZMK_MOD_MORPH(smart_shft,
 };
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
-ZMK_HOLD_TAP(smart_num,
+#define SMART_NUM &smtnum NUM 0
+ZMK_HOLD_TAP(smtnum,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_dance>;
+    bindings = <&mo>, <&numdance>;
 )
-ZMK_TAP_DANCE(num_dance,
+ZMK_TAP_DANCE(numdance,
     tapping-term-ms = <200>;
     bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
@@ -154,12 +155,12 @@ ZMK_TRI_STATE(mswapper,
     )
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+SIMPLE_MORPH(cm_morph, SFT, &kp COMMA, &cm_i_mor)
+SIMPLE_MORPH(cm_i_mor, CTL, &kp SEMICOLON, &kp LESS_THAN)
 
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+SIMPLE_MORPH(dt_morph, SFT, &kp DOT, &dt_i_mor)
+SIMPLE_MORPH(dt_i_mor, CTL, &kp COLON, &kp GREATER_THAN)
 
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
@@ -189,7 +190,7 @@ ZMK_TAP_DANCE(copy_cut,
 )
 
 // toggle hangle
-ZMK_MACRO(tog_hangle,
+ZMK_MACRO(toghng,
     bindings
         = <&macro_press &kp LCTRL>
         , <&macro_tap &kp SPACE>
@@ -250,9 +251,9 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A  &hml LALT R    &hml LCTRL S  &hml LSHFT T  &kp G           X_MM     &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma_morph  &dot_morph    &qexcl          X_RB
+    X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &cm_morph     &dt_morph     &qexcl          X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                             &lt_spc NAV SPC &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
+    X_LH                                             &lt_spc NAV SPC &lt FN RET      X_MH     SMART_NUM     &smt_shft                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };
