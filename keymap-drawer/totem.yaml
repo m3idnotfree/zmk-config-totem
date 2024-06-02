@@ -29,15 +29,15 @@ layers:
   - V
   - K
   - H
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
+  - '&cm_morph'
+  - '&dt_morph'
   - {t: '?', s: '!'}
   - $$material:keyboard_arrow_right$$
   - ''
   - '&lt_spc 3 SPC'
   - {t: '$$material:keyboard_return$$', h: fn}
-  - Smart num
-  - Smart shift
+  - '&smtnum 2 0'
+  - '&smt_shft'
   - ''
   qwert:
   - {t: ▽, type: trans}
@@ -280,7 +280,7 @@ combos:
   k: CANCEL
   l: [base, qwert, num]
 - p: [33, 12]
-  k: '&tog_hangle'
+  k: '&toghng'
   l: [base, qwert]
 - p: [33, 11]
   k: {t: qwert, h: '$$mdi:toggle-switch$$'}
@@ -298,7 +298,7 @@ combos:
   k: '&hml LC(LALT) TAB'
   l: [base, qwert, nav, num]
 - p: [12, 13]
-  k: '&hml_repeat LS(LCTRL) 0'
+  k: '&hmlrepet LS(LCTRL) 0'
   l: [base, qwert, nav, num]
 - p: [11, 13]
   k: zellij leader
@@ -310,10 +310,10 @@ combos:
   k: DEL
   l: [base, qwert, nav, num]
 - p: [16, 17]
-  k: '&lpar_lt'
+  k: '&hmrlprlt RS(LCTRL) 0'
   l: [base, qwert, num]
 - p: [17, 18]
-  k: '&rpar_gt'
+  k: '&hmrrprgt LC(LALT) 0'
   l: [base, qwert, num]
 - p: [16, 17]
   k: <
