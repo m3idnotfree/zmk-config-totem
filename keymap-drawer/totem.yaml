@@ -310,10 +310,10 @@ combos:
   k: DEL
   l: [base, qwert, nav, num]
 - p: [16, 17]
-  k: '&hmrlprlt RS(LCTRL) 0'
+  k: '&lpar_lt'
   l: [base, qwert, num]
 - p: [17, 18]
-  k: '&hmrrprgt LC(LALT) 0'
+  k: '&rpar_gt'
   l: [base, qwert, num]
 - p: [16, 17]
   k: <
