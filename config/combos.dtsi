@@ -57,11 +57,12 @@ COMBO(zellij,          &kp LC(G),       LM3 LM1,     DEF QWE,          COMBO_TER
 COMBO(bspc,            &kp BSPC,        RT1 RT2,     DEF QWE NAV NUM,  COMBO_TERM_SPAC, COMBO_IDLE_FAST)
 COMBO(del,             &kp DEL,         RT2 RT3,     DEF QWE NAV NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-// COMBO(lpar,            HRC_LPAR,        RM1 RM2,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
-// COMBO(rpar,            HRC_RPAR,        RM2 RM3,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(lpar,            HRC_LPAR,        RM1 RM2,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+COMBO(rpar,            HRC_RPAR,        RM2 RM3,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 // work with ubuntu
-COMBO(lpar,            &lpar_lt,        RM1 RM2,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
-COMBO(rpar,            &rpar_gt,        RM2 RM3,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// COMBO(lpar,            &lpar_lt,        RM1 RM2,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// COMBO(rpar,            &rpar_gt,        RM2 RM3,     DEF QWE     NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 COMBO(lt,              &kp LT,          RM1 RM2,     NAV,              COMBO_TERM_FAST, COMBO_IDLE_FAST)
 COMBO(gt,              &kp GT,          RM2 RM3,     NAV,              COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
