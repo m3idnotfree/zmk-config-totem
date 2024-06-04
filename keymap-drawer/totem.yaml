@@ -195,14 +195,14 @@ layers:
   - {t: ▽, type: trans}
   - CANCEL
   - ''
-  sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', BT CLR, BT CLR ALL, '', '', '', '', T, '', Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$', '', '', Out
-      BLE, Out USB, Reset, Reset, '', OUT TOG, '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
+  sys: [BT 1, BT 2, BT 3, BT 4, BT CLR, '', '', BT CLR ALL, '', '', '', OUT TOG, Out BLE, Out USB, Boot, Boot, '', '', '', '', '$$material:keyboard_arrow_left$$',
+    '', '', T, '', Reset, Reset, '', '', '', '', '$$material:keyboard_arrow_right$$', '', '', '', '', '', '']
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F
   - I
-  - Gui+ B
+  - B
   - Tab ←
   - Scroll ↓
   - Mouse ↑
@@ -220,9 +220,9 @@ layers:
   - Forward Click
   - $$material:keyboard_arrow_left$$
   - $$material:keyboard_arrow_right$$
-  - Gui+ X
-  - Gui+ C
-  - Gui+ V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Tab Move ←
   - PG DN
@@ -231,45 +231,6 @@ layers:
   - Tab Move →
   - $$material:keyboard_arrow_right$$
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Right Click
-  - Left Click
-  - esc
-  linux_mouse:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F
-  - I
-  - Ctl+ B
-  - Tab ←
-  - Scroll ↓
-  - Mouse ↑
-  - Scroll ↑
-  - Tab →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Back Click
-  - Mouse ←
-  - Mouse ↓
-  - Mouse →
-  - Forward Click
-  - $$material:keyboard_arrow_left$$
-  - {t: ▽, type: trans}
-  - Ctl+ X
-  - Ctl+ C
-  - Ctl+ V
-  - $$material:keyboard_arrow_up$$
-  - Tab Move ←
-  - PG DN
-  - Middle Click
-  - PG UP
-  - Tab Move →
-  - Ctl+ T
-  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Right Click
@@ -303,6 +264,15 @@ combos:
 - p: [11, 13]
   k: zellij leader
   l: [base, qwert]
+- p: [22, 24]
+  k: Ctl+ X
+  l: [base, qwert, nav, num]
+- p: [22, 23]
+  k: Ctl+ INS
+  l: [base, qwert, nav, num]
+- p: [23, 24]
+  k: Sft+ INS
+  l: [base, qwert, nav, num]
 - p: [6, 7]
   k: $$material:backspace$$
   l: [base, qwert, nav, num]
@@ -387,24 +357,6 @@ combos:
 - p: [14, 34]
   k: $$material:volume_down$$
   l: [base, qwert]
-- p: [31, 30]
-  k: {t: linux_mouse, h: '$$mdi:toggle-switch$$'}
-  l: [base, linux_mouse]
 - p: [6, 8]
   k: F5
-  l: [mouse, linux_mouse]
-- p: [7, 8]
-  k: Gui+ W
   l: [mouse]
-- p: [6, 7]
-  k: Gui+ T
-  l: [mouse]
-- p: [7, 8]
-  k: Ctl+ W
-  l: [linux_mouse]
-- p: [6, 7]
-  k: Ctl+ T
-  l: [linux_mouse]
-- p: [3, 4]
-  k: DEL
-  l: [linux_mouse]
