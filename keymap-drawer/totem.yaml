@@ -122,17 +122,17 @@ layers:
   - Swapper
   - Shift Tap
   - '&mswapper'
-  - {t: ▽, type: trans}
+  - Home
   - PG UP
   - {t: '$$material:backspace$$', h: Ctrl + Bspc}
   - {t: '$$material:keyboard_arrow_up$$', h: Ctrl + Home}
   - {t: ⌦, h: Ctrl + Del}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Tab ←
+  - Tab →
+  - PG DN
+  - PG UP
+  - End
   - PG DN
   - {t: '$$material:keyboard_arrow_left$$', h: Home}
   - {t: '$$material:keyboard_arrow_down$$', h: Ctrl + End}
@@ -140,10 +140,10 @@ layers:
   - $$material:keyboard_return$$
   - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Scroll ↓
+  - Scroll ↑
+  - Back Click
+  - Forward Click
   - INS
   - $$material:keyboard_tab$$
   - <
@@ -157,31 +157,31 @@ layers:
   - {t: ▽, type: trans}
   - ''
   fn:
-  - Tab ←
-  - Tab →
-  - PG DN
-  - PG UP
-  - Home
+  - {t: ▽, type: trans}
+  - F4
+  - F5
+  - F6
+  - Gui+ $$material:backspace$$
   - $$material:play_pause$$
   - $$material:skip_previous$$
   - $$material:volume_up$$
   - $$material:skip_next$$
   - {t: ▽, type: trans}
-  - Gui
+  - {t: ▽, type: trans}
   - Mac Desk Left
   - Ctrl
   - Mac Desk Right
-  - End
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$material:volume_down$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$material:keyboard_arrow_left$$
+  - DEL
   - {t: ▽, type: trans}
   - F1
-  - Back Click
-  - Forward Click
+  - F2
+  - F3
   - {t: ▽, type: trans}
   - $$material:volume_mute$$
   - Gui+ KP SUBTRACT
@@ -189,8 +189,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$material:keyboard_arrow_right$$
-  - Scroll ↓
-  - Scroll ↑
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - CANCEL
@@ -264,11 +264,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - E
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Shift
+  - Sft+ $$material:keyboard_return$$
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -319,10 +319,10 @@ combos:
   k: DEL
   l: [base, qwert, nav, num]
 - p: [16, 17]
-  k: '&hmrlprlt RS(LCTRL) 0'
+  k: '&lpar_lt'
   l: [base, qwert, num]
 - p: [17, 18]
-  k: '&hmrrprgt LC(LALT) 0'
+  k: '&rpar_gt'
   l: [base, qwert, num]
 - p: [16, 17]
   k: <
