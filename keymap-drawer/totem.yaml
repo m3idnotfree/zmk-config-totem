@@ -32,13 +32,13 @@ layers:
   - '&cm_morph'
   - '&dt_morph'
   - {t: '?', s: '!'}
-  - $$material:keyboard_arrow_right$$
-  - ''
+  - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_left$$
   - '&lt_spc 3 SPC'
   - {t: '$$material:keyboard_return$$', h: fn}
   - '&smtnum 2 0'
   - '&smt_shft'
-  - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_right$$
   qwert:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -71,13 +71,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$material:keyboard_arrow_right$$
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_left$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$material:keyboard_arrow_right$$
   num:
   - {t: ▽, type: trans}
   - '7'
@@ -110,13 +110,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$material:keyboard_arrow_right$$
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_left$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$material:keyboard_arrow_right$$
   nav:
   - {t: ▽, type: trans}
   - Swapper
@@ -149,8 +149,8 @@ layers:
   - <
   - '>'
   - sys
-  - $$material:keyboard_arrow_right$$
-  - ''
+  - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SPC
@@ -188,13 +188,13 @@ layers:
   - Gui+ KP PLUS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$material:keyboard_arrow_right$$
+  - {t: nav, h: '$$mdi:toggle-switch$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - CANCEL
-  - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_right$$
   sys:
   - BT 1
   - BT 2
@@ -227,13 +227,13 @@ layers:
   - Out BLE
   - ''
   - {type: held}
-  - $$material:keyboard_arrow_right$$
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_left$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$material:keyboard_arrow_right$$
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -267,7 +267,7 @@ layers:
   - PG UP
   - Tab Move →
   - $$material:keyboard_arrow_right$$
-  - ''
+  - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Right Click
