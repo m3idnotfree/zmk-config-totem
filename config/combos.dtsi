@@ -103,7 +103,5 @@ COMBO(tnumb_vol_dn, &kp C_VOL_DN, LM0 LH0,     DEF QWE,         COMBO_TERM_SLOW,
 /* Mouse */
 COMBO(refresh_tap, &kp F5,    RT1 RT3, MOUSE,    COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-/* RKEY*/
-COMBO(rkey,        &tog RKEY, RT3 RT4, DEF RKEY, COMBO_TERM_FAST, COMBO_IDLE_FAST)
     };
 };
