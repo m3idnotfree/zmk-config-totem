@@ -148,7 +148,7 @@ layers:
   - $$material:keyboard_tab$$
   - <
   - '>'
-  - sys
+  - sys2
   - {t: nav, h: '$$mdi:toggle-switch$$'}
   - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
@@ -226,7 +226,7 @@ layers:
   - Out USB
   - Out BLE
   - ''
-  - {type: held}
+  - ''
   - {t: nav, h: '$$mdi:toggle-switch$$'}
   - $$material:keyboard_arrow_left$$
   - ''
@@ -273,6 +273,45 @@ layers:
   - Right Click
   - Left Click
   - esc
+  sys2:
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT CLR
+  - ''
+  - ''
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - OUT TOG
+  - Out BLE
+  - Out USB
+  - Boot
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$material:keyboard_arrow_left$$
+  - ''
+  - ''
+  - T
+  - ''
+  - Reset
+  - Reset
+  - Out USB
+  - Out BLE
+  - ''
+  - {type: held}
+  - {t: nav, h: '$$mdi:toggle-switch$$'}
+  - $$material:keyboard_arrow_left$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$material:keyboard_arrow_right$$
 combos:
 - p: [5, 27]
   k: CANCEL
