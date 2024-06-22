@@ -2,10 +2,10 @@
 #include "totem.h"
 
 #define X_LB    &kp LEFT
-#define X_RB    &kp RIGHT
+#define X_RB    &tog NAV
 
-#define X_LH    &none
-#define X_RH    &tog NAV
+#define X_LH    &kp LEFT
+#define X_RH    &kp RIGHT
 
 /* source the main keymap */
 #include "base.keymap"
