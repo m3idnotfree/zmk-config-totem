@@ -148,7 +148,7 @@ layers:
   - $$material:keyboard_tab$$
   - <
   - '>'
-  - Gui+Alt+Sft+ )
+  - Gui+Alt+Sft+ ]
   - {t: nav, h: '$$mdi:toggle-switch$$'}
   - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
