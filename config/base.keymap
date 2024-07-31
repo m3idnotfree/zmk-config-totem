@@ -231,6 +231,8 @@ ZMK_MACRO(toghng,
 #define INCREASE &kp LG(KP_PLUS)
 #define DECREASE &kp LG(KP_SUBTRACT)
 
+#define NAV_LFT_MID &hml LGUI LC(PG_UP) &hml LALT LC(PG_DN) &hml LCTRL PG_DN &hml LSHFT PG_UP &kp END
+
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
@@ -281,13 +283,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
         nav {
             bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &swapper      &kp LS(TAB)   &mswapper     &kp HOME        X_MT     &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       &mo FN          X_RT
+    X_LT     ___           &swapper      &kp LS(TAB)   &mswapper     &kp HOME        X_MT     &kp PG_UP     &kp BSPC      &kp UP        &kp DEL       &mo FN          X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     W_TAP_L       W_TAP_R       &kp PG_DN     &kp PG_UP     &kp END         X_MM     &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET         X_RM
+    X_LM                                 NAV_LFT_MID                                 X_MM     &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           U_WH_D        U_WH_U        BACK          GO              X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        &mo SYS2        X_RB
+    X_LB     ___           U_WH_D        U_WH_U        BACK          GO              X_MB     &kp INS       &kp TAB       &kp LT        &kp GT     &kp LG(LA(LS(RPAR)) X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &kp SPC       ___                                                      &kp ESC
+    X_LH                                               ___           ___             X_MH     &kp SPC       CANCEL                                                   &kp ESC
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
         };

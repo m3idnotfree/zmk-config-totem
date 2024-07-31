@@ -124,19 +124,19 @@ layers:
   - '&mswapper'
   - Home
   - PG UP
-  - {t: '$$material:backspace$$', h: Ctrl + Bspc}
-  - {t: '$$material:keyboard_arrow_up$$', h: Ctrl + Home}
-  - {t: ⌦, h: Ctrl + Del}
+  - $$material:backspace$$
+  - $$material:keyboard_arrow_up$$
+  - DEL
   - fn
-  - Tab ←
-  - Tab →
-  - PG DN
-  - PG UP
+  - '&hml LGUI LC(PG_UP)'
+  - '&hml LALT LC(PG_DN)'
+  - '&hml LCTRL PG_DN'
+  - '&hml LSHFT PG_UP'
   - End
   - PG DN
-  - {t: '$$material:keyboard_arrow_left$$', h: Home}
-  - {t: '$$material:keyboard_arrow_down$$', h: Ctrl + End}
-  - {t: '$$material:keyboard_arrow_right$$', h: End}
+  - $$material:keyboard_arrow_left$$
+  - $$material:keyboard_arrow_down$$
+  - $$material:keyboard_arrow_right$$
   - $$material:keyboard_return$$
   - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
@@ -148,13 +148,13 @@ layers:
   - $$material:keyboard_tab$$
   - <
   - '>'
-  - sys2
+  - Gui+Alt+ LS(RPAR
   - {t: nav, h: '$$mdi:toggle-switch$$'}
   - $$material:keyboard_arrow_left$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SPC
-  - {t: ▽, type: trans}
+  - CANCEL
   - esc
   fn:
   - {t: ▽, type: trans}
@@ -304,7 +304,7 @@ layers:
   - Out USB
   - Out BLE
   - ''
-  - {type: held}
+  - ''
   - {t: nav, h: '$$mdi:toggle-switch$$'}
   - $$material:keyboard_arrow_left$$
   - ''
