@@ -154,7 +154,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SPC
-  - CANCEL
+  - {t: ▽, type: trans}
   - esc
   fn:
   - {t: ▽, type: trans}
