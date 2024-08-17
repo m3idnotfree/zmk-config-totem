@@ -14,12 +14,6 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: v2
-    - name: zmk-auto-layer
-      remote: urob
-      revision: v2
-    - name: zmk-tri-state
-      remote: urob
-      revision: v2
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
