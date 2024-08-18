@@ -11,7 +11,8 @@ manifest:
   projects:
     - name: zmk
       remote: urob
-      revision: main
+      # revision: main
+      revision: going-modular
       import: app/west.yml
     - name: zmk-helpers
       revision: main
@@ -19,9 +20,9 @@ manifest:
     - name: zmk-auto-layer
       revision: main
       path: modules/auto-layer
-    # - name: zmk-tri-state
-    #   revision: main
-    #   path: modules/tri-state
+    - name: zmk-tri-state
+      revision: main
+      path: modules/tri-state
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
