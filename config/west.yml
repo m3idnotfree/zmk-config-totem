@@ -15,11 +15,13 @@ manifest:
       revision: going-modular
       import: app/west.yml
     - name: zmk-helpers
+      remote: urob
       revision: main
-      path: modules/helpers
+      # path: modules/helpers
     - name: zmk-auto-layer
+      remote: urob
       revision: main
-      path: modules/auto-layer
+      # path: modules/auto-layer
     - name: zmk-tri-state
       revision: main
       path: modules/tri-state
