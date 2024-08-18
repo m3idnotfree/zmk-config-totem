@@ -104,7 +104,8 @@ MASK_MODS(msk_end,  (MOD_LCTL), &kp END)
 
 // Behavior can be invoked on peripherals, so name must be <= 8 characters.
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_MOD_MORPH(smart_shft,
+#define SMART_SHIFT &smrtshft
+ZMK_MOD_MORPH(smrtshft,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
 )
@@ -118,9 +119,9 @@ ZMK_HOLD_TAP(smartnum,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_dance>;
+    bindings = <&mo>, <&numdance>;
 )
-ZMK_TAP_DANCE(num_dance,
+ZMK_TAP_DANCE(numdance,
     tapping-term-ms = <200>;
     bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
@@ -154,12 +155,12 @@ ZMK_TRI_STATE(mswapper,
     )
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-SIMPLE_MORPH(cmamorph, SFT, &kp COMMA, &cmmainnr)
-SIMPLE_MORPH(cmmainnr, CTL, &kp SEMICOLON, &kp LESS_THAN)
+SIMPLE_MORPH(comma, SFT, &kp COMMA, &commain)
+SIMPLE_MORPH(commain, CTL, &kp SEMICOLON, &kp LESS_THAN)
 
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-SIMPLE_MORPH(dotmorph, SFT, &kp DOT, &dotinner)
-SIMPLE_MORPH(dotinner, CTL, &kp COLON, &kp GREATER_THAN)
+SIMPLE_MORPH(dot, SFT, &kp DOT, &dotin)
+SIMPLE_MORPH(dotin, CTL, &kp COLON, &kp GREATER_THAN)
 
 // tap: qmark | shift + tap: excl
 SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
@@ -189,7 +190,7 @@ ZMK_TAP_DANCE(copy_cut,
 )
 
 // toggle hangle
-ZMK_MACRO(toghng,
+ZMK_MACRO(tog_hng,
     bindings
         = <&macro_press &kp LCTRL>
         , <&macro_tap &kp SPACE>
@@ -244,9 +245,9 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A  &hml LALT R    &hml LCTRL S  &hml LSHFT T  &kp G           X_MM     &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &cmamorph     &dotmorph     &qexcl          X_RB
+    X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma        &dot          &qexcl          X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                             &lt_spc NAV SPC &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
+    X_LH                                             &lt_spc NAV SPC &lt FN RET      X_MH     SMART_NUM     SMART_SHIFT                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
