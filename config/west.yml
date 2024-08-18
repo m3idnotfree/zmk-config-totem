@@ -7,8 +7,12 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
+    # - name: zmk
+    #   remote: urob
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk
-      remote: urob
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-helpers
