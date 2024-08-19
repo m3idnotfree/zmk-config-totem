@@ -1,5 +1,3 @@
-/* Nav cluster */
-
 // long-tap action on hold, short-tap action on all interrupts
 #define MT_CORE                                                                                    \
     flavor = "tap-preferred";                                                                      \
@@ -10,6 +8,8 @@
 &mt { MT_CORE };
 ZMK_HOLD_TAP(mt_home, bindings = <&msk_home>, <&kp>; MT_CORE)
 ZMK_HOLD_TAP(mt_end, bindings = <&msk_end>, <&kp>; MT_CORE)
+
+/* Nav cluster */
 
 #define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
 #define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line

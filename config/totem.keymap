@@ -1,5 +1,4 @@
 /* source key position labels */
-// #include "totem.h"
 #include "zmk-helpers/key-labels/totem.h"
 
 #define X_LB    &kp LEFT

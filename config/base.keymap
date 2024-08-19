@@ -99,10 +99,6 @@ ZMK_MACRO(tog_hng,
 #define MAC_DSK_LETF   &kp LC(LEFT)             // mac workspace left
 #define MAC_DSK_RIGHT  &kp LC(RIGHT)            // mac workspace right
 
-// mouse
-#define GO             &mkp MB5
-#define BACK           &mkp MB4
-
 // web
 #define W_TAP_L        &kp LC(PG_UP)
 #define W_TAP_R        &kp LC(PG_DN)
@@ -120,9 +116,9 @@ ZMK_MACRO(tog_hng,
 #define _NAV_LFT_MID_ &hml LGUI LC(PG_UP) &hml LALT LC(PG_DN) &hml LCTRL PG_DN &hml LSHFT PG_UP &kp END
 #define PICTURE_IN_PICTURE &kp LG(LA(LS(RBKT)))
 
-/* Keymap */
-
 ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
+
+/* Keymap */
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
