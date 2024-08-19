@@ -1,4 +1,9 @@
+/* Caps-word, num-word and smart-mouse */
+
+// Behavior can be invoked on peripherals, so name must be <= 8 characters.
 #define SMART_SHIFT &smrtshft
+
+// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_MOD_MORPH(smrtshft,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;

@@ -1,10 +1,4 @@
-// long-tap action on hold, short-tap action on all interrupts
-#define MT_CORE                                                                                    \
-    flavor = "tap-preferred";                                                                      \
-    tapping-term-ms = <220>;                                                                       \
-    quick-tap-ms = <220>;                                                                          \
-    hold-trigger-key-positions = <0>;
-
+// mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
 #define MASK_MODS(NAME, MODS, BINDING)                                                             \
     ZMK_MOD_MORPH(NAME,                                                                            \
         bindings = <BINDING>, <BINDING>;                                                           \
