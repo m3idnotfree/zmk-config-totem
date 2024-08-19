@@ -61,16 +61,17 @@
 /*         hold-trigger-on-release;                                                                   \ */
 /*     ) */
 
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-
-MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
-MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
-
-MAKE_HRM(hmlrepet, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmrlprlt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
-MAKE_HRM(hmrrprgt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+/* MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs */
+/* MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs */
+/**/
+/* MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo */
+/* MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   " */
+/* MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   " */
+/**/
+/* MAKE_HRM(hmlrepet, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo */
+/* MAKE_HRM(hmrlprlt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   " */
+/* MAKE_HRM(hmrrprgt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   " */
+#include "homerow_modes.dtsi"
 
 /* Nav cluster */
 
@@ -105,27 +106,27 @@ MASK_MODS(msk_end,  (MOD_LCTL), &kp END)
 
 // Behavior can be invoked on peripherals, so name must be <= 8 characters.
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-#define SMART_SHIFT &smrtshft
-ZMK_MOD_MORPH(smrtshft,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
-)
-&caps_word {  // mods deactivate caps-word, requires PR #1451
-    /delete-property/ ignore-modifiers;
-};
-
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smartnum NUM 0
-ZMK_HOLD_TAP(smartnum,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&numdance>;
-)
-ZMK_TAP_DANCE(numdance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
-)
+/* #define SMART_SHIFT &smrtshft */
+/* ZMK_MOD_MORPH(smrtshft, */
+/*     bindings = <&sk LSHFT>, <&caps_word>; */
+/*     mods = <(MOD_LSFT)>; */
+/* ) */
+/* &caps_word {  // mods deactivate caps-word, requires PR #1451 */
+/*     /delete-property/ ignore-modifiers; */
+/* }; */
+/**/
+/* // tap: num-word | double-tap: sticky num-layer | hold: num-layer */
+/* #define SMART_NUM &smartnum NUM 0 */
+/* ZMK_HOLD_TAP(smartnum, */
+/*     flavor = "balanced"; */
+/*     tapping-term-ms = <200>; */
+/*     quick-tap-ms = <QUICK_TAP_MS>; */
+/*     bindings = <&mo>, <&numdance>; */
+/* ) */
+/* ZMK_TAP_DANCE(numdance, */
+/*     tapping-term-ms = <200>; */
+/*     bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap */
+/* ) */
 
 // smart-mouse, requires PR #1366
 // ZMK_TRI_STATE(smart_mouse,
@@ -133,7 +134,7 @@ ZMK_TAP_DANCE(numdance,
 //     ignored-key-positions = <LT3 LT2 LT1 LT0 LM0 LM1 LM2 LM3 LM4 LB3 LB2 LB1 LB0 KEYS_R RH0 RH1 RH2 LB5 RB5>;
 //     ignored-layers = <MOUSE FN>;
 // )
-
+#include "smart_layers.dtsi"
 /* Custom behaviors */
 
 // Alt+Tab swapper, requires PR #1366
@@ -156,19 +157,20 @@ ZMK_TRI_STATE(mswapper,
 /*     ) */
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-SIMPLE_MORPH(comma, SFT, &kp COMMA, &commain)
-SIMPLE_MORPH(commain, CTL, &kp SEMICOLON, &kp LESS_THAN)
+/* SIMPLE_MORPH(comma, SFT, &kp COMMA, &commain) */
+/* SIMPLE_MORPH(commain, CTL, &kp SEMICOLON, &kp LESS_THAN) */
 
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
-SIMPLE_MORPH(dot, SFT, &kp DOT, &dotin)
-SIMPLE_MORPH(dotin, CTL, &kp COLON, &kp GREATER_THAN)
+/* SIMPLE_MORPH(dot, SFT, &kp DOT, &dotin) */
+/* SIMPLE_MORPH(dotin, CTL, &kp COLON, &kp GREATER_THAN) */
 
 // tap: qmark | shift + tap: excl
-SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+/* SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL) */
 
 // tap: left/right parenthesis | shft + tap: less-than/greater-than
-SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
-SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+/* SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT) */
+/* SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT) */
+#include "morphs.dtsi"
 
 ZMK_HOLD_TAP(lt_spc,
     flavor = "balanced";

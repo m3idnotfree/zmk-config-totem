@@ -1,0 +1,28 @@
+#define SMART_SHIFT &smrtshft
+ZMK_MOD_MORPH(smrtshft,
+    bindings = <&sk LSHFT>, <&caps_word>;
+    mods = <(MOD_LSFT)>;
+)
+&caps_word {  // mods deactivate caps-word, requires PR #1451
+    /delete-property/ ignore-modifiers;
+};
+
+// tap: num-word | double-tap: sticky num-layer | hold: num-layer
+#define SMART_NUM &smartnum NUM 0
+ZMK_HOLD_TAP(smartnum,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&numdance>;
+)
+ZMK_TAP_DANCE(numdance,
+    tapping-term-ms = <200>;
+    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
+)
+
+// smart-mouse, requires PR #1366
+// ZMK_TRI_STATE(smart_mouse,
+//     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+//     ignored-key-positions = <LT3 LT2 LT1 LT0 LM0 LM1 LM2 LM3 LM4 LB3 LB2 LB1 LB0 KEYS_R RH0 RH1 RH2 LB5 RB5>;
+//     ignored-layers = <MOUSE FN>;
+// )
