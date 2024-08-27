@@ -46,18 +46,11 @@
 #include "morphs.dtsi"
 #include "macro.dtsi"
 
-ZMK_HOLD_TAP(lt_spc,
+ZMK_HOLD_TAP(lt_,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&kp SPC>;
-)
-
-ZMK_HOLD_TAP(lt_ret,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&kp RET>;
+    bindings = <&mo>, <&kp>;
 )
 
 ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
@@ -72,7 +65,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma        &dot          &qexcl          X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               &lt_spc NAV 0 &lt_ret FN 0    X_MH     SMART_NUM     SMART_SHIFT                                               X_RH
+    X_LH                                               &lt_ NAV SPC &lt_ FN RET      X_MH     SMART_NUM     SMART_SHIFT                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
