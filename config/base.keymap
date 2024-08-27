@@ -3,9 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-
-#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL  3 &bt BT_CLR
-
 #include "zmk-helpers/helper.h"
 
 #define DEF 0
@@ -20,9 +17,6 @@
 #include "mouse.dtsi"
 #include "extra_keys.h"
 #include "functions.dtsi"
-
-#define XXX &none
-#define ___ &trans
 
 /* Global settings */
 
@@ -46,7 +40,6 @@
 /* Homerow mods */
 
 #include "alias.dtsi"
-
 #include "homerow_modes.dtsi"
 #include "gimmicks.dtsi"
 #include "smart_layers.dtsi"
@@ -57,22 +50,15 @@ ZMK_HOLD_TAP(lt_spc,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&kp>;
+    bindings = <&mo>, <&kp SPC>;
 )
 
-// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
-ZMK_MOD_MORPH(bs_del,
-    bindings = <&kp BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    keep-mods = <MOD_RSFT>;
-)
-
-// tap: copy | double-tap: cut
-ZMK_TAP_DANCE(copy_cut,
+ZMK_HOLD_TAP(lt_ret,
+    flavor = "balanced";
     tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&kp RET>;
 )
-
 
 ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
 
@@ -86,7 +72,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma        &dot          &qexcl          X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                             &lt_spc NAV SPC &lt FN RET      X_MH     SMART_NUM     SMART_SHIFT                                               X_RH
+    X_LH                                               &lt_spc NAV   &lt_ret FN      X_MH     SMART_NUM     SMART_SHIFT                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -116,13 +102,13 @@ ZMK_LAYER(num,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     MAC_DSK_LETF  MAC_DSK_RIGHT &kp LS(TAB)   &mswapper     &kp HOME        X_MT     &kp PG_UP     &kp BSPC      &kp UP        &kp DEL       &mo FN          X_RT
+    X_LT     MAC_DSK_LETF  MAC_DSK_RIGHT &kp LS(TAB)   &mswapper     &kp HOME        X_MT     &kp PG_UP     &kp BSPC      &kp UP        &kp DEL       &kp f           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM                                _NAV_LFT_MID_                                X_MM     &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp RET         X_RM
+    X_LM                         _NAV_LFT_MID_                       &kp END         X_MM     &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           BACK          U_WH_D        U_WH_U        GO              X_MB     &kp INS       &kp TAB       &kp LT        &kp GT     PICTURE_IN_PICTURE X_RB
+    X_LB     ___           BACK          U_WH_D        U_WH_U        GO              X_MB     &kp I         &kp TAB       &kp LT        &kp GT     PICTURE_IN_PICTURE X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &kp SPC       ___                                                      &kp ESC
+    X_LH                                               ___           ___             X_MH     &kp SPC       ___                                                      &lt FN ESC
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -130,7 +116,7 @@ ZMK_LAYER(fn,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp F12       &kp F7        &kp F8        &kp F9        &kp LG(BSPC)    X_MT     PLAY_PAUSE    &kp C_PREV    VOL_UP        &kp C_NEXT    ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6  ___             X_MM     ___          DSK_PREV      VOL_DOWN      DSK_NEXT     ___             X_RM
+    X_LM     &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6  ___             X_MM     ___          DSK_PREV      VOL_DOWN      DSK_NEXT     ___              X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp DEL    &kp F10       &kp F1        &kp F2        &kp F3        ___             X_MB     MUTE          DECREASE      INCREASE      ___           ___             X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
@@ -142,9 +128,9 @@ ZMK_LAYER(sys,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT                                _BT_SEL_KEYS_                                X_MT     XXX           XXX          &bt BT_CLR_ALL XXX           XXX             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     XXX           &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &bootloader     X_MM     &bootloader   XXX           XXX           XXX           XXX             X_RM
+    X_LM     XXX           XXX           XXX           XXX           &bootloader     X_MM     &bootloader   XXX           XXX           XXX           XXX             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     XXX           XXX           &kp T         XXX           &sys_reset      X_MB     &sys_reset    &out OUT_USB  &out OUT_BLE  XXX           XXX             X_RB
+    X_LB     XXX           &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &sys_reset      X_MB     &sys_reset    &out OUT_USB  &out OUT_BLE  XXX           XXX             X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               XXX           XXX             X_MH     XXX           XXX                                                       X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
