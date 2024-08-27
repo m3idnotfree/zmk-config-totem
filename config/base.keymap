@@ -45,14 +45,13 @@
 
 /* Homerow mods */
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
+#include "alias.dtsi"
 
 #include "homerow_modes.dtsi"
 #include "gimmicks.dtsi"
 #include "smart_layers.dtsi"
 #include "morphs.dtsi"
+#include "macro.dtsi"
 
 ZMK_HOLD_TAP(lt_spc,
     flavor = "balanced";
@@ -74,47 +73,6 @@ ZMK_TAP_DANCE(copy_cut,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-// toggle hangle
-ZMK_MACRO(tog_hng,
-    bindings
-        = <&macro_press &kp LCTRL>
-        , <&macro_tap &kp SPACE>
-        , <&macro_release &kp LCTRL>
-        , <&macro_tap &tog QWE>
-        ;
-)
-
-// misc aliases
-#define CANCEL         &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV       &hmr LCTRL LG(LC(LEFT))  // previous desktop
-#define DSK_NEXT       &hmr LALT LG(LC(RIGHT))  // next     desktop
-#define PIN_WIN        &kp LG(LC(LS(Q)))        // pin window across desktops
-#define PIN_APP        &kp LG(LC(LS(A)))        // pin application across desktops
-#define DSK_MGR        &kp LA(GRAVE)            // desktop manager
-#define VOL_UP         &kp C_VOL_UP
-#define VOL_DOWN       &kp C_VOL_DN
-#define MUTE           &kp C_MUTE
-#define PLAY_PAUSE     &kp C_PP 
-
-#define MAC_DSK_LETF   &kp LC(LEFT)             // mac workspace left
-#define MAC_DSK_RIGHT  &kp LC(RIGHT)            // mac workspace right
-
-// web
-#define W_TAP_L        &kp LC(PG_UP)
-#define W_TAP_R        &kp LC(PG_DN)
-#define W_TAPM_L       &kp LC(LS(PG_UP))
-#define W_TAPM_R       &kp LC(LS(PG_DN))
-
-#define _MOUSE_TOP_ W_TAP_L   U_WH_D     U_MS_U      U_WH_U    W_TAP_R
-#define _MOUSE_MID_ BACK      U_MS_L     U_MS_D      U_MS_R    GO
-#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
-#define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
-
-#define INCREASE &kp LG(KP_PLUS)
-#define DECREASE &kp LG(KP_SUBTRACT)
-
-#define _NAV_LFT_MID_ &hml LGUI LC(PG_UP) &hml LALT LC(PG_DN) &hml LCTRL PG_DN &hml LSHFT PG_UP &kp END
-#define PICTURE_IN_PICTURE &kp LG(LA(LS(RBKT)))
 
 ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
 
@@ -162,7 +120,7 @@ ZMK_LAYER(nav,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM                                _NAV_LFT_MID_                                X_MM     &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           U_WH_D        U_WH_U        BACK          GO              X_MB     &kp INS       &kp TAB       &kp LT        &kp GT     PICTURE_IN_PICTURE X_RB
+    X_LB     ___           BACK          U_WH_D        U_WH_U        GO              X_MB     &kp INS       &kp TAB       &kp LT        &kp GT     PICTURE_IN_PICTURE X_RB
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &kp SPC       ___                                                      &kp ESC
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
