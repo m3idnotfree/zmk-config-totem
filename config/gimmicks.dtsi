@@ -18,6 +18,12 @@ ZMK_HOLD_TAP(mt_end, bindings = <&msk_end>, <&kp>; MT_CORE)
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
+// mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
+#define MASK_MODS(NAME, MODS, BINDING)                                                             \
+    ZMK_MOD_MORPH(NAME,                                                                            \
+        bindings = <BINDING>, <BINDING>;                                                           \
+        mods = <MODS>;                                                                             \
+    )
 MASK_MODS(msk_home, (MOD_LCTL), &kp HOME)
 MASK_MODS(msk_end,  (MOD_LCTL), &kp END)
 

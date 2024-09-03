@@ -1,6 +1,0 @@
-// mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
-#define MASK_MODS(NAME, MODS, BINDING)                                                             \
-    ZMK_MOD_MORPH(NAME,                                                                            \
-        bindings = <BINDING>, <BINDING>;                                                           \
-        mods = <MODS>;                                                                             \
-    )
