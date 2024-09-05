@@ -4,8 +4,8 @@
 #define X_LB    &tog NAV
 #define X_RB    &tog NAV
 
-#define X_LH    NAV_LEFT
-#define X_RH    NAV_RIGHT
+#define X_LH    &kp LEFT
+#define X_RH    &kp RIGHT
 
 /* source the main keymap */
 #include "base.keymap"
