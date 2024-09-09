@@ -20,8 +20,8 @@
 #define PLAY_PAUSE     &kp C_PP 
 
 //      web
-#define TAB_L     &kp LC(PG_UP)
-#define TAB_R     &kp LC(PG_DN)
+#define TAB_L     LC(PG_UP)
+#define TAB_R     LC(PG_DN)
 #define TAB_MV_L  &kp LC(LS(PG_UP))
 #define TAB_MV_R  &kp LC(LS(PG_DN))
 
@@ -31,8 +31,8 @@
 
 #define MAC_GO        &kp LG(RBKT)
 #define MAC_BACK      &kp LG(LBKT)
-#define MAC_TAB_L     &kp LS(LG(RBKT))
-#define MAC_TAB_R     &kp LS(LG(LBKT))
+#define MAC_TAB_L     LS(LG(RBKT))
+#define MAC_TAB_R     LS(LG(LBKT))
 
 #define MAC_OPEN_LAST_CLOSE_TAB &kp LS(LG(T))
 
@@ -41,10 +41,10 @@
 #define INCREASE &kp LG(KP_PLUS)
 #define DECREASE &kp LG(KP_SUBTRACT)
 
-#define _MOUSE_TOP_ TAB_L    U_WH_D    U_MS_U    U_WH_U    TAB_R
-#define _MOUSE_MID_ BACK     U_MS_L    U_MS_D    U_MS_R    GO
-#define _MOUSE_BOT_ TAB_MV_L &kp PG_DN &mkp MCLK &kp PG_UP TAB_MV_R
-#define _MOUSE_THU_ &mkp     RCLK      &mkp LCLK &kp ESC
+#define _MOUSE_TOP_ &kp TAB_L U_WH_D    U_MS_U    U_WH_U    &kp TAB_R
+#define _MOUSE_MID_ BACK      U_MS_L    U_MS_D    U_MS_R    GO
+#define _MOUSE_BOT_ TAB_MV_L  &kp PG_DN &mkp MCLK &kp PG_UP TAB_MV_R
+#define _MOUSE_THU_ &mkp      RCLK      &mkp LCLK &kp ESC
 
 #define _NAV_LFT_MID_ &hml LGUI TAB_L &hml LALT TAB_R &hml LCTRL PG_DN &hml LSHFT PG_UP
 #define _NAV_LFT_BOT_ ___             BACK            U_WH_D           U_WH_U           GO
