@@ -19,22 +19,36 @@
 #define MUTE           &kp C_MUTE
 #define PLAY_PAUSE     &kp C_PP 
 
-#define MAC_DSK_LETF   &kp LC(LEFT)             // mac workspace left
-#define MAC_DSK_RIGHT  &kp LC(RIGHT)            // mac workspace right
+//      web
+#define TAB_L     &kp LC(PG_UP)
+#define TAB_R     &kp LC(PG_DN)
+#define TAB_MV_L  &kp LC(LS(PG_UP))
+#define TAB_MV_R  &kp LC(LS(PG_DN))
 
-// web
-#define W_TAP_L        &kp LC(PG_UP)
-#define W_TAP_R        &kp LC(PG_DN)
-#define W_TAPM_L       &kp LC(LS(PG_UP))
-#define W_TAPM_R       &kp LC(LS(PG_DN))
+//      mac
+#define MAC_DSK_LETF  &kp LC(LEFT)  // mac workspace left
+#define MAC_DSK_RIGHT &kp LC(RIGHT) // mac workspace right
 
-#define _MOUSE_TOP_ W_TAP_L   U_WH_D     U_MS_U      U_WH_U    W_TAP_R
-#define _MOUSE_MID_ BACK      U_MS_L     U_MS_D      U_MS_R    GO
-#define _MOUSE_BOT_ W_TAPM_L  &kp PG_DN  &mkp MCLK   &kp PG_UP W_TAPM_R
-#define _MOUSE_THU_ &mkp RCLK &mkp LCLK  &kp ESC
+#define MAC_GO        &kp LG(RBKT)
+#define MAC_BACK      &kp LG(LBKT)
+#define MAC_TAB_L     &kp LS(LG(RBKT))
+#define MAC_TAB_R     &kp LS(LG(LBKT))
+
+#define MAC_OPEN_LAST_CLOSE_TAB &kp LS(LG(T))
+
+#define PICTURE_IN_PICTURE &kp LG(LA(LS(RBKT)))
 
 #define INCREASE &kp LG(KP_PLUS)
 #define DECREASE &kp LG(KP_SUBTRACT)
 
-#define _NAV_LFT_MID_ &hml LGUI LC(PG_UP) &hml LALT LC(PG_DN) &hml LCTRL PG_DN &hml LSHFT PG_UP
-#define PICTURE_IN_PICTURE &kp LG(LA(LS(RBKT)))
+#define _MOUSE_TOP_ TAB_L    U_WH_D    U_MS_U    U_WH_U    TAB_R
+#define _MOUSE_MID_ BACK     U_MS_L    U_MS_D    U_MS_R    GO
+#define _MOUSE_BOT_ TAB_MV_L &kp PG_DN &mkp MCLK &kp PG_UP TAB_MV_R
+#define _MOUSE_THU_ &mkp     RCLK      &mkp LCLK &kp ESC
+
+#define _NAV_LFT_MID_ &hml LGUI TAB_L &hml LALT TAB_R &hml LCTRL PG_DN &hml LSHFT PG_UP
+#define _NAV_LFT_BOT_ ___             BACK            U_WH_D           U_WH_U           GO
+
+#define _MAC_NAV_LFT_MID_ &hml LGUI MAC_TAB_L &hml LALT MAC_TAB_R &hml LCTRL PG_DN &hml LSHFT PG_UP
+#define _MAC_NAV_LFT_BOT_ ___                 MAC_BACK            U_WH_D           U_WH_U           MAC_GO
+
