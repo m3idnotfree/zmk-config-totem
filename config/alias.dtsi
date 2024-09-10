@@ -41,6 +41,8 @@
 #define INCREASE &kp LG(KP_PLUS)
 #define DECREASE &kp LG(KP_SUBTRACT)
 
+#define SWITCH_SAME_APP &kp LG(GRAVE)
+
 #define _MOUSE_TOP_ &kp TAB_L  U_WH_D     U_MS_U     U_WH_U     &kp TAB_R
 #define _MOUSE_MID_ BACK       U_MS_L     U_MS_D     U_MS_R     GO
 #define _MOUSE_BOT_ TAB_MV_L   &kp PG_DN  &mkp MCLK  &kp PG_UP  TAB_MV_R
