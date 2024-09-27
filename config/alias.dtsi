@@ -45,8 +45,8 @@
 
 #define _MOUSE_TOP_ &kp TAB_L  U_WH_D     U_MS_U     U_WH_U     &kp TAB_R
 #define _MOUSE_MID_ BACK       U_MS_L     U_MS_D     U_MS_R     GO
-#define _MOUSE_BOT_ TAB_MV_L   &kp PG_DN  &mkp MCLK  &kp PG_UP  TAB_MV_R
-#define _MOUSE_THU_ &mkp RCLK  &mkp LCLK  &kp ESC
+#define _MOUSE_BOT_ &kp HOME   &kp PG_DN  &mkp MCLK  &kp PG_UP  &kp ESC
+#define _MOUSE_THU_ &mkp RCLK  &mkp LCLK 
 
 #define _MAC_MOUSE_MID_ MAC_BACK U_MS_L U_MS_D U_MS_R MAC_GO
 
