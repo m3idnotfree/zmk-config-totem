@@ -1,6 +1,7 @@
 manifest:
   defaults:
     remote: urob
+    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -15,14 +16,18 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-helpers
-      remote: urob
-      revision: main
+      # remote: urob
+      # revision: main
     - name: zmk-auto-layer
-      remote: urob
-      revision: main
+      # remote: urob
+      # revision: main
+    - name: zmk-leader-key
+      # remote: urob
+      # revision: main
+      # path: modules/leader-key
     - name: zmk-tri-state
-      revision: main
-      path: modules/tri-state
+      # revision: main
+      # path: modules/tri-state
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
