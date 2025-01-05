@@ -57,6 +57,6 @@
 //                       ╭────────────────────┬────────────────────┬─────────────────┬─────────────────┬──────╮
 #define _MAC_NAV_LFT_MID_  &hml LGUI MAC_TAB_L  &hml LALT MAC_TAB_R  &hml LCTRL PG_DN  &hml LSHFT PG_UP
 //                       ├────────────────────┼────────────────────┼─────────────────┼─────────────────┼──────┤
-#define _MAC_NAV_LFT_BOT_  ___                  MAC_BACK             U_WH_D            U_WH_U           MAC_GO
+#define _MAC_NAV_LFT_BOT_  MAC_TAB_R            MAC_BACK             U_WH_D            U_WH_U           MAC_GO
 //                       ╰────────────────────┴────────────────────┴─────────────────┴─────────────────┴──────╯
 
