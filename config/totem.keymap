@@ -1,3 +1,4 @@
+#define CONFIG_WIRELESS
 #define X_LB    &tog QWE
 #define X_RB    &tog NAV
 
