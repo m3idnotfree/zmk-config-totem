@@ -176,7 +176,7 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
  // Sticky shift + leader.
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
-/*#include "extra_keys.h"*/
+#include "extra_keys.h"
 #include "alias.dtsi"
 
 // toggle hanle
