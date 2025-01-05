@@ -1,11 +1,8 @@
-/* source key position labels */
-#include "zmk-helpers/key-labels/totem.h"
-
 #define X_LB    &tog QWE
 #define X_RB    &tog NAV
 
 #define X_LH    &lt  MAC_NAV &tog_hng
 #define X_RH    &tog MOUSE
 
-/* source the main keymap */
+#include "zmk-helpers/key-labels/totem.h"
 #include "base.keymap"

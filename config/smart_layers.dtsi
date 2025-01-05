@@ -1,33 +1,27 @@
-/* Caps-word, num-word and smart-mouse */
+/* Caps-word & auto-layers */
 
 // Behavior can be invoked on peripherals, so name must be <= 8 characters.
-#define SMART_SHIFT &smrtshft
-
-// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_MOD_MORPH(smrtshft,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
+#define SMART_SHIFT &smart_shft
+// Tap: sticky-shift | Shift + tap/ double-tap: caps-word | Hold: shift.
+ZMK_MOD_MORPH(smart_shft,
+  bindings = <&sk LSHFT>, <&caps_word>;
+  mods = <(MOD_LSFT)>;
 )
-&caps_word {  // mods deactivate caps-word, requires PR #1451
-    /delete-property/ ignore-modifiers;
+&caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
+  /delete-property/ ignore-modifiers;
 };
 
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smartnum NUM 0
-ZMK_HOLD_TAP(smartnum,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&numdance>;
-)
-ZMK_TAP_DANCE(numdance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
-)
+// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+#define SMART_NUM &smart_num NUM 0
+ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
+              tapping-term-ms = <200>;)
 
-// smart-mouse, requires PR #1366
-// ZMK_TRI_STATE(smart_mouse,
-//     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-//     ignored-key-positions = <LT3 LT2 LT1 LT0 LM0 LM1 LM2 LM3 LM4 LB3 LB2 LB1 LB0 KEYS_R RH0 RH1 RH2 LB5 RB5>;
-//     ignored-layers = <MOUSE FN>;
-// )
+// Smart-mouse, requires tri-state module.
+ZMK_TRI_STATE(
+    smart_mouse, bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+    ignored-key-positions =
+        <LT1 LT3 LH0 LH1 RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RH0 RH1>;
+    ignored-layers = <MOUSE NAV FN>;)

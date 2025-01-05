@@ -1,46 +1,32 @@
 manifest:
   defaults:
     remote: urob
-    # revision: main
     revision: v0.1 # Pin everything to v0.1
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
-    # - name: zmk
-    # remote: urob
-    ## revision: going-modular
-    # revision: main
-    # import: app/west.yml
     # This is vanilla ZMK - just using my remote to pin the current state of main,
     # as upstream hasn't yet released a version with mouse.
     - name: zmk
       revision: v0.1+mouse
       import: app/west.yml
-    - name: zmk-helpers
-      path: modules/zmk/helpers
-      # remote: urob
-      # revision: main
+      # ZMK modules
     - name: zmk-adaptive-key
       path: modules/zmk/adaptive-key
     - name: zmk-auto-layer
       path: modules/zmk/auto-layer
-      # remote: urob
-      # revision: main
+    - name: zmk-helpers
+      path: modules/zmk/helpers
     - name: zmk-leader-key
       revision: v0.1+locality
       path: modules/zmk/leader-key
-      # remote: urob
-      # revision: main
-      # path: modules/leader-key
     - name: zmk-tri-state
       path: modules/zmk/tri-state
-      # revision: main
-      # path: modules/tri-state
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
