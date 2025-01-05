@@ -2,7 +2,7 @@
 #define X_LB    &tog QWE
 #define X_RB    &tog NAV
 
-#define X_LH    &lt MAC_NAV tog_hng
+#define X_LH    &lt MAC_NAV &tog_hng
 #define X_RH    &tog MOUSE
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
     ZMK_LAYER(                                                                 \
