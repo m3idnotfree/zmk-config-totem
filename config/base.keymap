@@ -179,7 +179,7 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 /*#include "extra_keys.h"*/
 #include "alias.dtsi"
 
-// toggle hangle
+// toggle hanle
 ZMK_MACRO(tog_hng,
     bindings
         = <&macro_press &kp LCTRL>

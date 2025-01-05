@@ -1,8 +1,8 @@
-#define X_LB    &tog QWE
-#define X_RB    &tog NAV
+// #define X_LB    &tog QWE
+// #define X_RB    &tog NAV
 
-#define X_LH    &lt  MAC_NAV &tog_hng
-#define X_RH    &tog MOUSE
+// #define X_LH    &lt  MAC_NAV &tog_hng
+// #define X_RH    &tog MOUSE
 
 #include "zmk-helpers/key-labels/totem.h"
 #include "base.keymap"
