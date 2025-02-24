@@ -14,13 +14,13 @@
             X_LH LH RH X_RH                                                    \
     )
 
-#define ZMK_CUSTOM_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
+#define ZMK_LEFT_CUSTOM_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)            \
     ZMK_LAYER(                                                                 \
         name,                                                                  \
                  LT RT                                                         \
                  LM RM                                                         \
-                 LB RB                                                         \
-                 LH RH                                                         \
+                 LB RB X_RB                                                    \
+                 LH RH X_RH                                                    \
     )
 
 
