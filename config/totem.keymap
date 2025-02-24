@@ -5,7 +5,7 @@
 #define X_LH    &tog_hng
 #define X_RH    &tog MOUSE
 
-#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
+#define MK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
     ZMK_LAYER(                                                                 \
         name,                                                                  \
                  LT RT                                                         \
@@ -14,7 +14,7 @@
             X_LH LH RH X_RH                                                    \
     )
 
-#define ZMK_LEFT_CUSTOM_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)            \
+#define MK_LEFT_CUSTOM_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)            \
     ZMK_LAYER(                                                                 \
         name,                                                                  \
                  LT RT                                                         \
