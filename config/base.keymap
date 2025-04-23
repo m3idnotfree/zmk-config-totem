@@ -104,6 +104,14 @@ ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
 MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
 MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
+/* Caps-word & auto-layers */
+ 
+ // Tap: sticky-shift | Shift + tap/ double-tap: caps-word | Hold: shift.
+ ZMK_MOD_MORPH(smart_shft,
+   bindings = <&sk LSHFT>, <&caps_word>;
+   mods = <(MOD_LSFT)>;
+ )
+
 /* Magic-shift & auto-layers */
 
 // Tap: repeat after alpha, else sticky-shift |
@@ -143,7 +151,7 @@ ZMK_TAP_DANCE(num_dance,
 ZMK_TRI_STATE(
     smart_mouse, bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
     ignored-key-positions =
-        <LT1 LT3 LH0 LH1 RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RH0 RH1>;
+        <LT1 LT2 LH0 LH1 RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RH0 RH1>;
     ignored-layers = <MOUSE NAV FN>;)
 
 /* Custom behaviors */
@@ -151,19 +159,19 @@ ZMK_TRI_STATE(
 // Alt+Tab swapper, requires tri-state module.
 ZMK_TRI_STATE(swapper,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
+    ignored-key-positions = <LT2 RT2 RM1 RM2 RM3>;
 )
 
 // Alt+Tab mac swapper, requires tri-state module.
 ZMK_TRI_STATE(mswapper,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-    ignored-key-positions = <LT2>;
+    ignored-key-positions = <LT2 RT2 RM1 RM2 RM3>;
 )
 
 // Ctrl+Tab swapper, requires tri-state module.
 ZMK_TRI_STATE(web_swapper,
     bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-    ignored-key-positions = <LH2>;
+    ignored-key-positions = <LH2 RT2 RM1 RM2 RM3>;
 )
 
 // Define mod-morph with a *single* mod trigger for less repetition.
@@ -221,7 +229,7 @@ ZMK_BASE_LAYER(Base,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp Z         &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexcl      ,
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                              &lt NAV SPC   &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT                                            
+                                              &lt NAV SPC   &lt FN RET  ,   SMART_NUM     &smart_shft                                            
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                          
 )
 

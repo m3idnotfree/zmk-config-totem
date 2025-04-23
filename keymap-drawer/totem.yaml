@@ -37,7 +37,7 @@ layers:
   - {t: SPC, h: Nav}
   - {t: Enter, h: Fn}
   - {t: Numword, h: Num, s: Sticky Num}
-  - {t: Magic, h: Shift}
+  - {t: Shift, h: sticky, s: Caps Word}
   - {t: Mouse, h: toggle}
   Qwert:
   - {type: trans}
