@@ -167,7 +167,7 @@ layers:
   - $$mdi:volume-high$$
   - $$mdi:skip-forward$$
   - {type: trans}
-  - {t: F11, h: Gui}
+  - F11
   - {t: F4, h: Alt}
   - {t: F5, h: Ctrl}
   - {t: F6, h: Shift}
