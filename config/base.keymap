@@ -1,12 +1,10 @@
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // Requires auto-layer module.
+#include <behaviors/unicode.dtsi> // Requires zmk-unicode module.
+#include <zmk-helpers/helper.h> // Requires zmk-helpers module.
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL  3 &bt BT_CLR
 
@@ -17,7 +15,8 @@
 #define FN 4
 #define SYS 5
 #define MOUSE 6
-#define MAC_NAV 7
+#define MOUSE_NAV 7
+// #define MAC_NAV 7
 
 #define XXX &none
 #define ___ &trans
@@ -194,6 +193,13 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
+// Tap: space | Shift + tap: dot -> space -> sticky shift | Hold: nav layer.
+ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&spc_morph>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
+ZMK_MACRO(dot_spc, bindings = <&kp DOT &kp SPACE &sk LSHFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+
 // Tap: backspace | Lshft + tap: delete | Rshft + tap: shift-delete.
 ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
               mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <MOD_RSFT>;)
@@ -229,7 +235,7 @@ ZMK_BASE_LAYER(Base,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp Z         &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexcl      ,
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                              &lt NAV SPC   &lt FN RET  ,   SMART_NUM     &smart_shft                                            
+                                              &lt_spc NAV 0  &lt FN RET  ,   SMART_NUM     &smart_shft                                            
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                          
 )
 
@@ -263,9 +269,9 @@ ZMK_TOTEM_LAYER(Nav,
 //         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                  _NAV_LFT_MID_                       &kp END     ,   &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET     ,
 //╭──────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭──────╮
-&kp MAC_TAB_L &kp MAC_TAB_R BACK         U_WH_D        U_WH_U        GO          ,   &kp I         &kp TAB       &kp LT        &kp GT        PIP             ___  ,
+    ___      ___            BACK         U_WH_D        U_WH_U        GO          ,   &kp I         &kp TAB       &kp LT        &kp GT        PIP             ___  ,
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-  MAC_BACK                                             ___           MAC_GO      ,   &lt NUM ESC   ___                                                       ___
+    ___                                                ___           MAC_GO      ,   &lt NUM ESC   ___                                                   ZELLIJ_LEADER 
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -273,9 +279,9 @@ ZMK_TOTEM_LAYER(Fn,
 //         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp F12       &kp F7        &kp F8        &kp F9        &kp LG(BSPC),   PLAY_PAUSE    &kp C_PREV    VOL_UP        &kp C_NEXT     ___        ,
 //         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp F11       &hml LALT F4  &hml LCTRL F5 &hml LSHFT F6 SWITCH_SAME_APP, ___          MAC_DSK_LETF  VOL_DOWN      MAC_DSK_RIGHT  ___        ,
+             &hml LGUI F11 &hml LALT F4  &hml LCTRL F5 &hml LSHFT F6 SWITCH_SAME_APP, ___          MAC_DSK_LETF  VOL_DOWN      MAC_DSK_RIGHT  ___        ,
 //╭──────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭──────╮
-  &kp DEL    &kp F10       &kp F1        &kp F2        &kp F3        ___         ,   MUTE          INCREASE      DECREASE      &kp COMMA     &kp DOT         ___  ,
+  &kp DEL    &kp F10       &kp F1        &kp F2        &kp F3      MAC_FULL_SCREEN,  MUTE          INCREASE      DECREASE      &kp COMMA     &kp DOT         ___  ,
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
  &kp LS(TAB)                                           &web_swapper  ___         ,   ___           CANCEL                                                     ___
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -295,13 +301,25 @@ ZMK_BASE_LAYER(Sys,
 
 ZMK_TOTEM_LAYER(Mouse, 
 //         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             ___           ___           ___           ___           ___         ,                               _MOUSE_TOP_                             ,
+             ___           ___           ___           ___           ___         ,   &kp TAB_L     U_WH_D        U_MS_U        U_WH_U        &kp TAB_R   ,
 //         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             ___           ___           ___           ___           ___         ,                               _MOUSE_MID_                             ,
+             ___           ___           ___           ___           ___         ,   BACK          U_MS_L        U_MS_D        U_MS_R        GO          ,
 //╭──────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭──────╮
-  &kp LEFT   &kp RIGHT     ___           ___           ___           ___         ,                               _MOUSE_BOT_                                 ___  ,
+  &kp LEFT   &kp RIGHT     ___           ___           ___           ___         ,   &kp HOME      &kp PG_DN     &mkp MCLK     &kp PG_UP     &kp ESC       &mo MOUSE_NAV,
 //├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               MAC_DSK_LETF  MAC_DSK_RIGHT,  &mkp RCLK     &mkp LCLK                                                 ___
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
+
+ZMK_TOTEM_LAYER(Mouse_nav, 
+//         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+             XXX           XXX           XXX           XXX           XXX         ,   XXX           XXX           UP             XXX           XXX        ,
+//         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+             XXX           XXX           XXX           XXX           XXX         ,   XXX           LEFT           DOWN         RIGHT         XXX         ,
+//╭──────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭──────╮
+    XXX      XXX           XXX           XXX           XXX           XXX         ,   XXX           XXX           XXX           XXX           XXX             XXX  ,
+//├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+    XXX                                                XXX           XXX         ,   MAC_DSK_LETF  MAC_DSK_RIGHT                                        MAC_FULL_SCREEN 
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 

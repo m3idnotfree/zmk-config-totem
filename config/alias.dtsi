@@ -22,8 +22,8 @@
 
 #define MAC_GO        &kp LG(RBKT)
 #define MAC_BACK      &kp LG(LBKT)
-#define MAC_TAB_L     LS(LG(RBKT))
-#define MAC_TAB_R     LS(LG(LBKT))
+#define MAC_TAB_L     LS(LG(LBKT))
+#define MAC_TAB_R     LS(LG(RBKT))
 
 #define MAC_OPEN_LAST_CLOSE_TAB &kp LS(LG(T))
 
@@ -34,14 +34,6 @@
 
 #define SWITCH_SAME_APP &kp LG(GRAVE)
 
-//                 ╭──────────┬───────────┬─────────┬──────────┬──────────╮
-#define _MOUSE_TOP_  &kp TAB_L  U_WH_D      U_MS_U    U_WH_U     &kp TAB_R
-//                 ├──────────┼───────────┼─────────┼──────────┼──────────┤
-#define _MOUSE_MID_  BACK       U_MS_L      U_MS_D    U_MS_R     GO
-//                 ├──────────┼───────────┼─────────┼──────────┼──────────┤
-#define _MOUSE_BOT_  &kp HOME   &kp PG_DN   &mkp MCLK &kp PG_UP  &kp ESC
-//                 ╰──────────┴───────────┴─────────┴─────────────────────╯
-
 //                     ╭─────────┬───────┬───────┬───────┬───────╮
 #define _MAC_MOUSE_MID_  MAC_BACK  U_MS_L  U_MS_D  U_MS_R  MAC_GO
 //                     ╰─────────┴───────┴───────┴───────┴───────╯
@@ -51,6 +43,7 @@
 //                   ╰────────────────┴────────────────┴─────────────────┴───────────────────╯
 
 //                       ╭────────────────────┬────────────────────┬─────────────────┬─────────────────┬──────╮
-#define _MAC_NAV_LFT_MID_  &hml LGUI MAC_TAB_L  &hml LALT MAC_TAB_R  &hml LCTRL PG_DN  &hml LSHFT PG_UP
+// #define _MAC_NAV_LFT_MID_  &hml LGUI MAC_TAB_L  &hml LALT MAC_TAB_R  &hml LCTRL PG_DN  &hml LSHFT PG_UP
 //                       ╰────────────────────┴────────────────────┴─────────────────┴─────────────────┴──────╯
-
+#define ZELLIJ_LEADER &kp LC(G)
+#define MAC_FULL_SCREEN &kp LC(LG(F))
