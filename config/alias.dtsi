@@ -11,26 +11,27 @@
 #define PLAY_PAUSE     &kp C_PP 
 
 //      web
-#define TAB_L     LC(PG_UP)
-#define TAB_R     LC(PG_DN)
-#define TAB_MV_L  &kp LC(LS(PG_UP))
-#define TAB_MV_R  &kp LC(LS(PG_DN))
+#define TAB_L          &kp LC(PG_UP)
+#define TAB_R          &kp LC(PG_DN)
+#define TAB_MV_L       &kp LC(LS(PG_UP))
+#define TAB_MV_R       &kp LC(LS(PG_DN))
+#define FORCUS_SEARCH  &kp LG(L)
 
 //      mac
-#define MAC_DSK_LETF  &kp LC(LEFT)  // mac workspace left
-#define MAC_DSK_RIGHT &kp LC(RIGHT) // mac workspace right
+#define MAC_DSK_LETF   &kp LC(LEFT)  // mac workspace left
+#define MAC_DSK_RIGHT  &kp LC(RIGHT) // mac workspace right
 
-#define MAC_GO        &kp LG(RBKT)
-#define MAC_BACK      &kp LG(LBKT)
-#define MAC_TAB_L     LS(LG(LBKT))
-#define MAC_TAB_R     LS(LG(RBKT))
+#define MAC_GO         &kp LG(RBKT)
+#define MAC_BACK       &kp LG(LBKT)
+#define MAC_TAB_L      LS(LG(LBKT))
+#define MAC_TAB_R      LS(LG(RBKT))
 
 #define MAC_OPEN_LAST_CLOSE_TAB &kp LS(LG(T))
 
 #define PIP &kp LG(LA(LS(RBKT)))
 
-#define INCREASE &kp LG(KP_PLUS)
-#define DECREASE &kp LG(KP_SUBTRACT)
+#define INCREASE       &kp LG(KP_PLUS)
+#define DECREASE       &kp LG(KP_SUBTRACT)
 
 #define SWITCH_SAME_APP &kp LG(GRAVE)
 
@@ -38,12 +39,14 @@
 #define _MAC_MOUSE_MID_  MAC_BACK  U_MS_L  U_MS_D  U_MS_R  MAC_GO
 //                     ╰─────────┴───────┴───────┴───────┴───────╯
 
+#define T_L            LC(PG_UP)
+#define T_R            LC(PG_DN)
 //                   ╭────────────────┬────────────────┬─────────────────┬───────────────────╮
-#define _NAV_LFT_MID_  &hml LGUI TAB_L  &hml LALT TAB_R  &hml LCTRL PG_DN  &hml LSHFT  PG_UP
+#define _NAV_LFT_MID_  &hml LGUI T_L    &hml LALT T_R    &hml LCTRL PG_DN  &hml LSHFT  PG_UP
 //                   ╰────────────────┴────────────────┴─────────────────┴───────────────────╯
 
 //                       ╭────────────────────┬────────────────────┬─────────────────┬─────────────────┬──────╮
 // #define _MAC_NAV_LFT_MID_  &hml LGUI MAC_TAB_L  &hml LALT MAC_TAB_R  &hml LCTRL PG_DN  &hml LSHFT PG_UP
 //                       ╰────────────────────┴────────────────────┴─────────────────┴─────────────────┴──────╯
-#define ZELLIJ_LEADER &kp LC(G)
+#define ZELLIJ_LEADER   &kp LC(G)
 #define MAC_FULL_SCREEN &kp LC(LG(F))
