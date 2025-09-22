@@ -20,6 +20,8 @@
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
 
+#define ZELLIJ_LEADER   &kp LC(G)
+
 ZMK_COMBO(zellij, ZELLIJ_LEADER,  RM0 RM1,  DEF QWE,                 COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
