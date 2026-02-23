@@ -1,2 +1,5 @@
 parse_config:
-  zmk_additional_includes: ["zmk-helpers/include"]
+  zmk_additional_includes:
+    - "modules/zmk/helpers/include"
+    - "modules/zmk/auto-layer/include"
+    - "modules/zmk/unicode/include"
