@@ -3,3 +3,172 @@ parse_config:
     - "modules/zmk/helpers/include"
     - "modules/zmk/auto-layer/include"
     - "modules/zmk/unicode/include"
+
+  zmk_preamble: |
+    #include <zmk-helpers/key-labels/totem.h>
+    #define CONFIG_WIRELESS
+
+  raw_binding_map:
+    # System
+    "&sys_reset": Reset
+    "&bootloader": Boot
+    "&caps_word": Caps Word
+    "&kp K_CANCEL": Cancel
+    # Bluetooth
+    "&bt BT_SEL 0": BT 1
+    "&bt BT_SEL 1": BT 2
+    "&bt BT_SEL 2": BT 3
+    "&bt BT_SEL 3": BT 4
+    "&bt BT_CLR": BT CLR
+    # Output
+    "&out OUT_TOG": OUT TOG
+    "&out OUT_BLE": OUT BLE
+    "&out OUT_USB": OUT USB
+    # Clipboard
+    "&kp LC(INS)": Copy
+    "&kp LC(X)": Cut
+    "&kp LS(INS)": Paste
+    # Mac shortcuts
+    "&kp LC(LEFT)": Ctl+←
+    "&kp LC(RIGHT)": Ctl+→
+    "&kp LG(LBKT)": Back
+    "&kp LG(RBKT)": Forward
+    "&kp LC(LG(F))": Fullscreen
+    "&kp LG(GRAVE)": Same App
+    "&kp LG(LA(LS(RBKT)))": PiP
+    "&kp LC(G)": Zellij
+    # Custom behaviors
+    "&mswapper": Mac Tab
+    "&web_swapper": Web Tab
+    "&tog_hng": Handle
+    "&smart_shft": { "t": "Shift", "h": "sticky", "s": "Caps Word" }
+    "&smart_num 2 0": { "t": "Numword", "h": "Num", "s": "Sticky Num" }
+    "&lt_spc 3 0": { "t": "Spc", "h": "Nav" }
+    "&magic_shift LSHFT 0": { "t": "Magic", "h": "Shift" }
+    # Leader
+    "&leader": Leader
+    "&leader_sft": Shift+Leader
+    # HRM combos
+    "&hm_combo_tab LS(LALT) 0": { "t": "Tab", "h": "Sft+Alt" }
+    "&hm_combo_ldr LS(LCTRL) 0": Leader
+    "&hm_combo_ldrsh LS(LC(LALT)) 0": Shift+Leader
+    "&hm_combo_lpar RS(LCTRL) 0": { "t": "(", "right": "<" }
+    "&hm_combo_rpar RS(LALT) 0": { "t": ")", "right": ">" }
+    # Mouse
+    "&mmv MOVE_UP": Mouse ↑
+    "&mmv MOVE_DOWN": Mouse ↓
+    "&mmv MOVE_LEFT": Mouse ←
+    "&mmv MOVE_RIGHT": Mouse →
+    "&msc SCRL_UP": Scroll ↑
+    "&msc SCRL_DOWN": Scroll ↓
+    "&msc SCRL_LEFT": Scroll ←
+    "&msc SCRL_RIGHT": Scroll →
+    "&mkp LCLK": Left Click
+    "&mkp RCLK": Right Click
+    "&mkp MCLK": Middle Click
+    "&mkp MB4": Back Click
+    "&mkp MB5": Forward Click
+    # Media
+    "&kp C_PP": $$mdi:play-pause$$
+    "&kp C_VOL_UP": $$mdi:volume-high$$
+    "&kp C_VOL_DN": $$mdi:volume-medium$$
+    "&kp C_MUTE": $$mdi:volume-off$$
+    "&kp C_NEXT": $$mdi:skip-forward$$
+    "&kp C_PREV": $$mdi:skip-backward$$
+
+  trans_legend: { "t": "", "type": "trans" }
+
+  zmk_combos:
+    combo_cut: { align: bottom, o: 0.15 }
+    combo_ldrsh: { align: top, o: 1.35 }
+    combo_lt: { hidden: true }
+    combo_gt: { hidden: true }
+    combo_lbrc: { hidden: true }
+    combo_rbrc: { hidden: true }
+
+  zmk_keycode_map:
+    LALT: Alt
+    RALT: Alt
+    LCTRL: Ctrl
+    RCTRL: Ctrl
+    LGUI: Gui
+    RGUI: Gui
+    LSHFT: Shift
+    RSHFT: Shift
+    BSPC: Bspc
+    DEL: Del
+    ESC: Esc
+    RET: Enter
+    SPACE: Spc
+    TAB: Tab
+    PG_UP: PgUp
+    PG_DN: PgDn
+    INS: Ins
+    HOME: Home
+    END: End
+    UP: ↑
+    DOWN: ↓
+    LEFT: ←
+    RIGHT: →
+    AMPERSAND: "&"
+    AMPS: "&"
+    APOS: "'"
+    APOSTROPHE: "'"
+    ASTERISK: "*"
+    ASTRK: "*"
+    AT: "@"
+    AT_SIGN: "@"
+    BACKSLASH: \
+    BSLH: \
+    CARET: ^
+    COLON: ":"
+    COMMA: ","
+    DLLR: $
+    DOLLAR: $
+    DOT: .
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    EQUAL: "="
+    EXCL: "!"
+    EXCLAMATION: "!"
+    FSLH: /
+    GRAVE: "`"
+    GREATER_THAN: ">"
+    GT: ">"
+    HASH: "#"
+    LBKT: "["
+    LBRC: "{"
+    LEFT_BRACE: "{"
+    LEFT_BRACKET: "["
+    LEFT_PARENTHESIS: (
+    LESS_THAN: <
+    LPAR: (
+    LT: <
+    MINUS: "-"
+    PERCENT: "%"
+    PERIOD: .
+    PIPE: "|"
+    PLUS: +
+    PRCNT: "%"
+    QMARK: "?"
+    QUESTION: "?"
+    RBKT: "]"
+    RBRC: "}"
+    RIGHT_BRACE: "}"
+    RIGHT_BRACKET: "]"
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    SEMI: ;
+    SEMICOLON: ;
+    SINGLE_QUOTE: "'"
+    SLASH: /
+    SQT: "'"
+    STAR: "*"
+    TILDE: "~"
+    UNDER: _
+    UNDERSCORE: _
+
+draw_config:
+  append_colon_to_layer_header: false
+  dark_mode: auto
+  footer_text: "m3idnotfree/zmk-config-totem"
