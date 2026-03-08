@@ -15,8 +15,7 @@
 #define SYS 4
 #define MOUSE 5
 #define NAV 6
-// #define MOUSE_NAV 7
-// #define MAC_NAV 7
+#define ZELLIJ 7
 
 #define XXX &none
 #define ___ &trans
@@ -74,6 +73,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 #include "combos.dtsi"  // Must be sourced after HRM-combo hack.
 #include "leader.dtsi"
 #include "mouse.dtsi"
+#include "zellij.dtsi"
 
 /* Nav cluster */
 
@@ -223,6 +223,14 @@ ZMK_MACRO(tog_hng,
         ;
 )
 
+
+// tap = &tog MOUSE, hold = &mo ZELLIJ
+ZMK_HOLD_TAP(ht_zj_mouse,
+    bindings = <&mo>, <&tog>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+)
+
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
@@ -335,5 +343,17 @@ ZMK_TOTEM_LAYER(Nav,
 //     ___                                                ___           ___         ,  &mkp RCLK     &mkp LCLK                                                  ___   
 // //╰──────╯                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 // )
+
+ZMK_TOTEM_LAYER(Zellij,
+//         ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+             XXX           &zj_tab_prev  &zj_focus_u   &zj_tab_next  &zj_new_tab ,   &zj_forgot    XXX           XXX           XXX           XXX         ,
+//         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+             XXX           &zj_focus_l   &zj_focus_d   &zj_focus_r   &zj_new_pane,   &zj_swap_layout &zj_resize_l &zj_resize_d &zj_resize_u  &zj_resize_r,
+//╭──────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭──────╮
+    XXX      &zj_search    &zj_pane_d    &zj_pane_r    &zj_fullscreen &zj_float  ,   ___           &zj_move_l    &zj_move_d    &zj_move_u    &zj_move_r      XXX  ,
+//├──────┤ ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+    XXX                                                &zj_scroll    &tog ZELLIJ ,   ___           ___                                                        ___
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
 
 /* vim: set ft=c tw=146: */

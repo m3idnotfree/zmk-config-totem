@@ -1,0 +1,46 @@
+#define ZJ_MS 50
+
+// Pane focus — normal mode stays open, append ESC
+ZMK_MACRO(zj_focus_l,    bindings = <&kp LC(G) &kp H &kp ESC>;    wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_focus_d,    bindings = <&kp LC(G) &kp J &kp ESC>;    wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_focus_u,    bindings = <&kp LC(G) &kp K &kp ESC>;    wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_focus_r,    bindings = <&kp LC(G) &kp L &kp ESC>;    wait-ms = <ZJ_MS>; tap-ms = <5>;)
+
+// Tab — routed via tab mode (auto-returns to locked)
+ZMK_MACRO(zj_tab_prev,   bindings = <&kp LC(G) &kp T &kp H>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_tab_next,   bindings = <&kp LC(G) &kp T &kp L>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_new_tab,    bindings = <&kp LC(G) &kp T &kp N>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_close_tab,  bindings = <&kp LC(G) &kp T &kp X>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+
+// Pane — auto-returns to locked
+ZMK_MACRO(zj_new_pane,   bindings = <&kp LC(G) &kp N>;            wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_pane_d,     bindings = <&kp LC(G) &kp P &kp D>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_pane_r,     bindings = <&kp LC(G) &kp P &kp R>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_close_pane, bindings = <&kp LC(G) &kp P &kp X>;      wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_float,      bindings = <&kp LC(G) &kp W>;            wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_fullscreen, bindings = <&kp LC(G) &kp F>;            wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_scroll,     bindings = <&kp LC(G) &kp E>;            wait-ms = <ZJ_MS>; tap-ms = <5>;)
+
+// Resize — stays in resize mode, append ESC
+ZMK_MACRO(zj_resize_l,  bindings = <&kp LC(G) &kp R &kp H &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_resize_d,  bindings = <&kp LC(G) &kp R &kp J &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_resize_u,  bindings = <&kp LC(G) &kp R &kp K &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_resize_r,  bindings = <&kp LC(G) &kp R &kp L &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+
+// Move pane — stays in move mode, append ESC
+ZMK_MACRO(zj_move_l,    bindings = <&kp LC(G) &kp M &kp H &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_move_d,    bindings = <&kp LC(G) &kp M &kp J &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_move_u,    bindings = <&kp LC(G) &kp M &kp K &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_move_r,    bindings = <&kp LC(G) &kp M &kp L &kp ESC>; wait-ms = <ZJ_MS>; tap-ms = <5>;)
+
+// Session
+ZMK_MACRO(zj_ses_d,     bindings = <&kp LC(G) &kp S &kp D>;         wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_ses_mgr,   bindings = <&kp LC(G) &kp S &kp W>;         wait-ms = <ZJ_MS>; tap-ms = <5>;)
+
+// Misc
+ZMK_MACRO(zj_search,    bindings = <&kp LC(G) &kp FSLH>;            wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_rename_tab,bindings = <&kp LC(G) &kp T &kp R>;         wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_pane_embed,bindings = <&kp LC(G) &kp P &kp E>;         wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_pane_grp,  bindings = <&kp LC(G) &kp P &kp P &kp ESC>;wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_forgot,    bindings = <&kp LC(G) &kp Y>;               wait-ms = <ZJ_MS>; tap-ms = <5>;)
+ZMK_MACRO(zj_swap_layout, bindings = <&kp LC(G) &kp P &kp TAB &kp ESC>;  wait-ms = <ZJ_MS>; tap-ms = <5>;)

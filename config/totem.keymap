@@ -3,7 +3,7 @@
 #define X_RB    &tog NAV
 
 #define X_LH    &tog_hng
-#define X_RH    &tog MOUSE
+#define X_RH    &ht_zj_mouse ZELLIJ MOUSE
 
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
     ZMK_LAYER(                                                                 \
