@@ -34,7 +34,7 @@ layers:
   - {t: '?', s: '!'}
   - {t: Nav, h: toggle}
   - Handle
-  - {t: Spc, h: Nav}
+  - {t: Spc, h: Nav, s: '&dot_spc'}
   - {t: Enter, h: Fn}
   - {t: Numword, h: Num, s: Sticky Num}
   - {t: Shift, h: sticky, s: Caps Word}
@@ -117,45 +117,6 @@ layers:
   - {type: trans}
   - {type: trans}
   - {t: Mouse, h: toggle}
-  Nav:
-  - Ctl+←
-  - Ctl+→
-  - Sft+Tab
-  - Mac Tab
-  - Home
-  - PgUp
-  - SPC
-  - {t: ↑, h: Ctl+Home}
-  - Del
-  - F
-  - {t: Ctl+PgUp, h: Gui}
-  - {t: Ctl+PgDn, h: Alt}
-  - {t: PgDn, h: Ctrl}
-  - {t: PgUp, h: Shift}
-  - End
-  - PgDn
-  - {t: ←, h: Home}
-  - {t: ↓, h: Ctl+End}
-  - {t: →, h: End}
-  - Enter
-  - {type: trans}
-  - {type: trans}
-  - Back Click
-  - Scroll ↓
-  - Scroll ↑
-  - Forward Click
-  - I
-  - Tab
-  - <
-  - '>'
-  - PiP
-  - {type: trans}
-  - Back
-  - {type: trans}
-  - Forward
-  - {t: Esc, h: Num}
-  - {type: trans}
-  - Zellij
   Fn:
   - F12
   - F7
@@ -163,7 +124,7 @@ layers:
   - F9
   - Gui+Bspc
   - $$mdi:play-pause$$
-  - Zellij
+  - {type: trans}
   - $$mdi:volume-high$$
   - $$mdi:skip-forward$$
   - {type: trans}
@@ -266,56 +227,53 @@ layers:
   - Middle Click
   - PgUp
   - Esc
-  - {t: Mouse_nav, h: toggle}
+  - {type: trans}
   - Handle
   - Ctl+←
   - Ctl+→
   - Right Click
   - Left Click
   - {type: trans}
-  Mouse_nav:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Gui+W
-  - $$mdi:volume-high$$
-  - ↑
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Gui+L
-  - ←
-  - ↓
-  - →
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Gui+R
-  - $$mdi:volume-medium$$
-  - ''
-  - ''
-  - ''
-  - {type: trans}
-  - ''
-  - ''
-  - ''
+  Nav:
   - Ctl+←
   - Ctl+→
-  - Fullscreen
+  - Sft+Tab
+  - Mac Tab
+  - Home
+  - PgUp
+  - SPC
+  - {t: ↑, h: Ctl+Home}
+  - Del
+  - F
+  - {t: Ctl+PgUp, h: Gui}
+  - {t: Ctl+PgDn, h: Alt}
+  - {t: PgDn, h: Ctrl}
+  - {t: PgUp, h: Shift}
+  - End
+  - PgDn
+  - {t: ←, h: Home}
+  - {t: ↓, h: Ctl+End}
+  - {t: →, h: End}
+  - Enter
+  - {type: trans}
+  - {type: trans}
+  - Back Click
+  - Scroll ↓
+  - Scroll ↑
+  - Forward Click
+  - I
+  - Tab
+  - <
+  - '>'
+  - PiP
+  - {type: trans}
+  - Back
+  - {type: held}
+  - Forward
+  - {t: Esc, h: Num}
+  - {type: trans}
+  - {type: trans}
 combos:
-- p: [15, 16]
-  k: Zellij
-  l: [Base, Qwert]
 - p: [1, 2]
   k: Esc
   l: [Base, Qwert, Nav, Num, Mouse]
