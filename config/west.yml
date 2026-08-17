@@ -1,7 +1,7 @@
 manifest:
   defaults:
     remote: urob
-    revision: v0.3 # Pin everything to v0.3
+    # revision: v0.3 # Pin everything to v0.3
   remotes:
     - name: urob
       url-base: https://github.com/urob
@@ -28,7 +28,7 @@ manifest:
       path: modules/zmk/unicode
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3
+      # revision: v0.3
       # Temporarily overload Zephyr until
       # https://github.com/zmkfirmware/zephyr/pull/40 is merged.
   # - name: zephyr
