@@ -1,7 +1,7 @@
 manifest:
   defaults:
     remote: urob
-    # revision: v0.3 # Pin everything to v0.3
+    revision: main # Pin everything to v0.3
   remotes:
     - name: urob
       url-base: https://github.com/urob
